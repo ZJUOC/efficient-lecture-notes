@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>物理实验 · 测量、误差与数据处理（ADHD大纲版）</title><link href="data:," rel="icon"/><style>
+@font-face{font-family:"Anthropic Serif";src:url("物理字体/AnthropicSerif.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:swap}@font-face{font-family:"Anthropic Sans";src:url("物理字体/AnthropicSans.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:swap}@font-face{font-family:"Lecture Song";src:url("实验字体/SourceHanSerifCN-Subset.woff2") format("woff2");font-weight:200 900;font-display:swap}:root{--serif:"Anthropic Serif","Lecture Song","Source Han Serif CN VF","Songti SC",Georgia,serif;--sans:"Anthropic Sans",-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;--ink:#242a35;--muted:#657080;--line:#e1e5ec;--purple:#6e4a9c;--blue:#126d9b;--green:#17815a;--orange:#9a531d;--rose:#a64355;color-scheme:light}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:#f5f4f0;color:var(--ink);font:18px/1.95 var(--serif)}aside,.utility,.legend,.block-title,figcaption,summary,footer,.kicker,table,dialog button{font-family:var(--sans)}a{color:#315e91;text-underline-offset:3px;overflow-wrap:anywhere}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #328dcc;outline-offset:4px}aside{position:fixed;inset:0 auto 0 0;width:254px;overflow:auto;padding:32px 24px;background:#f5f4f0;border-right:1px solid var(--line);font-size:13px;line-height:1.65;z-index:10}.course{font-weight:700;font-size:15px;margin:26px 0 4px}.course-sub{color:var(--muted);font-size:12px;margin-bottom:24px}nav>ul{list-style:none;padding:0}nav ul ul{list-style:none;padding:0}nav ul ul ul{display:none}nav>ul>li>a{display:none}nav li a{display:block;padding:7px 8px;text-decoration:none;border-left:2px solid transparent;color:#526071}nav li a:hover,nav li a.active{color:#523279;background:#eae6f2;border-left-color:var(--purple)}main{margin-left:254px;max-width:1100px;background:#fff;min-height:100vh;padding:46px 70px 90px}.utility{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:36px;font-size:13px;color:var(--muted)}.utility button{border:0;background:none;color:#526071;padding:7px 9px}.utility button:hover{background:#f0f2f6}.kicker{font-size:12px;color:var(--purple);letter-spacing:1.7px;font-weight:700;margin-bottom:12px}h1{font-family:var(--serif);font-size:42px;line-height:1.3;letter-spacing:1px;margin:0 0 18px}h2{font-size:27px;line-height:1.45;margin:68px 0 24px;padding:22px 0 0;border-top:1px solid #d4dae4;font-weight:700}h3{font-size:21px;line-height:1.6;margin:36px 0 18px}p{margin:1em 0}strong{font-weight:650}.legend{display:flex;flex-wrap:wrap;gap:7px 20px;margin:26px 0 32px;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px;color:#53606e}.legend span::before{content:"";display:inline-block;width:5px;height:13px;background:var(--tone);margin-right:7px;vertical-align:-2px}.definition{--tone:var(--green);--wash:#edf7f2;--edge:#cbe5d8}.theorem{--tone:var(--purple);--wash:#f0ecf7;--edge:#d8cce9}.result,.question{--tone:var(--blue);--wash:#eef7fb;--edge:#cce3ef}.example{--tone:var(--orange);--wash:#fcf2e9;--edge:#ead5c3}.warning{--tone:var(--rose);--wash:#fcf0f2;--edge:#efd1d7}.block{margin:26px 0;padding:17px 23px 19px;background:var(--wash);border:1px solid var(--edge);border-left:4px solid var(--tone);border-radius:0}.block-title{color:var(--tone);font-size:15px;font-weight:700;margin-bottom:9px}.block>:last-child{margin-bottom:0}.block p:first-of-type{margin-top:0}.block p{margin:.7em 0}.block .display.math{margin:12px 0;padding:8px 0}.display.math{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;margin:22px 0;padding:12px 4px;scrollbar-width:thin}math{font-family:math}math[display="block"]{font-size:1.09em;margin:auto;width:max-content;min-width:100%;max-width:none}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.75;margin:24px 0}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:12px 14px}th{background:#f2f4f8;font-weight:650}td:first-child{font-weight:550}figure{margin:32px 0;padding:22px 24px;background:#fff;border:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) 190px;align-items:center;gap:25px}.figure-open{display:block;padding:0;border:0;background:white;width:100%;cursor:zoom-in;line-height:0}.figure-open img{max-width:100%;width:auto;max-height:365px;height:auto;display:block;margin:auto}figcaption{font-size:14px;line-height:1.8;color:#586170}figcaption::after{content:"点击图片放大";display:block;margin-top:12px;font-size:11px;color:#7b8593}figure.slide{grid-template-columns:1fr}figure.slide img{max-height:none;width:100%}figure.slide figcaption{text-align:center}details{margin:26px 0;border:1px solid #dbe3ed;padding:14px 20px;background:#fafbfd}summary{cursor:pointer;color:#315e91;font-weight:650;font-size:16px}details[open]>summary{margin-bottom:20px}details p{font-size:17px}details figure{margin:16px 0}li{padding-left:3px;margin:10px 0}ol,ul{padding-left:25px}blockquote{border-left:3px solid #bbc8d7;margin:24px 0;padding:0 20px;color:#526071}footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}#toc-button{display:none}.scrim{display:none}dialog{border:0;padding:20px;background:#fff;max-width:96vw;max-height:94vh;box-shadow:0 15px 60px #0004}dialog::backdrop{background:#15202dcc}dialog .close{display:block;margin-left:auto;border:0;background:#f1f3f6;padding:5px 12px;font-size:14px}dialog img{display:block;max-width:88vw;max-height:74vh;object-fit:contain;margin:12px auto}dialog p{max-width:800px;font-size:14px;margin:8px auto}.chapter-hint{color:var(--muted);font-size:13px}.mobile-title{display:none}
+@media(min-width:1450px){main{margin-left:max(254px,calc((100vw - 1000px)/2));box-shadow:0 0 0 1px #e8ebf0}}
+@media(max-width:1050px){aside{transform:translateX(-100%);transition:transform .18s}body.toc-open aside{transform:none}.scrim{position:fixed;inset:0;background:#14223855;z-index:9}body.toc-open .scrim{display:block}main{margin:0 auto;padding:32px 40px 70px;max-width:900px}#toc-button{display:inline-block}.utility{margin-bottom:28px}}
+@media(max-width:600px){body{font-size:17px;line-height:1.9}main{padding:22px 19px 60px}h1{font-size:34px}h2{font-size:25px;margin-top:48px}h3{font-size:20px}.utility{font-size:12px;gap:0}.utility button{padding:6px}.kicker{font-size:11px}.block{padding:14px 16px}.block-title{font-size:14px}figure{grid-template-columns:1fr;padding:18px;gap:14px}.figure-open img{max-height:340px}figcaption{font-size:13px;line-height:1.7}figcaption::after{margin-top:6px}table{display:block;overflow-x:auto;font-size:13px}th,td{min-width:100px;padding:10px}math[display="block"]{font-size:1em}details{padding:12px 15px}.legend{gap:8px 16px}dialog{padding:12px}dialog img{max-width:87vw}li{padding-left:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}aside{transition:none}}
+@media print{body{background:white;font-size:11pt;color:black}aside,.utility,.legend,.scrim,dialog{display:none!important}main{margin:0;max-width:none;padding:0;box-shadow:none}h1{font-size:24pt}h2{font-size:17pt;margin-top:25pt;break-after:avoid}h3{font-size:13pt;break-after:avoid}figure,.block{break-inside:avoid}figure{grid-template-columns:1fr 180px}figure img{max-height:230px}.block{-webkit-print-color-adjust:exact;print-color-adjust:exact}figcaption::after{display:none}table{font-size:9pt}.display.math{overflow:visible;font-size:.94em}p,li{orphans:3;widows:3}details{background:white}a{color:inherit;text-decoration:none}}
+.figure-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:28px 0}.figure-row.three{grid-template-columns:repeat(3,minmax(0,1fr))}.figure-row figure{grid-template-columns:1fr;margin:0;padding:16px;gap:12px;align-content:start}.figure-row .figure-open img{max-height:260px}
+</style><link href="ADHD工具/adhd.css?v=267732c8" rel="stylesheet"/><link href="ADHD工具/outline.css?v=267732c8" rel="stylesheet"/></head><body><button aria-label="关闭目录" class="scrim"></button><aside id="contents"><a href="开始阅读.html">← 课程讲义</a><div class="course">大学物理实验</div><div class="course-sub">绪论 · 测量、误差与数据处理</div><nav aria-label="章节目录"><ul>
+<li><a href="#测量误差与数据处理" id="toc-测量误差与数据处理">测量、误差与数据处理</a>
+<ul>
+<li><a href="#学习路线" id="toc-学习路线">学习路线</a></li>
+<li><a href="#measurement" id="toc-measurement">1 测量与读数</a></li>
+<li><a href="#errors" id="toc-errors">2 误差的性质与分布</a></li>
+<li><a href="#uncertainty" id="toc-uncertainty">3
+直接测量的不确定度</a></li>
+<li><a href="#propagation" id="toc-propagation">4
+间接测量的不确定度</a></li>
+<li><a href="#significant-figures" id="toc-significant-figures">5
+有效数字与修约</a></li>
+<li><a href="#data-methods" id="toc-data-methods">6
+数据处理方法</a></li>
+<li><a href="#report" id="toc-report">7 实验报告</a></li>
+<li><a href="#practice" id="toc-practice">8 练习与概念检查</a></li>
+</ul></li>
+</ul></nav></aside><main><div class="utility"><div><button aria-controls="contents" aria-expanded="false" id="toc-button">☰ 目录</button><span>课程讲义 / 物理实验</span></div><div><button id="toggle">展开答案与拓展</button><button id="print">打印 / 保存 PDF</button></div></div><div class="kicker">LAB FUNDAMENTALS</div><h1 id="测量误差与数据处理">测量、误差与数据处理</h1>
+<p><strong>大学物理实验 · 绪论课学习讲义</strong></p><div aria-label="内容颜色说明" class="legend"><span class="definition">定义</span><span class="theorem">定理</span><span class="result">结论</span><span class="example">例题</span><span class="warning">易错</span></div>
+<p>每个物理实验最后交出的都是一个数，加上一个“±”：测得的弦线波速是多少，偏差有多大，这个偏差从哪里来。本讲义讲清楚这一行结果是怎样得到的：怎样读数，怎样判断误差的性质，怎样由重复数据和仪器指标算出不确定度，间接测量的不确定度怎样传播，结果要保留几位，以及用哪种方法处理成组数据。后面每个实验的数据处理都按这里的规则做。</p>
+<p>需要的准备：平均值、标准差的概念，偏导数和全微分。</p>
+<h2 id="学习路线">学习路线</h2>
+<table>
+<thead>
+<tr>
+<th>单元</th>
+<th>内容</th>
+<th>需要建立的能力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>测量与读数</td>
+<td>读出可靠数字和估读位；读游标卡尺、螺旋测微器、角游标</td>
+</tr>
+<tr>
+<td>2</td>
+<td>误差的性质与分布</td>
+<td>区分系统、随机、粗大误差；区分精密度、正确度、准确度</td>
+</tr>
+<tr>
+<td>3</td>
+<td>直接测量的不确定度</td>
+<td>由重复数据算 A 类，由仪器允差算 B 类，合成并写出结果</td>
+</tr>
+<tr>
+<td>4</td>
+<td>间接测量的不确定度</td>
+<td>用偏导数或对数微分传播不确定度</td>
+</tr>
+<tr>
+<td>5</td>
+<td>有效数字与修约</td>
+<td>按不确定度决定位数；按规则修约与运算</td>
+</tr>
+<tr>
+<td>6</td>
+<td>数据处理方法</td>
+<td>选择列表、逐差、作图、最小二乘；判断拟合质量</td>
+</tr>
+<tr>
+<td>7</td>
+<td>实验报告</td>
+<td>知道预习报告与实验报告各写什么</td>
+</tr>
+<tr>
+<td>8</td>
+<td>练习</td>
+<td>独立完成完整的数据处理</td>
+</tr>
+</tbody>
+</table>
+<h2 id="measurement">1 测量与读数</h2>
+<h3 id="直接测量与间接测量">1.1 直接测量与间接测量</h3>
+<p>测量由四个要素构成：被测对象、测量程序、测量准确度和计量单位。缺一个，“测得多少”都说不清。</p>
+<ul>
+<li><mark class="hl hl-evidence" data-cat="evidence" id="hl-0"><strong>直接测量</strong>：用仪器直接读出被测量，例如用米尺读长度、用秒表读时间；</mark></li>
+<li><mark class="hl hl-claim" data-cat="claim" id="hl-1"><strong>间接测量</strong>：先直接测出几个量，再通过已知的函数关系算出被测量，例如测圆环的外径、内径和高求体积，测弦长、频率求波速。</mark></li>
+</ul>
+<p>绝大多数实验的目标量都是间接测量。<mark class="hl hl-claim" data-cat="claim" id="hl-2">它的精度取决于每一个直接测量量，所以要先学会评价直接测量，再学传播。</mark></p>
+<h3 id="有效数字可靠数字加一位估读">1.2
+有效数字：可靠数字加一位估读</h3>
+<p>用最小分度 1 mm 的钢尺测
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+点位置：刻度线能准确读到
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>7.3</mn><annotation encoding="application/x-tex">7.3</annotation></semantics></math>
+cm，末端落在 7.3 与 7.4 之间约一半处，估读为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.05</mn><annotation encoding="application/x-tex">0.05</annotation></semantics></math>
+cm。</p>
+<div class="block definition">
+<p class="block-title"><strong>定义 1 · 有效数字</strong></p>
+<p><mark class="hl hl-term" data-cat="term" id="hl-3">测量值中从仪器刻度上直接准确读出的数字称为<strong>可靠数字</strong>，最后一位估读出的数字称为<strong>存疑数字</strong>。</mark><mark class="hl hl-term" data-cat="term" id="hl-4">可靠数字加上一位存疑数字，称为测量值的有效数字，其位数称为有效位数。</mark></p>
+</div>
+<p>钢尺例中结果写
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>7.35</mn><annotation encoding="application/x-tex">7.35</annotation></semantics></math>
+cm，有效位数 3
+位。<strong class="kt" data-cat="term" id="hl-63">估读只估一位</strong>：再往后的数字已经没有意义。有效数字的位数反映测量的精细程度：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>7.35</mn><annotation encoding="application/x-tex">7.35</annotation></semantics></math>
+cm 与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>7.350</mn><annotation encoding="application/x-tex">7.350</annotation></semantics></math>
+cm 数值相同，后者却声称精确到
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.001</mn><annotation encoding="application/x-tex">0.001</annotation></semantics></math>
+cm，是两个不同的测量结果。</p>
+<figure>
+<button aria-label="放大：钢尺读数：可靠数字 7.3 cm，估读 0.05 cm，结果 7.35 cm，3 位有效数字。" class="figure-open" type="button"><img alt="钢尺读数：可靠数字 7.3 cm，估读 0.05 cm，结果 7.35 cm，3 位有效数字。" src="实验原图/ruler.png"/></button>
+<figcaption aria-hidden="true">钢尺读数：可靠数字 7.3 cm，估读 0.05
+cm，结果 7.35 cm，3 位有效数字。</figcaption>
+</figure>
+<h3 id="带游标和测微的仪器">1.3 带游标和测微的仪器</h3>
+<p><strong class="kt" data-cat="term" id="hl-64">游标卡尺。</strong> 主尺最小分度 1 mm。50 分度的游标把主尺的
+49 mm 分成 50 格，每格
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.98</mn><annotation encoding="application/x-tex">0.98</annotation></semantics></math>
+mm，比主尺格短
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.02</mn><annotation encoding="application/x-tex">0.02</annotation></semantics></math>
+mm，所以精度为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.02</mn><annotation encoding="application/x-tex">0.02</annotation></semantics></math>
+mm（另有 0.05 mm、0.1 mm 规格）。读数 = 游标零线左侧主尺的整毫米数 +
+游标上与主尺刻线对齐的格数 ×
+精度。游标卡尺<strong class="kt" data-cat="term" id="hl-65">不再估读</strong>：对齐的格数本身就是最后一位。</p>
+<div class="figure-row">
+<figure>
+<button aria-label="放大：50 分度游标：零线在 49 mm 之后，第 41 格（标 8 后第 1 小格）对齐，读数 49+41\times0.02=49.82 mm。" class="figure-open" type="button"><img alt="50 分度游标：零线在 49 mm 之后，第 41 格（标 8 后第 1 小格）对齐，读数 49+41\times0.02=49.82 mm。" src="实验原图/vernier-scale.png"/></button>
+<figcaption aria-hidden="true">50 分度游标：零线在 49 mm 之后，第 41
+格（标 8 后第 1 小格）对齐，读数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>49</mn><mo>+</mo><mn>41</mn><mo>×</mo><mn>0.02</mn><mo>=</mo><mn>49.82</mn></mrow><annotation encoding="application/x-tex">49+41\times0.02=49.82</annotation></semantics></math>
+mm。</figcaption>
+</figure>
+<figure>
+<button aria-label="放大：实物读数：主尺 13 mm，游标第 16 格对齐，L=13+0.32=13.32 mm。" class="figure-open" type="button"><img alt="实物读数：主尺 13 mm，游标第 16 格对齐，L=13+0.32=13.32 mm。" src="实验原图/vernier-photo.png"/></button>
+<figcaption aria-hidden="true">实物读数：主尺 13 mm，游标第 16
+格对齐，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mn>13</mn><mo>+</mo><mn>0.32</mn><mo>=</mo><mn>13.32</mn></mrow><annotation encoding="application/x-tex">L=13+0.32=13.32</annotation></semantics></math>
+mm。</figcaption>
+</figure>
+</div>
+<p><strong class="kt" data-cat="term" id="hl-66">螺旋测微器（千分尺）。</strong> 固定套管上的刻度每格 0.5
+mm，微分筒一圈 50 格，每格 0.01 mm。<mark class="hl hl-counter" data-cat="counter" id="hl-5">读数 =
+套管读数（注意是否露出半毫米线）+ 微分筒对齐格数 × 0.01 mm +
+估读一位。</mark>图中套管露出 5.5 mm，微分筒对在 23.7 格，读数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5.5</mn><mo>+</mo><mn>0.237</mn><mo>=</mo><mn>5.737</mn></mrow><annotation encoding="application/x-tex">5.5+0.237=5.737</annotation></semantics></math>
+mm，最后的 7
+是估读位。使用前要记下<strong class="kt" data-cat="term" id="hl-67">零位读数</strong>：两测砧并拢时读数不为零，这个零位误差是已定系统误差，结果必须修正。</p>
+<p><strong class="kt" data-cat="term" id="hl-68">角游标。</strong> 分光计的角度盘最小分度
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>30</mn><mo>′</mo></msup><annotation encoding="application/x-tex">30'</annotation></semantics></math>
+或
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>20</mn><mo>′</mo></msup><annotation encoding="application/x-tex">20'</annotation></semantics></math>，角游标原理与游标卡尺相同。图中
+39 个
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>20</mn><mo>′</mo></msup><annotation encoding="application/x-tex">20'</annotation></semantics></math>
+的主刻度对应 40 个游标刻度，精度为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>30</mn><mo>″</mo></msup><annotation encoding="application/x-tex">30''</annotation></semantics></math>。读数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>105</mn><mo>∘</mo></msup><msup><mn>20</mn><mo>′</mo></msup><mo>+</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>30</mn><mo>″</mo></msup><mo>=</mo><msup><mn>105</mn><mo>∘</mo></msup><msup><mn>30</mn><mo>′</mo></msup><msup><mn>30</mn><mo>″</mo></msup></mrow><annotation encoding="application/x-tex">105^\circ20'+10'30''=105^\circ30'30''</annotation></semantics></math>。</p>
+<div class="figure-row">
+<figure>
+<button aria-label="放大：螺旋测微器：套管 5.5 mm，微分筒 23.7 格，读数 5.737 mm。" class="figure-open" type="button"><img alt="螺旋测微器：套管 5.5 mm，微分筒 23.7 格，读数 5.737 mm。" src="实验原图/micrometer.png"/></button>
+<figcaption aria-hidden="true">螺旋测微器：套管 5.5 mm，微分筒 23.7
+格，读数 5.737 mm。</figcaption>
+</figure>
+<figure>
+<button aria-label="放大：角游标：主盘 105°20′，游标读 10′30″，合计 105°30′30″。" class="figure-open" type="button"><img alt="角游标：主盘 105°20′，游标读 10′30″，合计 105°30′30″。" src="实验原图/angle-vernier.png"/></button>
+<figcaption aria-hidden="true">角游标：主盘 105°20′，游标读 10′30″，合计
+105°30′30″。</figcaption>
+</figure>
+</div>
+<h2 id="errors">2 误差的性质与分布</h2>
+<h3 id="误差与相对误差">2.1 误差与相对误差</h3>
+<div class="block definition">
+<p class="block-title"><strong>定义 2 · 误差</strong></p>
+<p><mark class="hl hl-term" data-cat="term" id="hl-6">误差 = 测量值 − 真值。</mark><mark class="hl hl-term" data-cat="term" id="hl-7">相对误差
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mo form="prefix" stretchy="false">|</mo><mtext mathvariant="normal">测量值</mtext><mo>−</mo><mtext mathvariant="normal">真值</mtext><mo form="prefix" stretchy="false">|</mo></mrow><mtext mathvariant="normal">真值</mtext></mfrac></mstyle><mo>×</mo><mn>100</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">E=\dfrac{|\text{测量值}-\text{真值}|}{\text{真值}}\times100\%</annotation></semantics></math>。</mark></p>
+</div>
+<p>任何测量都有误差，而真值一般无法知道，所以误差本身通常无法准确求出。实际能做的是：分析误差的来源和性质，消除或修正能修正的部分，再对剩下的部分给出一个可信的范围，这就是第
+3 单元的不确定度。相对误差便于比较不同大小的量：测 1 m 差 1 mm 与测 1 cm
+差 1 mm，精度差十倍。</p>
+<h3 id="三类误差">2.2 三类误差</h3>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>来源</th>
+<th>特点</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>系统误差</td>
+<td>仪器本身、理论近似、方法</td>
+<td>同样条件下重复测量，大小方向不变或按规律变化</td>
+<td>找出原因，修正或改进方法</td>
+</tr>
+<tr>
+<td>随机误差</td>
+<td>环境与操作中的偶然因素</td>
+<td>无规则起伏，但大量重复时服从统计规律</td>
+<td>多次测量取平均</td>
+</tr>
+<tr>
+<td>粗大误差</td>
+<td>读错、记错、操作失误</td>
+<td>明显偏离</td>
+<td>查明原因后剔除，不能凭感觉删数据</td>
+</tr>
+</tbody>
+</table>
+<p>系统误差又分两种。<mark class="hl hl-evidence" data-cat="evidence" id="hl-8"><strong>已定系统误差</strong>：大小方向已知，例如螺旋测微器的零位读数、电表未调零，<strong>必须修正</strong>。</mark><mark class="hl hl-counter" data-cat="counter" id="hl-9"><strong>未定系统误差</strong>：只知道不超过某个范围，不知具体数值，例如仪器的允差（示值误差），它不能修正，只能计入不确定度的
+B 类分量。</mark></p>
+<p><mark class="hl hl-counter" data-cat="counter" id="hl-10">多次测量取平均只能减小随机误差，<strong>不能消除系统误差</strong>：零位偏
+0.005 mm 的千分尺，测一百次平均值还是偏 0.005 mm。</mark></p>
+<h3 id="误差的分布">2.3 误差的分布</h3>
+<p><strong class="kt" data-cat="term" id="hl-69">正态分布。</strong>
+物理实验中多次独立测量的数据通常近似服从正态分布：</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mi>σ</mi><msqrt><mrow><mn>2</mn><mi>π</mi></mrow></msqrt></mrow></mfrac><mrow><mi mathvariant="normal">exp</mi><mo>⁡</mo></mrow><mrow><mo form="prefix" stretchy="true">[</mo><mi>−</mi><mfrac><mrow><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo form="postfix" stretchy="false">)</mo><mn>2</mn></msup></mrow><mrow><mn>2</mn><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac><mo form="postfix" stretchy="true">]</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">f(x)=\frac{1}{\sigma\sqrt{2\pi}}\exp\left[-\frac{(x-\mu)^2}{2\sigma^2}\right].</annotation></semantics></math></div>
+<p>消除系统误差后，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>
+是无穷多次测量的平均值，作为真值的最佳近似；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>
+是标准差，决定曲线的宽窄：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>
+越小，数据越集中，测量越精密。测量值落在
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">[</mo><mi>μ</mi><mo>−</mo><mi>σ</mi><mo>,</mo><mi>μ</mi><mo>+</mo><mi>σ</mi><mo form="postfix" stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[\mu-\sigma,\mu+\sigma]</annotation></semantics></math>
+内的概率为 68.3%，落在
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>±</mi><mn>2</mn><mi>σ</mi></mrow><annotation encoding="application/x-tex">\pm2\sigma</annotation></semantics></math>
+内为
+95.4%，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>±</mi><mn>3</mn><mi>σ</mi></mrow><annotation encoding="application/x-tex">\pm3\sigma</annotation></semantics></math>
+内为 99.7%。</p>
+<p>随机误差有四个特性：<strong class="kt" data-cat="term" id="hl-70">单峰性</strong>（小误差出现多）、<strong class="kt" data-cat="term" id="hl-71">对称性</strong>（正负误差机会相等）、<strong class="kt" data-cat="term" id="hl-72">有界性</strong>（很大的误差几乎不出现）、<strong class="kt" data-cat="term" id="hl-73">抵偿性</strong>（次数很多时误差的平均趋于零）。抵偿性就是取平均的理由。</p>
+<p><mark class="hl hl-evidence" data-cat="evidence" id="hl-11"><strong>均匀分布。</strong> 有些误差只知道一定落在
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mi>−</mi><mi>a</mi><mo>,</mo><mi>+</mi><mi>a</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(-a,+a)</annotation></semantics></math>
+内，各处可能性相同，例如仪器允差、数字仪表末位的截断。</mark>均匀分布的标准差为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>/</mi><msqrt><mn>3</mn></msqrt></mrow><annotation encoding="application/x-tex">a/\sqrt3</annotation></semantics></math>，这正是后面
+B 类不确定度除以
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mn>3</mn></msqrt><annotation encoding="application/x-tex">\sqrt3</annotation></semantics></math>
+的来源。</p>
+<div class="figure-row">
+<figure>
+<button aria-label="放大：正态分布与均匀分布。左图阴影为 \mu\pm\sigma 区间；右图误差限定在 (-a,a) 内等可能。" class="figure-open" type="button"><img alt="正态分布与均匀分布。左图阴影为 \mu\pm\sigma 区间；右图误差限定在 (-a,a) 内等可能。" src="实验原图/distributions.png"/></button>
+<figcaption aria-hidden="true">正态分布与均匀分布。左图阴影为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>±</mo><mi>σ</mi></mrow><annotation encoding="application/x-tex">\mu\pm\sigma</annotation></semantics></math>
+区间；右图误差限定在
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mi>−</mi><mi>a</mi><mo>,</mo><mi>a</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(-a,a)</annotation></semantics></math>
+内等可能。</figcaption>
+</figure>
+<figure>
+<button aria-label="放大：随机误差的四个特性。\sigma 越小曲线越尖，数据越集中。" class="figure-open" type="button"><img alt="随机误差的四个特性。\sigma 越小曲线越尖，数据越集中。" src="实验原图/normal-errors.png"/></button>
+<figcaption aria-hidden="true">随机误差的四个特性。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>
+越小曲线越尖，数据越集中。</figcaption>
+</figure>
+</div>
+<h3 id="精密度正确度与准确度">2.4 精密度、正确度与准确度</h3>
+<ul>
+<li><strong class="kt" data-cat="term" id="hl-74">精密度</strong>：多次重复测量值彼此接近的程度，反映随机误差的大小；</li>
+<li><strong class="kt" data-cat="term" id="hl-75">正确度</strong>：测量平均值接近真值的程度，反映系统误差的大小；</li>
+<li><strong class="kt" data-cat="term" id="hl-76">准确度</strong>：测量数据集中在真值附近的程度，是二者的综合。</li>
+</ul>
+<figure>
+<button aria-label="放大：打靶图：A 精密且正确；B 正确但不精密；C 精密但有系统偏差；D 两者都差。准确度 A &gt; B &gt; D &gt; C。" class="figure-open" type="button"><img alt="打靶图：A 精密且正确；B 正确但不精密；C 精密但有系统偏差；D 两者都差。准确度 A &gt; B &gt; D &gt; C。" src="实验原图/precision-accuracy.png"/></button>
+<figcaption aria-hidden="true">打靶图：A 精密且正确；B 正确但不精密；C
+精密但有系统偏差；D 两者都差。准确度 A &gt; B &gt; D &gt;
+C。</figcaption>
+</figure>
+<p>C
+组数据非常集中，看起来“很准”，但整体偏离靶心——这是系统误差。数据重复性好不代表结果对。</p>
+<h2 id="uncertainty">3 直接测量的不确定度</h2>
+<h3 id="什么是不确定度">3.1 什么是不确定度</h3>
+<p>误差无法求出，不确定度是可以评定的量：它根据已有信息，给出测量结果可能分散的范围，总是一个正数。它把两部分合在一起：多次测量中表现出来的随机分散（A
+类），以及用统计方法评定不了的部分，主要是未定系统误差（B 类）。</p>
+<p><strong>A 类、B
+类是按评定方法分的，不严格等于随机误差和系统误差的划分</strong>：A
+类用统计方法算，B
+类用仪器说明书、校准证书等其他信息估计。本课入门时，可以近似把 A
+类对应随机误差、B 类对应仪器允差。</p>
+<h3 id="a-类由重复数据计算">3.2 A 类：由重复数据计算</h3>
+<p>对同一量独立重复测量
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+次，得
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">x_1,\ldots,x_n</annotation></semantics></math>。最佳估计是算术平均值</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>x</mi><mi>i</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">\bar x=\frac1n\sum_{i=1}^nx_i .</annotation></semantics></math></div>
+<p>每一次读数的分散程度用<strong class="kt" data-cat="term" id="hl-77">单次测量的实验标准偏差</strong>（贝塞尔公式）描述：</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><msqrt><mrow><mfrac><mn>1</mn><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo form="prefix" stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><msup><mo form="postfix" stretchy="false">)</mo><mn>2</mn></msup></mrow></msqrt><mi>.</mi></mrow><annotation encoding="application/x-tex">s(x)=\sqrt{\frac{1}{n-1}\sum_{i=1}^n(x_i-\bar x)^2}.</annotation></semantics></math></div>
+<p><mark class="hl hl-counter" data-cat="counter" id="hl-12">分母是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math>
+而不是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>：均值
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><annotation encoding="application/x-tex">\bar x</annotation></semantics></math>
+本身由这些数据算出，偏差之和恒为零，只有
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math>
+个是独立的。</mark></p>
+<p>最后报告的是平均值，平均值比单次读数更稳定，它的标准偏差是</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>A</mi></msub><mo>=</mo><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo form="postfix" stretchy="false">)</mo></mrow><msqrt><mi>n</mi></msqrt></mfrac><mo>=</mo><msqrt><mrow><mfrac><mn>1</mn><mrow><mi>n</mi><mo form="prefix" stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo form="postfix" stretchy="false">)</mo></mrow></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo form="prefix" stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><msup><mo form="postfix" stretchy="false">)</mo><mn>2</mn></msup></mrow></msqrt><mi>.</mi></mrow><annotation encoding="application/x-tex">u_A=s(\bar x)=\frac{s(x)}{\sqrt n}=\sqrt{\frac{1}{n(n-1)}\sum_{i=1}^n(x_i-\bar x)^2}.</annotation></semantics></math></div>
+<div class="block warning">
+<p class="block-title"><strong>易错 ·
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">s(x)</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">s(\bar x)</annotation></semantics></math></strong></p>
+<p><mark class="hl hl-counter" data-cat="counter" id="hl-13"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">s(x)</annotation></semantics></math>
+描述单次读数的分散，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo form="postfix" stretchy="false">)</mo><mi>/</mi><msqrt><mi>n</mi></msqrt></mrow><annotation encoding="application/x-tex">s(\bar x)=s(x)/\sqrt n</annotation></semantics></math>
+描述平均值的分散。</mark>结果报告平均值时，A 类分量用
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">s(\bar x)</annotation></semantics></math>。<mark class="hl hl-counter" data-cat="counter" id="hl-14">不要把
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">s(x)</annotation></semantics></math>
+当作
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mi>A</mi></msub><annotation encoding="application/x-tex">u_A</annotation></semantics></math>，也不要对已经除过
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mi>n</mi></msqrt><annotation encoding="application/x-tex">\sqrt n</annotation></semantics></math>
+的数再除一次。</mark><mark class="hl hl-counter" data-cat="counter" id="hl-15">测量次数一般取
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">6\le n\le10</annotation></semantics></math>：次数太少统计不可靠，太多则
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msqrt><mi>n</mi></msqrt></mrow><annotation encoding="application/x-tex">1/\sqrt n</annotation></semantics></math>
+的改善很慢，而且时间长了条件容易漂移。</mark></p>
+</div>
+<h3 id="b-类由仪器允差估计">3.3 B 类：由仪器允差估计</h3>
+<p>仪器的允差（示值误差）<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">Δ</mi><mtext mathvariant="normal">仪</mtext></msub><annotation encoding="application/x-tex">\Delta_{\text{仪}}</annotation></semantics></math>
+表示在正常使用下读数与真值的差不超过
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>±</mi><msub><mi mathvariant="normal">Δ</mi><mtext mathvariant="normal">仪</mtext></msub></mrow><annotation encoding="application/x-tex">\pm\Delta_{\text{仪}}</annotation></semantics></math>。常见仪器：</p>
+<table>
+<thead>
+<tr>
+<th>仪器</th>
+<th>量程</th>
+<th>分度值</th>
+<th>允差</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>钢板尺</td>
+<td>150 mm</td>
+<td>1 mm</td>
+<td>±0.10 mm</td>
+</tr>
+<tr>
+<td>钢板尺</td>
+<td>500 mm</td>
+<td>1 mm</td>
+<td>±0.15 mm</td>
+</tr>
+<tr>
+<td>钢板尺</td>
+<td>1000 mm</td>
+<td>1 mm</td>
+<td>±0.20 mm</td>
+</tr>
+<tr>
+<td>游标卡尺</td>
+<td>125 mm</td>
+<td>0.02 mm</td>
+<td>±0.02 mm</td>
+</tr>
+<tr>
+<td>螺旋测微器（1 级）</td>
+<td>25 mm</td>
+<td>0.01 mm</td>
+<td>±0.004 mm</td>
+</tr>
+<tr>
+<td>电表（0.5 级）</td>
+<td>—</td>
+<td>—</td>
+<td>0.5% × 量程</td>
+</tr>
+<tr>
+<td>机械停表、数字毫秒表</td>
+<td>—</td>
+<td>0.1 s</td>
+<td>0.1 s</td>
+</tr>
+<tr>
+<td>物理天平</td>
+<td>500 g</td>
+<td>0.05 g</td>
+<td>0.08 g（接近满量程）</td>
+</tr>
+</tbody>
+</table>
+<p>电表按等级给出：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mtext mathvariant="normal">仪</mtext></msub><mo>=</mo><mtext mathvariant="normal">量程</mtext><mo>×</mo><mtext mathvariant="normal">级别</mtext><mi>%</mi></mrow><annotation encoding="application/x-tex">\Delta_{\text{仪}}=\text{量程}\times\text{级别}\%</annotation></semantics></math>。<mark class="hl hl-evidence" data-cat="evidence" id="hl-16">例如量程
+100 mV、0.5
+级的电压表，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mtext mathvariant="normal">仪</mtext></msub><mo>=</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">\Delta_{\text{仪}}=0.5</annotation></semantics></math>
+mV，而且<strong>不论读数大小都是这个值</strong>，所以读数越接近满量程，相对误差越小。</mark></p>
+<p>允差在
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mi>−</mi><msub><mi mathvariant="normal">Δ</mi><mtext mathvariant="normal">仪</mtext></msub><mo>,</mo><msub><mi mathvariant="normal">Δ</mi><mtext mathvariant="normal">仪</mtext></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(-\Delta_{\text{仪}},\Delta_{\text{仪}})</annotation></semantics></math>
+内按均匀分布处理，得</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>B</mi></msub><mo>=</mo><mfrac><msub><mi mathvariant="normal">Δ</mi><mtext mathvariant="normal">仪</mtext></msub><msqrt><mn>3</mn></msqrt></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">u_B=\frac{\Delta_{\text{仪}}}{\sqrt3}.</annotation></semantics></math></div>
+<p>若按正态分布、以
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>σ</mi></mrow><annotation encoding="application/x-tex">3\sigma</annotation></semantics></math>
+为界处理，则为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mtext mathvariant="normal">仪</mtext></msub><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">\Delta_{\text{仪}}/3</annotation></semantics></math>。本课程采用均匀分布
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mtext mathvariant="normal">仪</mtext></msub><mi>/</mi><msqrt><mn>3</mn></msqrt></mrow><annotation encoding="application/x-tex">\Delta_{\text{仪}}/\sqrt3</annotation></semantics></math>。</p>
+<div class="block example">
+<p class="block-title"><strong>例题 · 按精度要求选电表</strong></p>
+<p><mark class="hl hl-evidence" data-cat="evidence" id="hl-17">测约 1.5 V 的电压，要求相对误差不超过 1.5%。</mark>可选：0.5 级量程 5 V；1.0
+级量程 2 V；2.5 级量程 1.5 V。</p>
+<p>三块表的允差分别为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>×</mo><mn>0.5</mn><mi>%</mi><mo>=</mo><mn>0.025</mn></mrow><annotation encoding="application/x-tex">5\times0.5\%=0.025</annotation></semantics></math>
+V、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>×</mo><mn>1.0</mn><mi>%</mi><mo>=</mo><mn>0.020</mn></mrow><annotation encoding="application/x-tex">2\times1.0\%=0.020</annotation></semantics></math>
+V、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.5</mn><mo>×</mo><mn>2.5</mn><mi>%</mi><mo>=</mo><mn>0.0375</mn></mrow><annotation encoding="application/x-tex">1.5\times2.5\%=0.0375</annotation></semantics></math>
+V，相对误差分别为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.7</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">1.7\%</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.3</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">1.3\%</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.5</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">2.5\%</annotation></semantics></math>。只有
+1.0 级 2 V
+表满足要求。等级高的表若量程选大了，反而不如等级低一些、量程合适的表。</p>
+</div>
+<h3 id="合成与结果表达">3.4 合成与结果表达</h3>
+<p>A、B 两类分量相互独立，按方和根合成：</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><msqrt><mrow><msubsup><mi>u</mi><mi>A</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>u</mi><mi>B</mi><mn>2</mn></msubsup></mrow></msqrt><mi>.</mi></mrow><annotation encoding="application/x-tex">u=\sqrt{u_A^2+u_B^2}.</annotation></semantics></math></div>
+<div class="block result">
+<p class="block-title"><strong>结论 · 直接测量的完整步骤</strong></p>
+<ol>
+<li><mark class="hl hl-thesis" data-cat="thesis" id="hl-18">修正已定系统误差（如零位）；</mark></li>
+<li><mark class="hl hl-thesis" data-cat="thesis" id="hl-19">求平均值
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><annotation encoding="application/x-tex">\bar x</annotation></semantics></math>；</mark></li>
+<li>求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">s(x)</annotation></semantics></math>
+和
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>A</mi></msub><mo>=</mo><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo form="postfix" stretchy="false">)</mo><mi>/</mi><msqrt><mi>n</mi></msqrt></mrow><annotation encoding="application/x-tex">u_A=s(x)/\sqrt n</annotation></semantics></math>；</li>
+<li><mark class="hl hl-thesis" data-cat="thesis" id="hl-20">由仪器允差求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>B</mi></msub><mo>=</mo><msub><mi mathvariant="normal">Δ</mi><mtext mathvariant="normal">仪</mtext></msub><mi>/</mi><msqrt><mn>3</mn></msqrt></mrow><annotation encoding="application/x-tex">u_B=\Delta_{\text{仪}}/\sqrt3</annotation></semantics></math>；</mark></li>
+<li>合成
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><msqrt><mrow><msubsup><mi>u</mi><mi>A</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>u</mi><mi>B</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="application/x-tex">u=\sqrt{u_A^2+u_B^2}</annotation></semantics></math>；</li>
+<li><mark class="hl hl-thesis" data-cat="thesis" id="hl-21">按第 5 单元的规则修约，写成
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mo>±</mo><mi>u</mi></mrow><annotation encoding="application/x-tex">x=\bar x\pm u</annotation></semantics></math>（单位），必要时附相对不确定度
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mi>/</mi><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow></mrow><annotation encoding="application/x-tex">u/\bar x</annotation></semantics></math>。</mark></li>
+</ol>
+</div>
+<figure>
+<button aria-label="放大：结果表达式中的三层含义：平均值反映正确度，u 中的 A 类反映精密度，合起来反映准确度。" class="figure-open" type="button"><img alt="结果表达式中的三层含义：平均值反映正确度，u 中的 A 类反映精密度，合起来反映准确度。" src="实验原图/result-expression.png"/></button>
+<figcaption aria-hidden="true">结果表达式中的三层含义：平均值反映正确度，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+中的 A 类反映精密度，合起来反映准确度。</figcaption>
+</figure>
+<p>只进行一次测量时，没有 A
+类分量，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><msub><mi>u</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">u=u_B</annotation></semantics></math>。</p>
+<div class="block example">
+<p class="block-title"><strong>例题 · 钢丝直径</strong></p>
+<p><mark class="hl hl-evidence" data-cat="evidence" id="hl-22">用螺旋测微器测钢丝直径 6
+次（mm）：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.249</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0.250</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0.244</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0.256</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0.253</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0.242</mn></mrow><annotation encoding="application/x-tex">0.249,\ 0.250,\ 0.244,\ 0.256,\ 0.253,\ 0.242</annotation></semantics></math>。</mark>零位读数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mi>+</mi><mn>0.005</mn></mrow><annotation encoding="application/x-tex">x_0=+0.005</annotation></semantics></math>
+mm，允差
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mtext mathvariant="normal">仪</mtext></msub><mo>=</mo><mn>0.004</mn></mrow><annotation encoding="application/x-tex">\Delta_{\text{仪}}=0.004</annotation></semantics></math>
+mm。写出测量结果。</p>
+<p>平均值
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mo>=</mo><mn>1.494</mn><mi>/</mi><mn>6</mn><mo>=</mo><mn>0.249</mn></mrow><annotation encoding="application/x-tex">\bar x=1.494/6=0.249</annotation></semantics></math>
+mm。零位为正，说明读数偏大，修正后
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mn>0.244</mn></mrow><annotation encoding="application/x-tex">d=\bar x-x_0=0.244</annotation></semantics></math>
+mm。</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mn>0.0053</mn><mspace width="0.222em"></mspace><mtext mathvariant="normal">mm</mtext><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>u</mi><mi>A</mi></msub><mo>=</mo><mfrac><mn>0.0053</mn><msqrt><mn>6</mn></msqrt></mfrac><mo>=</mo><mn>0.0022</mn><mspace width="0.222em"></mspace><mtext mathvariant="normal">mm</mtext><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>u</mi><mi>B</mi></msub><mo>=</mo><mfrac><mn>0.004</mn><msqrt><mn>3</mn></msqrt></mfrac><mo>=</mo><mn>0.0023</mn><mspace width="0.222em"></mspace><mtext mathvariant="normal">mm</mtext><mo>,</mo></mrow><annotation encoding="application/x-tex">s(x)=0.0053\ \text{mm},\qquad u_A=\frac{0.0053}{\sqrt6}=0.0022\ \text{mm},\qquad u_B=\frac{0.004}{\sqrt3}=0.0023\ \text{mm},</annotation></semantics></math></div>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><msqrt><mrow><msup><mn>0.0022</mn><mn>2</mn></msup><mo>+</mo><msup><mn>0.0023</mn><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mn>0.0032</mn><mspace width="0.222em"></mspace><mtext mathvariant="normal">mm</mtext><mi>.</mi></mrow><annotation encoding="application/x-tex">u=\sqrt{0.0022^2+0.0023^2}=0.0032\ \text{mm}.</annotation></semantics></math></div>
+<p>不确定度首位是 3，保留一位，后一位非零进位得
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.004</mn><annotation encoding="application/x-tex">0.004</annotation></semantics></math>
+mm。结果</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>0.244</mn><mo>±</mo><mn>0.004</mn><mo form="postfix" stretchy="false">)</mo><mspace width="0.222em"></mspace><mtext mathvariant="normal">mm</mtext><mi>.</mi></mrow><annotation encoding="application/x-tex">d=(0.244\pm0.004)\ \text{mm}.</annotation></semantics></math></div>
+<p>检查：六个数之和是 1.494，平均值是 0.249，不是
+0.250——计算中间结果时要多保留一两位，最后再修约。零位的正负号决定加还是减：零位为正时读数整体偏大，要减去。</p>
+</div>
+<div class="block example">
+<p class="block-title"><strong>例题 · 圆棒长度</strong></p>
+<p><mark class="hl hl-evidence" data-cat="evidence" id="hl-23">用 50 分度游标卡尺（允差 0.02 mm）测圆棒长度 6
+次（mm）：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>250.08</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>250.14</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>250.24</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>250.06</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>250.10</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>250.02</mn></mrow><annotation encoding="application/x-tex">250.08,\ 250.14,\ 250.24,\ 250.06,\ 250.10,\ 250.02</annotation></semantics></math>。</mark></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>L</mi></mrow><mo>=</mo><mn>250.107</mn></mrow><annotation encoding="application/x-tex">\bar L=250.107</annotation></semantics></math>
+mm，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>L</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mn>0.077</mn></mrow><annotation encoding="application/x-tex">s(L)=0.077</annotation></semantics></math>
+mm，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>A</mi></msub><mo>=</mo><mn>0.077</mn><mi>/</mi><msqrt><mn>6</mn></msqrt><mo>=</mo><mn>0.031</mn></mrow><annotation encoding="application/x-tex">u_A=0.077/\sqrt6=0.031</annotation></semantics></math>
+mm，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>B</mi></msub><mo>=</mo><mn>0.02</mn><mi>/</mi><msqrt><mn>3</mn></msqrt><mo>=</mo><mn>0.012</mn></mrow><annotation encoding="application/x-tex">u_B=0.02/\sqrt3=0.012</annotation></semantics></math>
+mm，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><msqrt><mrow><msup><mn>0.031</mn><mn>2</mn></msup><mo>+</mo><msup><mn>0.012</mn><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mn>0.033</mn></mrow><annotation encoding="application/x-tex">u=\sqrt{0.031^2+0.012^2}=0.033</annotation></semantics></math>
+mm。修约得
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.04</mn><annotation encoding="application/x-tex">0.04</annotation></semantics></math>
+mm，结果</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>250.11</mn><mo>±</mo><mn>0.04</mn><mo form="postfix" stretchy="false">)</mo><mspace width="0.222em"></mspace><mtext mathvariant="normal">mm</mtext><mi>.</mi></mrow><annotation encoding="application/x-tex">L=(250.11\pm0.04)\ \text{mm}.</annotation></semantics></math></div>
+<p><mark class="hl hl-counter" data-cat="counter" id="hl-24">这组数据的 A 类比 B
+类大得多，说明主要误差来自重复测量的分散（例如测量位置不同、棒端不平），而不是卡尺本身。</mark>这种比较就是误差分析该写的内容。</p>
+</div>
+<h2 id="propagation">4 间接测量的不确定度</h2>
+<h3 id="传播公式的来历">4.1 传播公式的来历</h3>
+<p>设
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>f</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y=f(x_1,x_2,\ldots,x_n)</annotation></semantics></math>，各直接测量量的不确定度为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">u(x_i)</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mi>i</mi></msub><annotation encoding="application/x-tex">x_i</annotation></semantics></math>
+的一个小偏差
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">d</mi><msub><mi>x</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\mathrm dx_i</annotation></semantics></math>
+引起
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+的偏差为全微分</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">d</mi><mi>y</mi><mo>=</mo><mfrac><mrow><mi>∂</mi><mi>f</mi></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac><mi mathvariant="normal">d</mi><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mi>⋯</mi><mo>+</mo><mfrac><mrow><mi>∂</mi><mi>f</mi></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mi>n</mi></msub></mrow></mfrac><mi mathvariant="normal">d</mi><msub><mi>x</mi><mi>n</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathrm dy=\frac{\partial f}{\partial x_1}\mathrm dx_1+\cdots+\frac{\partial f}{\partial x_n}\mathrm dx_n .</annotation></semantics></math></div>
+<p>把
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">d</mi><msub><mi>x</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\mathrm dx_i</annotation></semantics></math>
+换成
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">u(x_i)</annotation></semantics></math>。<mark class="hl hl-counter" data-cat="counter" id="hl-25">各输入量相互独立时，它们的偏差不会总是同号叠加，所以按方和根合成，而不是直接相加：</mark></p>
+<div class="block theorem">
+<p class="block-title"><strong>定理 1 · 不确定度传播（输入量相互独立）</strong></p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>c</mi></msub><mo form="prefix" stretchy="false">(</mo><mi>y</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><msqrt><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><mrow><mi>∂</mi><mi>f</mi></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup><msup><mi>u</mi><mn>2</mn></msup><mo form="prefix" stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow></msqrt><mi>.</mi><mspace width="2.0em"></mspace><mtext mathvariant="normal">（和差形式方便）</mtext></mrow><annotation encoding="application/x-tex">u_c(y)=\sqrt{\sum_{i=1}^n\left(\frac{\partial f}{\partial x_i}\right)^2u^2(x_i)} .\qquad\text{（和差形式方便）}</annotation></semantics></math></div>
+<p><mark class="hl hl-thesis" data-cat="thesis" id="hl-26">两边先取对数再微分，得到相对不确定度：</mark></p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msub><mi>u</mi><mi>c</mi></msub><mo form="prefix" stretchy="false">(</mo><mi>y</mi><mo form="postfix" stretchy="false">)</mo></mrow><mi>y</mi></mfrac><mo>=</mo><msqrt><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><mrow><mi>∂</mi><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mi>f</mi></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup><msup><mi>u</mi><mn>2</mn></msup><mo form="prefix" stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow></msqrt><mi>.</mi><mspace width="2.0em"></mspace><mtext mathvariant="normal">（积商形式方便）</mtext></mrow><annotation encoding="application/x-tex">\frac{u_c(y)}{y}=\sqrt{\sum_{i=1}^n\left(\frac{\partial\ln f}{\partial x_i}\right)^2u^2(x_i)} .\qquad\text{（积商形式方便）}</annotation></semantics></math></div>
+</div>
+<p>偏导数就是“灵敏度”：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+对哪个输入量越敏感，那个量的不确定度对结果影响越大。</p>
+<div class="block result">
+<p class="block-title"><strong>结论 · 常用函数的传播式</strong></p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>不确定度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi>x</mi><mo>±</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">N=x\pm y</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>N</mi></msub><mo>=</mo><msqrt><mrow><msubsup><mi>u</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>u</mi><mi>y</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="application/x-tex">u_N=\sqrt{u_x^2+u_y^2}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi>x</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">N=xy</annotation></semantics></math>
+或
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi>x</mi><mi>/</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">N=x/y</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle displaystyle="true"><mfrac><msub><mi>u</mi><mi>N</mi></msub><mi>N</mi></mfrac></mstyle><mo>=</mo><msqrt><mrow><msup><mrow><mo form="prefix" stretchy="true">(</mo><mstyle displaystyle="true"><mfrac><msub><mi>u</mi><mi>x</mi></msub><mi>x</mi></mfrac></mstyle><mo form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo form="prefix" stretchy="true">(</mo><mstyle displaystyle="true"><mfrac><msub><mi>u</mi><mi>y</mi></msub><mi>y</mi></mfrac></mstyle><mo form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\dfrac{u_N}{N}=\sqrt{\left(\dfrac{u_x}{x}\right)^2+\left(\dfrac{u_y}{y}\right)^2}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi>k</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">N=kx</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>N</mi></msub><mo>=</mo><mo form="prefix" stretchy="false">|</mo><mi>k</mi><mo form="postfix" stretchy="false">|</mo><msub><mi>u</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">u_N=\lvert k\rvert u_x</annotation></semantics></math></td>
+</tr>
+<tr>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><msup><mi>x</mi><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">N=x^k</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle displaystyle="true"><mfrac><msub><mi>u</mi><mi>N</mi></msub><mi>N</mi></mfrac></mstyle><mo>=</mo><mo form="prefix" stretchy="false">|</mo><mi>k</mi><mo form="postfix" stretchy="false">|</mo><mstyle displaystyle="true"><mfrac><msub><mi>u</mi><mi>x</mi></msub><mrow><mo form="prefix" stretchy="false">|</mo><mi>x</mi><mo form="postfix" stretchy="false">|</mo></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\dfrac{u_N}{N}=\lvert k\rvert\dfrac{u_x}{\lvert x\rvert}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>记忆方法：<strong>和差看绝对不确定度，积商看相对不确定度</strong>。幂次会把相对不确定度放大
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><mi>k</mi><mo form="prefix" stretchy="false">|</mo></mrow><annotation encoding="application/x-tex">|k|</annotation></semantics></math>
+倍，所以公式中次数最高的量要测得最仔细。<mark class="hl hl-evidence" data-cat="evidence" id="hl-27">例如
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y=x^2</annotation></semantics></math>
+时
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>y</mi></msub><mi>/</mi><mi>y</mi><mo>=</mo><mn>2</mn><msub><mi>u</mi><mi>x</mi></msub><mi>/</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">u_y/y=2u_x/x</annotation></semantics></math>。</mark></p>
+<div class="block warning">
+<p class="block-title"><strong>易错 · 差值会放大相对不确定度</strong></p>
+<p><mark class="hl hl-counter" data-cat="counter" id="hl-28"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi>x</mi><mo>−</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">N=x-y</annotation></semantics></math>
+且
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>≈</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x\approx y</annotation></semantics></math>
+时，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mi>N</mi></msub><annotation encoding="application/x-tex">u_N</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mi>x</mi></msub><annotation encoding="application/x-tex">u_x</annotation></semantics></math>
+同量级，而
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+很小，相对不确定度会很大。</mark>例如两次读数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10.25</mn><annotation encoding="application/x-tex">10.25</annotation></semantics></math>
+与
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10.20</mn><annotation encoding="application/x-tex">10.20</annotation></semantics></math>
+cm，各有
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.02</mn><annotation encoding="application/x-tex">0.02</annotation></semantics></math>
+cm 的不确定度，差值的不确定度为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mrow><msup><mn>0.02</mn><mn>2</mn></msup><mo>+</mo><msup><mn>0.02</mn><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mn>0.029</mn></mrow><annotation encoding="application/x-tex">\sqrt{0.02^2+0.02^2}=0.029</annotation></semantics></math>
+cm，结果
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mn>0.050</mn><mo>±</mo><mn>0.029</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(0.050\pm0.029)</annotation></semantics></math>
+cm，相对不确定度接近
+60%。设计实验时应避免让目标量等于两个相近量的差。</p>
+</div>
+<h3 id="圆环体积">4.2 圆环体积</h3>
+<div class="block example">
+<p class="block-title"><strong>例题 · 圆环体积及其不确定度</strong></p>
+<p><mark class="hl hl-evidence" data-cat="evidence" id="hl-29">圆环外径
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mn>9.800</mn><mo>±</mo><mn>0.005</mn></mrow><annotation encoding="application/x-tex">D=9.800\pm0.005</annotation></semantics></math>
+mm，内径
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>4.500</mn><mo>±</mo><mn>0.005</mn></mrow><annotation encoding="application/x-tex">d=4.500\pm0.005</annotation></semantics></math>
+mm，高
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mn>5.000</mn><mo>±</mo><mn>0.005</mn></mrow><annotation encoding="application/x-tex">h=5.000\pm0.005</annotation></semantics></math>
+mm。</mark>求体积及不确定度。</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mfrac><mi>π</mi><mn>4</mn></mfrac><mo form="prefix" stretchy="false">(</mo><msup><mi>D</mi><mn>2</mn></msup><mo>−</mo><msup><mi>d</mi><mn>2</mn></msup><mo form="postfix" stretchy="false">)</mo><mi>h</mi><mo>=</mo><mfrac><mi>π</mi><mn>4</mn></mfrac><mo form="prefix" stretchy="false">(</mo><msup><mn>9.800</mn><mn>2</mn></msup><mo>−</mo><msup><mn>4.500</mn><mn>2</mn></msup><mo form="postfix" stretchy="false">)</mo><mo>×</mo><mn>5.000</mn><mo>=</mo><mn>297.6</mn><mspace width="0.222em"></mspace><msup><mtext mathvariant="normal">mm</mtext><mn>3</mn></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">V=\frac\pi4(D^2-d^2)h=\frac\pi4(9.800^2-4.500^2)\times5.000=297.6\ \text{mm}^3 .</annotation></semantics></math></div>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
+是积商形式，取对数：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mi>V</mi><mo>=</mo><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mfrac><mi>π</mi><mn>4</mn></mfrac><mo>+</mo><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><msup><mi>D</mi><mn>2</mn></msup><mo>−</mo><msup><mi>d</mi><mn>2</mn></msup><mo form="postfix" stretchy="false">)</mo><mo>+</mo><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">\ln V=\ln\frac\pi4+\ln(D^2-d^2)+\ln h</annotation></semantics></math>，</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>∂</mi><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mi>V</mi></mrow><mrow><mi>∂</mi><mi>D</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>2</mn><mi>D</mi></mrow><mrow><msup><mi>D</mi><mn>2</mn></msup><mo>−</mo><msup><mi>d</mi><mn>2</mn></msup></mrow></mfrac><mo>,</mo><mspace width="2.0em"></mspace><mfrac><mrow><mi>∂</mi><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mi>V</mi></mrow><mrow><mi>∂</mi><mi>d</mi></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><mrow><mn>2</mn><mi>d</mi></mrow><mrow><msup><mi>D</mi><mn>2</mn></msup><mo>−</mo><msup><mi>d</mi><mn>2</mn></msup></mrow></mfrac><mo>,</mo><mspace width="2.0em"></mspace><mfrac><mrow><mi>∂</mi><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mi>V</mi></mrow><mrow><mi>∂</mi><mi>h</mi></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mi>h</mi></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">\frac{\partial\ln V}{\partial D}=\frac{2D}{D^2-d^2},\qquad \frac{\partial\ln V}{\partial d}=-\frac{2d}{D^2-d^2},\qquad \frac{\partial\ln V}{\partial h}=\frac1h .</annotation></semantics></math></div>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>D</mi><mn>2</mn></msup><mo>−</mo><msup><mi>d</mi><mn>2</mn></msup><mo>=</mo><mn>75.79</mn></mrow><annotation encoding="application/x-tex">D^2-d^2=75.79</annotation></semantics></math>
+mm²，代入</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>u</mi><mi>V</mi></msub><mi>V</mi></mfrac><mo>=</mo><msqrt><mrow><msup><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mn>9.800</mn><mo>×</mo><mn>0.005</mn></mrow><mn>75.79</mn></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mn>4.500</mn><mo>×</mo><mn>0.005</mn></mrow><mn>75.79</mn></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><mn>0.005</mn><mn>5.000</mn></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mn>0.0017</mn><mo>=</mo><mn>0.17</mn><mi>%</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\frac{u_V}{V}=\sqrt{\left(\frac{2\times9.800\times0.005}{75.79}\right)^2+\left(\frac{2\times4.500\times0.005}{75.79}\right)^2+\left(\frac{0.005}{5.000}\right)^2}=0.0017=0.17\% .</annotation></semantics></math></div>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>V</mi></msub><mo>=</mo><mn>297.6</mn><mo>×</mo><mn>0.0017</mn><mo>=</mo><mn>0.52</mn></mrow><annotation encoding="application/x-tex">u_V=297.6\times0.0017=0.52</annotation></semantics></math>
+mm³，修约为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.6</mn><annotation encoding="application/x-tex">0.6</annotation></semantics></math>
+mm³（首位 5，保留一位，后一位非零进位）。结果</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>297.6</mn><mo>±</mo><mn>0.6</mn><mo form="postfix" stretchy="false">)</mo><mspace width="0.222em"></mspace><msup><mtext mathvariant="normal">mm</mtext><mn>3</mn></msup><mo>,</mo><mspace width="2.0em"></mspace><mfrac><msub><mi>u</mi><mi>V</mi></msub><mi>V</mi></mfrac><mo>=</mo><mn>0.17</mn><mi>%</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">V=(297.6\pm0.6)\ \text{mm}^3,\qquad \frac{u_V}{V}=0.17\% .</annotation></semantics></math></div>
+<p>三项中外径一项最大（0.13%），因为它以平方出现且数值最大。也可以直接用第一个公式，偏导数为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>∂</mi><mi>V</mi></mrow><mrow><mi>∂</mi><mi>D</mi></mrow></mfrac><mo>=</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mi>D</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">\frac{\partial V}{\partial D}=\frac\pi2Dh</annotation></semantics></math>
+等，结果相同。</p>
+</div>
+<h3 id="两类公式的选择">4.3 两类公式的选择</h3>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+由加减构成时，用绝对形式直接合成；<mark class="hl hl-claim" data-cat="claim" id="hl-30">由乘除、幂构成时，先求相对不确定度更简单，最后再乘以
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+得到绝对值。</mark>两种写法是同一个公式，只是计算量不同。</p>
+<h2 id="significant-figures">5 有效数字与修约</h2>
+<h3 id="位数由不确定度决定">5.1 位数由不确定度决定</h3>
+<p>有效数字不是随意保留的：<strong>测量结果的最后一位要与不确定度的最后一位对齐</strong>，而不确定度本身只取一到两位。</p>
+<div class="block result">
+<p class="block-title"><strong>结论 · 本课程的取位规则</strong></p>
+<ol>
+<li><mark class="hl hl-thesis" data-cat="thesis" id="hl-31">不确定度首位是 1 或 2 时保留两位，首位是 3 及以上时保留一位；</mark></li>
+<li><mark class="hl hl-thesis" data-cat="thesis" id="hl-32">不确定度修约时，要保留的最后一位之后的数<strong>不为零就进位</strong>，为零则舍去（保守地往大估）；</mark></li>
+<li><mark class="hl hl-thesis" data-cat="thesis" id="hl-33">测量值按“四舍六入五凑偶”修约到与不确定度末位对齐；</mark></li>
+<li><mark class="hl hl-thesis" data-cat="thesis" id="hl-34">完整结果写成（数值 ±
+不确定度）单位，数量级大时用科学记数法，数值与不确定度用同一个
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mi>n</mi></msup><annotation encoding="application/x-tex">10^n</annotation></semantics></math>。</mark></li>
+</ol>
+</div>
+<p>例：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>c</mi></msub><mo>=</mo><mn>0.12134</mn><mo>→</mo><mn>0.13</mn></mrow><annotation encoding="application/x-tex">u_c=0.12134\to0.13</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>c</mi></msub><mo>=</mo><mn>0.1201</mn><mo>→</mo><mn>0.12</mn></mrow><annotation encoding="application/x-tex">u_c=0.1201\to0.12</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>c</mi></msub><mo>=</mo><mn>0.3421</mn><mo>→</mo><mn>0.4</mn></mrow><annotation encoding="application/x-tex">u_c=0.3421\to0.4</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>c</mi></msub><mo>=</mo><mn>0.3021</mn><mo>→</mo><mn>0.3</mn></mrow><annotation encoding="application/x-tex">u_c=0.3021\to0.3</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>2.3450</mn><mo>±</mo><mn>0.0320</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">S=(2.3450\pm0.0320)</annotation></semantics></math>
+cm² 写成
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mn>2.34</mn><mo>±</mo><mn>0.04</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(2.34\pm0.04)</annotation></semantics></math>
+cm²；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>2.3530</mn><mo>±</mo><mn>0.0212</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">S=(2.3530\pm0.0212)</annotation></semantics></math>
+cm² 写成
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mn>2.353</mn><mo>±</mo><mn>0.022</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(2.353\pm0.022)</annotation></semantics></math>
+cm²。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mn>4400000</mn><mo>±</mo><mn>2000</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(4400000\pm2000)</annotation></semantics></math>
+m 应写成
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mn>4.4000</mn><mo>±</mo><mn>0.0020</mn><mo form="postfix" stretchy="false">)</mo><mo>×</mo><msup><mn>10</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">(4.4000\pm0.0020)\times10^6</annotation></semantics></math>
+m。</p>
+<h3 id="修约规则">5.2 修约规则</h3>
+<p><strong class="kt" data-cat="term" id="hl-78">四舍六入五凑偶：</strong> 要舍去的部分小于 5 舍，大于 5
+入；恰好是 5（后面全为零）时，使保留的末位成为偶数。取四位有效数字：</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.717499</mn><mo>→</mo><mn>2.717</mn><mo>,</mo><mspace width="1.0em"></mspace><mn>5.165509</mn><mo>→</mo><mn>5.166</mn><mo>,</mo><mspace width="1.0em"></mspace><mn>4.510500</mn><mo>→</mo><mn>4.510</mn><mo>,</mo><mspace width="1.0em"></mspace><mn>4.511500</mn><mo>→</mo><mn>4.512</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">2.717499\to2.717,\quad 5.165509\to5.166,\quad 4.510500\to4.510,\quad 4.511500\to4.512 .</annotation></semantics></math></div>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4.510501</mn><mo>→</mo><mn>4.511</mn></mrow><annotation encoding="application/x-tex">4.510501\to4.511</annotation></semantics></math>：舍去部分
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.000501</mn><annotation encoding="application/x-tex">0.000501</annotation></semantics></math>
+大于半个单位，不属于“恰好是
+5”的情形。“凑偶”让舍和入的机会均等，大量数据修约时不会系统地偏大。</p>
+<p>不确定度修约与数值修约用的是不同规则：数值力求无偏，不确定度宁大勿小。</p>
+<h3 id="运算中的有效数字">5.3 运算中的有效数字</h3>
+<p>没有给出不确定度时，间接结果的位数按以下规则粗略确定：</p>
+<ul>
+<li><strong class="kt" data-cat="term" id="hl-79">加减</strong>：结果的末位与参与运算各数中末位<strong class="kt" data-cat="term" id="hl-80">最高</strong>的那个对齐。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12.4</mn><mo>+</mo><mn>0.571</mn><mo>=</mo><mn>12.971</mn><mo>→</mo><mn>13.0</mn></mrow><annotation encoding="application/x-tex">12.4+0.571=12.971\to13.0</annotation></semantics></math>。</li>
+<li><strong class="kt" data-cat="term" id="hl-81">乘除</strong>：结果的有效位数与参与运算各数中有效位数<strong class="kt" data-cat="term" id="hl-82">最少</strong>的相同。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3600</mn><mo>×</mo><mn>8.0</mn><mo>=</mo><mn>28800</mn><mo>→</mo><mn>2.9</mn><mo>×</mo><msup><mn>10</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">3600\times8.0=28800\to2.9\times10^4</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6.600</mn><mo>÷</mo><mn>6.0</mn><mo>=</mo><mn>1.1</mn></mrow><annotation encoding="application/x-tex">6.600\div6.0=1.1</annotation></semantics></math>；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>12</mn><mn>3</mn></msup><mo>×</mo><mn>3</mn><mo>=</mo><mn>5184</mn><mo>→</mo><mn>5</mn><mo>×</mo><msup><mn>10</mn><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">12^3\times3=5184\to5\times10^3</annotation></semantics></math>。</li>
+<li><strong class="kt" data-cat="term" id="hl-83">函数</strong>：由传播决定位数。<mark class="hl hl-evidence" data-cat="evidence" id="hl-35">例如
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><msup><mn>85</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">\theta=85^\circ</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>θ</mi><mo>=</mo><msup><mn>1</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">\Delta\theta=1^\circ</annotation></semantics></math>
+时，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>θ</mi><mo>=</mo><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>θ</mi><mo>⋅</mo><mi mathvariant="normal">Δ</mi><mi>θ</mi><mo>=</mo><mn>0.087</mn><mo>×</mo><mn>0.0175</mn><mo>≈</mo><mn>0.0015</mn></mrow><annotation encoding="application/x-tex">\Delta\sin\theta=\cos\theta\cdot\Delta\theta=0.087\times0.0175\approx0.0015</annotation></semantics></math>，所以
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><msup><mn>85</mn><mo>∘</mo></msup><mo>=</mo><mn>0.996</mn></mrow><annotation encoding="application/x-tex">\sin85^\circ=0.996</annotation></semantics></math>，保留到千分位。</mark></li>
+</ul>
+<p><mark class="hl hl-counter" data-cat="counter" id="hl-36">单位换算不改变有效位数：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>980</mn><annotation encoding="application/x-tex">980</annotation></semantics></math>
+cm/s² 写成 m/s² 是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>9.80</mn><annotation encoding="application/x-tex">9.80</annotation></semantics></math>
+m/s²，末尾的 0 不能丢。</mark>常数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>π</mi><annotation encoding="application/x-tex">\pi</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mn>2</mn></msqrt><annotation encoding="application/x-tex">\sqrt2</annotation></semantics></math>
+等取的位数应比参与运算的测量值多一位，不让它们成为限制精度的因素。<strong>计算过程中多保留一两位，只在最后修约一次</strong>，避免累积修约误差。</p>
+<h2 id="data-methods">6 数据处理方法</h2>
+<h3 id="列表法">6.1 列表法</h3>
+<p>把原始数据、中间结果按顺序列表，表头写明物理量和单位，读数保留原始的有效位数。<mark class="hl hl-counter" data-cat="counter" id="hl-37">好的表格本身就能显示规律，也便于检查错误。</mark><mark class="hl hl-evidence" data-cat="evidence" id="hl-38">例如在杨氏模量实验中，同时记录增砝码和减砝码时的读数并取平均，可以抵消摩擦和弹性滞后的影响。</mark></p>
+<h3 id="successive-difference">6.2 逐差法</h3>
+<p>测得等间距变化的 10 个读数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>A</mi><mn>10</mn></msub></mrow><annotation encoding="application/x-tex">A_1,\ldots,A_{10}</annotation></semantics></math>，要求每一步的平均增量。如果逐项相减再平均：</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mrow><mi mathvariant="normal">Δ</mi><mi>A</mi></mrow></mrow><mo>=</mo><mfrac><mrow><mo form="prefix" stretchy="false">(</mo><msub><mi>A</mi><mn>2</mn></msub><mo>−</mo><msub><mi>A</mi><mn>1</mn></msub><mo form="postfix" stretchy="false">)</mo><mo>+</mo><mo form="prefix" stretchy="false">(</mo><msub><mi>A</mi><mn>3</mn></msub><mo>−</mo><msub><mi>A</mi><mn>2</mn></msub><mo form="postfix" stretchy="false">)</mo><mo>+</mo><mi>⋯</mi><mo>+</mo><mo form="prefix" stretchy="false">(</mo><msub><mi>A</mi><mn>10</mn></msub><mo>−</mo><msub><mi>A</mi><mn>9</mn></msub><mo form="postfix" stretchy="false">)</mo></mrow><mn>9</mn></mfrac><mo>=</mo><mfrac><mrow><msub><mi>A</mi><mn>10</mn></msub><mo>−</mo><msub><mi>A</mi><mn>1</mn></msub></mrow><mn>9</mn></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">\overline{\Delta A}=\frac{(A_2-A_1)+(A_3-A_2)+\cdots+(A_{10}-A_9)}{9}=\frac{A_{10}-A_1}{9},</annotation></semantics></math></div>
+<p>中间的数据全部抵消，只用到首尾两个，多次测量白做了。<strong class="kt" data-cat="term" id="hl-84">逐差法</strong>把数据分成前后两组，对应项相减：</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mrow><mi mathvariant="normal">Δ</mi><mi>A</mi></mrow></mrow><mo>=</mo><mfrac><mrow><mo form="prefix" stretchy="false">(</mo><msub><mi>A</mi><mn>6</mn></msub><mo>−</mo><msub><mi>A</mi><mn>1</mn></msub><mo form="postfix" stretchy="false">)</mo><mo>+</mo><mo form="prefix" stretchy="false">(</mo><msub><mi>A</mi><mn>7</mn></msub><mo>−</mo><msub><mi>A</mi><mn>2</mn></msub><mo form="postfix" stretchy="false">)</mo><mo>+</mo><mo form="prefix" stretchy="false">(</mo><msub><mi>A</mi><mn>8</mn></msub><mo>−</mo><msub><mi>A</mi><mn>3</mn></msub><mo form="postfix" stretchy="false">)</mo><mo>+</mo><mo form="prefix" stretchy="false">(</mo><msub><mi>A</mi><mn>9</mn></msub><mo>−</mo><msub><mi>A</mi><mn>4</mn></msub><mo form="postfix" stretchy="false">)</mo><mo>+</mo><mo form="prefix" stretchy="false">(</mo><msub><mi>A</mi><mn>10</mn></msub><mo>−</mo><msub><mi>A</mi><mn>5</mn></msub><mo form="postfix" stretchy="false">)</mo></mrow><mrow><mn>5</mn><mo>×</mo><mn>5</mn></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">\overline{\Delta A}=\frac{(A_6-A_1)+(A_7-A_2)+(A_8-A_3)+(A_9-A_4)+(A_{10}-A_5)}{5\times5}.</annotation></semantics></math></div>
+<p>每个差值跨 5 步，除以 5 得每步增量，再对 5
+组取平均，所有数据都用上了。使用条件是：自变量<strong class="kt" data-cat="term" id="hl-85">等间距</strong>变化，且因变量与之呈<strong class="kt" data-cat="term" id="hl-86">线性</strong>关系。</p>
+<h3 id="作图法">6.3 作图法</h3>
+<p>作图能直观显示规律，也能求斜率、截距。六点要求：</p>
+<ol>
+<li>选择合适的坐标分度，使数据充满图纸，有效数字与读数一致；坐标原点不必从
+0 开始；</li>
+<li>标明坐标轴的物理量和单位；</li>
+<li>用 ×、○ 等符号清楚地标出实验点；</li>
+<li>用直尺或曲线板连成光滑、均匀的细线，不必通过每一个点，而应使点均匀分布在线的两侧；</li>
+<li>求斜率时在线上另取两点（不用原始数据点），标出坐标；</li>
+<li>标出图名。</li>
+</ol>
+<div class="figure-row">
+<figure>
+<button aria-label="放大：作图示例：电阻伏安特性。在直线上取 A(1.00, 2.76)、B(7.00, 18.58)，R=\frac{7.00-1.00}{18.58-2.76}=0.379 kΩ。" class="figure-open" type="button"><img alt="作图示例：电阻伏安特性。在直线上取 A(1.00, 2.76)、B(7.00, 18.58)，R=\frac{7.00-1.00}{18.58-2.76}=0.379 kΩ。" src="实验原图/plot-example.png"/></button>
+<figcaption aria-hidden="true">作图示例：电阻伏安特性。在直线上取
+A(1.00, 2.76)、B(7.00,
+18.58)，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mfrac><mrow><mn>7.00</mn><mo>−</mo><mn>1.00</mn></mrow><mrow><mn>18.58</mn><mo>−</mo><mn>2.76</mn></mrow></mfrac><mo>=</mo><mn>0.379</mn></mrow><annotation encoding="application/x-tex">R=\frac{7.00-1.00}{18.58-2.76}=0.379</annotation></semantics></math>
+kΩ。</figcaption>
+</figure>
+<figure>
+<button aria-label="放大：不当的图：左图曲线粗、不光滑；右图分度不当，数据挤在一角。" class="figure-open" type="button"><img alt="不当的图：左图曲线粗、不光滑；右图分度不当，数据挤在一角。" src="实验原图/plot-bad.png"/></button>
+<figcaption aria-hidden="true">不当的图：左图曲线粗、不光滑；右图分度不当，数据挤在一角。</figcaption>
+</figure>
+</div>
+<p><mark class="hl hl-counter" data-cat="counter" id="hl-39">注意示例中电压单位是 V、电流单位是 mA，所以斜率的倒数单位是 kΩ。</mark></p>
+<h3 id="least-squares">6.4 最小二乘法直线拟合</h3>
+<p>作图时直线靠目测，因人而异。最小二乘法给出客观的最佳直线。设
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+组数据
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><msub><mi>y</mi><mi>i</mi></msub><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x_i,y_i)</annotation></semantics></math>
+理论上满足
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">y=bx+a</annotation></semantics></math>，且
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+的误差可以忽略，使各点沿
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+方向偏离直线的平方和</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo form="prefix" maxsize="120%" minsize="120%" stretchy="true">[</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><mo form="prefix" stretchy="false">(</mo><mi>b</mi><msub><mi>x</mi><mi>i</mi></msub><mo>+</mo><mi>a</mi><mo form="postfix" stretchy="false">)</mo><msup><mo form="postfix" maxsize="120%" minsize="120%" stretchy="true">]</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\varepsilon=\sum_{i=1}^n\big[y_i-(bx_i+a)\big]^2</annotation></semantics></math></div>
+<p>最小。令
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∂</mi><mi>ε</mi><mi>/</mi><mi>∂</mi><mi>a</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\partial\varepsilon/\partial a=0</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∂</mi><mi>ε</mi><mi>/</mi><mi>∂</mi><mi>b</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\partial\varepsilon/\partial b=0</annotation></semantics></math>，解得</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mfrac><mrow><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mspace width="0.167em"></mspace><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>y</mi></mrow><mo>−</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mrow><mi>x</mi><mi>y</mi></mrow></mrow></mrow><mrow><msup><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mn>2</mn></msup><mo>−</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></mfrac><mo>,</mo><mspace width="2.0em"></mspace><mi>a</mi><mo>=</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>y</mi></mrow><mo>−</mo><mi>b</mi><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">b=\frac{\bar x\,\bar y-\overline{xy}}{\bar x^2-\overline{x^2}},\qquad a=\bar y-b\bar x ,</annotation></semantics></math></div>
+<p>其中上横线表示对
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+个数据求平均。拟合的 A 类不确定度为</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>y</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><msqrt><mfrac><mrow><mo>∑</mo><mo form="prefix" stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><mi>a</mi><mo>−</mo><mi>b</mi><msub><mi>x</mi><mi>i</mi></msub><msup><mo form="postfix" stretchy="false">)</mo><mn>2</mn></msup></mrow><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></mfrac></msqrt><mo>,</mo><mspace width="2.0em"></mspace><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>b</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>y</mi><mo form="postfix" stretchy="false">)</mo></mrow><msqrt><mrow><mi>n</mi><mrow><mo form="prefix" stretchy="true">(</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>−</mo><msup><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mn>2</mn></msup><mo form="postfix" stretchy="true">)</mo></mrow></mrow></msqrt></mfrac><mo>,</mo><mspace width="2.0em"></mspace><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>a</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><msqrt><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt><mspace width="0.167em"></mspace><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>b</mi><mo form="postfix" stretchy="false">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">s(y)=\sqrt{\frac{\sum(y_i-a-bx_i)^2}{n-2}},\qquad s(b)=\frac{s(y)}{\sqrt{n\left(\overline{x^2}-\bar x^2\right)}},\qquad s(a)=\sqrt{\overline{x^2}}\,s(b).</annotation></semantics></math></div>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>y</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">s(y)</annotation></semantics></math>
+的分母是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n-2</annotation></semantics></math>，因为两个参数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a,b</annotation></semantics></math>
+由数据确定。</p>
+<p><strong>相关系数</strong></p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mfrac><mrow><mo>∑</mo><mo form="prefix" stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mo form="postfix" stretchy="false">)</mo><mo form="prefix" stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>y</mi></mrow><mo form="postfix" stretchy="false">)</mo></mrow><mrow><msqrt><mrow><mo>∑</mo><mo form="prefix" stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><msup><mo form="postfix" stretchy="false">)</mo><mn>2</mn></msup></mrow></msqrt><msqrt><mrow><mo>∑</mo><mo form="prefix" stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>y</mi></mrow><msup><mo form="postfix" stretchy="false">)</mo><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mo>,</mo><mspace width="2.0em"></mspace><mo>−</mo><mn>1</mn><mo>≤</mo><mi>r</mi><mo>≤</mo><mn>1</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">r=\frac{\sum(x_i-\bar x)(y_i-\bar y)}{\sqrt{\sum(x_i-\bar x)^2}\sqrt{\sum(y_i-\bar y)^2}},\qquad -1\le r\le1,</annotation></semantics></math></div>
+<p>衡量数据与直线的符合程度：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><mi>r</mi><mo form="prefix" stretchy="false">|</mo><mo>→</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">|r|\to1</annotation></semantics></math>
+线性好，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><mi>r</mi><mo form="prefix" stretchy="false">|</mo><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">|r|\to0</annotation></semantics></math>
+无线性关系，拟合没有意义。物理实验一般要求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><mi>r</mi><mo form="prefix" stretchy="false">|</mo><mo>≥</mo><mn>0.999</mn></mrow><annotation encoding="application/x-tex">|r|\ge0.999</annotation></semantics></math>。计算器的二元统计功能、Excel
+的 <code>slope</code>、<code>intercept</code>、<code>correl</code>
+函数，或 Python、Origin 等软件都能直接给出
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">a,b,r</annotation></semantics></math>。</p>
+<div class="block warning">
+<p class="block-title"><strong>易错 ·
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+很接近 1 不代表没有系统误差</strong></p>
+<p><mark class="hl hl-counter" data-cat="counter" id="hl-40">所有数据整体偏移，或仪器存在比例误差时，数据仍然可以严格共线，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+照样接近
+1。</mark><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+只检验线性，不检验正确性。还要看残差是否随机分布、截距是否符合物理预期。</p>
+</div>
+<p><mark class="hl hl-claim" data-cat="claim" id="hl-41"><strong>曲线改直。</strong>
+许多关系可以先变换成直线再拟合：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>a</mi><msup><mi>x</mi><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">y=ax^k</annotation></semantics></math>
+取对数得
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mi>y</mi><mo>=</mo><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mi>a</mi><mo>+</mo><mi>k</mi><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">\ln y=\ln a+k\ln x</annotation></semantics></math>；</mark><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>a</mi><msup><mi>e</mi><mrow><mi>b</mi><mi>x</mi></mrow></msup></mrow><annotation encoding="application/x-tex">y=ae^{bx}</annotation></semantics></math>
+得
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mi>y</mi><mo>=</mo><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mi>a</mi><mo>+</mo><mi>b</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\ln y=\ln a+bx</annotation></semantics></math>。<mark class="hl hl-claim" data-cat="claim" id="hl-42">在双对数坐标或半对数坐标上作图，同样是这个思路。</mark></p>
+<h2 id="report">7 实验报告</h2>
+<p>每个实验包含两份文档，用课程提供的模板（在学在浙大下载）：</p>
+<p><strong class="kt" data-cat="term" id="hl-87">预习报告（实验前提交）</strong>：实验综述，写清实验现象、原理和方法，包括必要的光路图、电路图和公式，一般不超过
+500 字；实验重点和实验难点各不超过 100
+字。预习的目的是进实验室前知道要测什么、怎样测、原始数据记哪些量，并<strong class="kt" data-cat="term" id="hl-88">提前设计好数据表格</strong>。</p>
+<p><strong class="kt" data-cat="term" id="hl-89">实验报告（实验后提交）</strong>：</p>
+<ol>
+<li>原始数据：用 A4
+纸记录，用水笔或圆珠笔，不用铅笔，写上姓名学号；做完请指导教师检查签字，把原始记录拍照插入电子报告。</li>
+<li>结果与分析：数据处理写出完整过程，包括公式、必要的中间计算和结果；误差分析要计算不确定度，写出完整的结果表达式，并分析误差来源。</li>
+<li>实验探讨：对实验内容、现象和过程的小结。</li>
+<li>思考题。</li>
+</ol>
+<p><mark class="hl hl-counter" data-cat="counter" id="hl-43">误差分析要落到具体机制，例如“A 类远大于 B
+类，主要来自测量位置不同”“零位误差已修正”，而不是笼统的“存在人为误差和仪器误差”。</mark><mark class="hl hl-counter" data-cat="counter" id="hl-44">原始数据必须真实，不能修改或伪造。</mark>报告的具体提交时间和评分细则以当期课程通知为准。</p>
+<h2 id="practice">8 练习与概念检查</h2>
+<p><mark class="hl hl-claim" data-cat="claim" id="hl-45">先写出第一步：结果是直接还是间接测量，需要哪些分量，用哪条传播式。</mark>再展开核对。</p>
+<h3 id="practice-p1">P1 读数与有效位数</h3>
+<div class="block example"><div class="block-title">练习 · 先独立作答</div><p><mark class="hl hl-evidence" data-cat="evidence" id="hl-46">(1) 用最小分度 1 mm 的米尺测得某长度，末端恰好对准 12 cm
+刻线，应记为多少？</mark>(2) 50 分度游标卡尺，主尺读 21 mm，游标第 37
+格与主尺对齐，读数是多少？(3) 螺旋测微器套管露出 3 mm 线但未露出 3.5 mm
+线，微分筒对准 41.6 格，读数是多少？</p></div>
+<details>
+<summary>
+解析
+</summary>
+<p>(1)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>12.00</mn><annotation encoding="application/x-tex">12.00</annotation></semantics></math>
+cm（即
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>120.0</mn><annotation encoding="application/x-tex">120.0</annotation></semantics></math>
+mm）。刻线对齐时也要写出估读位 0，写成 12 cm 会丢掉两位有效数字。</p>
+<p>(2)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>21</mn><mo>+</mo><mn>37</mn><mo>×</mo><mn>0.02</mn><mo>=</mo><mn>21.74</mn></mrow><annotation encoding="application/x-tex">21+37\times0.02=21.74</annotation></semantics></math>
+mm，游标卡尺不再估读。</p>
+<p>(3)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>+</mo><mn>41.6</mn><mo>×</mo><mn>0.01</mn><mo>=</mo><mn>3.416</mn></mrow><annotation encoding="application/x-tex">3+41.6\times0.01=3.416</annotation></semantics></math>
+mm，最后一位 6 是估读。</p>
+</details>
+<h3 id="practice-p2">P2 平均值的 A 类不确定度</h3>
+<div class="block example"><div class="block-title">练习 · 先独立作答</div><p><mark class="hl hl-evidence" data-cat="evidence" id="hl-47">重复测量 9 次，单次测量的标准偏差为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mn>0.06</mn></mrow><annotation encoding="application/x-tex">s=0.06</annotation></semantics></math>
+mm；</mark>仪器允差
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mtext mathvariant="normal">仪</mtext></msub><mo>=</mo><mn>0.03</mn></mrow><annotation encoding="application/x-tex">\Delta_{\text{仪}}=0.03</annotation></semantics></math>
+mm。求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mi>A</mi></msub><annotation encoding="application/x-tex">u_A</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mi>B</mi></msub><annotation encoding="application/x-tex">u_B</annotation></semantics></math>
+和合成不确定度。</p></div>
+<details>
+<summary>
+解析
+</summary>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>A</mi></msub><mo>=</mo><mn>0.06</mn><mi>/</mi><msqrt><mn>9</mn></msqrt><mo>=</mo><mn>0.020</mn></mrow><annotation encoding="application/x-tex">u_A=0.06/\sqrt9=0.020</annotation></semantics></math>
+mm，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>B</mi></msub><mo>=</mo><mn>0.03</mn><mi>/</mi><msqrt><mn>3</mn></msqrt><mo>=</mo><mn>0.0173</mn></mrow><annotation encoding="application/x-tex">u_B=0.03/\sqrt3=0.0173</annotation></semantics></math>
+mm，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><msqrt><mrow><msup><mn>0.020</mn><mn>2</mn></msup><mo>+</mo><msup><mn>0.0173</mn><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mn>0.0265</mn></mrow><annotation encoding="application/x-tex">u=\sqrt{0.020^2+0.0173^2}=0.0265</annotation></semantics></math>
+mm，修约为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.027</mn><annotation encoding="application/x-tex">0.027</annotation></semantics></math>
+mm（首位 2，保留两位，后一位非零进位）。</p>
+</details>
+<h3 id="practice-p3">P3 零位修正</h3>
+<div class="block example"><div class="block-title">练习 · 先独立作答</div><p><mark class="hl hl-evidence" data-cat="evidence" id="hl-48">螺旋测微器两测砧并拢时读数为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>0.012</mn></mrow><annotation encoding="application/x-tex">-0.012</annotation></semantics></math>
+mm，测某物体平均读数为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>5.263</mn><annotation encoding="application/x-tex">5.263</annotation></semantics></math>
+mm。</mark>修正后的结果是多少？</p></div>
+<details>
+<summary>
+解析
+</summary>
+<p>零位为负，说明读数整体偏小 0.012 mm，修正值
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>5.263</mn><mo>−</mo><mo form="prefix" stretchy="false">(</mo><mi>−</mi><mn>0.012</mn><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mn>5.275</mn></mrow><annotation encoding="application/x-tex">=5.263-(-0.012)=5.275</annotation></semantics></math>
+mm。规则统一写成“读数减零位”，正负号自然处理。</p>
+</details>
+<h3 id="practice-p4">P4 完整的直接测量</h3>
+<div class="block example"><div class="block-title">练习 · 先独立作答</div><p><mark class="hl hl-evidence" data-cat="evidence" id="hl-49">用停表（<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Δ</mi><mtext mathvariant="normal">仪</mtext></msub><mo>=</mo><mn>0.1</mn></mrow><annotation encoding="application/x-tex">\Delta_{\text{仪}}=0.1</annotation></semantics></math>
+s）测单摆 10 个周期的总时间 6
+次（s）：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20.14</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>20.08</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>20.21</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>20.12</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>20.18</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>20.07</mn></mrow><annotation encoding="application/x-tex">20.14,\ 20.08,\ 20.21,\ 20.12,\ 20.18,\ 20.07</annotation></semantics></math>。</mark>求
+10 个周期总时间
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+的测量结果，以及周期
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>。</p></div>
+<details>
+<summary>
+提示
+</summary>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mi>t</mi><mi>/</mi><mn>10</mn></mrow><annotation encoding="application/x-tex">T=t/10</annotation></semantics></math>
+是
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi>k</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">N=kx</annotation></semantics></math>
+型，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>T</mi></msub><mo>=</mo><msub><mi>u</mi><mi>t</mi></msub><mi>/</mi><mn>10</mn></mrow><annotation encoding="application/x-tex">u_T=u_t/10</annotation></semantics></math>。</p>
+</details>
+<details>
+<summary>
+解析
+</summary>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>t</mi></mrow><mo>=</mo><mn>120.80</mn><mi>/</mi><mn>6</mn><mo>=</mo><mn>20.133</mn></mrow><annotation encoding="application/x-tex">\bar t=120.80/6=20.133</annotation></semantics></math>
+s，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo form="prefix" stretchy="false">(</mo><mi>t</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mn>0.0557</mn></mrow><annotation encoding="application/x-tex">s(t)=0.0557</annotation></semantics></math>
+s，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>A</mi></msub><mo>=</mo><mn>0.0227</mn></mrow><annotation encoding="application/x-tex">u_A=0.0227</annotation></semantics></math>
+s，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>B</mi></msub><mo>=</mo><mn>0.1</mn><mi>/</mi><msqrt><mn>3</mn></msqrt><mo>=</mo><mn>0.0577</mn></mrow><annotation encoding="application/x-tex">u_B=0.1/\sqrt3=0.0577</annotation></semantics></math>
+s，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mn>0.0620</mn></mrow><annotation encoding="application/x-tex">u=0.0620</annotation></semantics></math>
+s →
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.07</mn><annotation encoding="application/x-tex">0.07</annotation></semantics></math>
+s。</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>20.13</mn><mo>±</mo><mn>0.07</mn><mo form="postfix" stretchy="false">)</mo><mspace width="0.222em"></mspace><mtext mathvariant="normal">s</mtext><mo>,</mo><mspace width="2.0em"></mspace><mi>T</mi><mo>=</mo><mfrac><mi>t</mi><mn>10</mn></mfrac><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>2.013</mn><mo>±</mo><mn>0.007</mn><mo form="postfix" stretchy="false">)</mo><mspace width="0.222em"></mspace><mtext mathvariant="normal">s</mtext><mi>.</mi></mrow><annotation encoding="application/x-tex">t=(20.13\pm0.07)\ \text{s},\qquad T=\frac t{10}=(2.013\pm0.007)\ \text{s}.</annotation></semantics></math></div>
+<p>这里 B 类占主导：停表的允差比重复测量的分散大。<mark class="hl hl-counter" data-cat="counter" id="hl-50">一次测 10 个周期而不是
+1 个，正是为了把这个固定的计时误差分摊到 10 个周期上。</mark></p>
+</details>
+<h3 id="practice-p5">P5 幂函数的传播</h3>
+<div class="block example"><div class="block-title">练习 · 先独立作答</div><p><mark class="hl hl-evidence" data-cat="evidence" id="hl-51">测得球的直径
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>20.00</mn><mo>±</mo><mn>0.02</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">D=(20.00\pm0.02)</annotation></semantics></math>
+mm，求体积
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mfrac><mi>π</mi><mn>6</mn></mfrac><msup><mi>D</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">V=\frac\pi6D^3</annotation></semantics></math>
+及其不确定度。</mark></p></div>
+<details>
+<summary>
+解析
+</summary>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>V</mi></msub><mi>/</mi><mi>V</mi><mo>=</mo><mn>3</mn><msub><mi>u</mi><mi>D</mi></msub><mi>/</mi><mi>D</mi><mo>=</mo><mn>3</mn><mo>×</mo><mn>0.02</mn><mi>/</mi><mn>20.00</mn><mo>=</mo><mn>0.30</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">u_V/V=3u_D/D=3\times0.02/20.00=0.30\%</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mfrac><mi>π</mi><mn>6</mn></mfrac><mo>×</mo><msup><mn>20.00</mn><mn>3</mn></msup><mo>=</mo><mn>4188.8</mn></mrow><annotation encoding="application/x-tex">V=\frac\pi6\times20.00^3=4188.8</annotation></semantics></math>
+mm³，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>V</mi></msub><mo>=</mo><mn>12.6</mn></mrow><annotation encoding="application/x-tex">u_V=12.6</annotation></semantics></math>
+mm³ →
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>13</mn><annotation encoding="application/x-tex">13</annotation></semantics></math>
+mm³（首位 1，保留两位，进位）。</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>4189</mn><mo>±</mo><mn>13</mn><mo form="postfix" stretchy="false">)</mo><mspace width="0.222em"></mspace><msup><mtext mathvariant="normal">mm</mtext><mn>3</mn></msup><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>4.189</mn><mo>±</mo><mn>0.013</mn><mo form="postfix" stretchy="false">)</mo><mo>×</mo><msup><mn>10</mn><mn>3</mn></msup><mspace width="0.222em"></mspace><msup><mtext mathvariant="normal">mm</mtext><mn>3</mn></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">V=(4189\pm13)\ \text{mm}^3=(4.189\pm0.013)\times10^3\ \text{mm}^3 .</annotation></semantics></math></div>
+<p>直径的相对不确定度 0.1% 被放大到 0.3%。</p>
+</details>
+<h3 id="practice-p6">P6 积商的传播</h3>
+<div class="block example"><div class="block-title">练习 · 先独立作答</div><p><mark class="hl hl-evidence" data-cat="evidence" id="hl-52">用
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><mn>4</mn><msup><mi>π</mi><mn>2</mn></msup><mi>L</mi><mi>/</mi><msup><mi>T</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">g=4\pi^2L/T^2</annotation></semantics></math>
+测重力加速度，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>1.0000</mn><mo>±</mo><mn>0.0010</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">L=(1.0000\pm0.0010)</annotation></semantics></math>
+m，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>2.007</mn><mo>±</mo><mn>0.002</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">T=(2.007\pm0.002)</annotation></semantics></math>
+s。</mark>求
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>
+及其不确定度，并指出哪个量对结果影响大。</p></div>
+<details>
+<summary>
+解析
+</summary>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>u</mi><mi>g</mi></msub><mi>g</mi></mfrac><mo>=</mo><msqrt><mrow><msup><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><msub><mi>u</mi><mi>L</mi></msub><mi>L</mi></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo form="prefix" stretchy="true">(</mo><mn>2</mn><mfrac><msub><mi>u</mi><mi>T</mi></msub><mi>T</mi></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup></mrow></msqrt><mo>=</mo><msqrt><mrow><msup><mn>0.0010</mn><mn>2</mn></msup><mo>+</mo><msup><mn>0.00199</mn><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mn>0.00223</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\frac{u_g}{g}=\sqrt{\left(\frac{u_L}{L}\right)^2+\left(2\frac{u_T}{T}\right)^2}=\sqrt{0.0010^2+0.00199^2}=0.00223 .</annotation></semantics></math></div>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><mn>4</mn><msup><mi>π</mi><mn>2</mn></msup><mo>×</mo><mn>1.0000</mn><mi>/</mi><msup><mn>2.007</mn><mn>2</mn></msup><mo>=</mo><mn>9.801</mn></mrow><annotation encoding="application/x-tex">g=4\pi^2\times1.0000/2.007^2=9.801</annotation></semantics></math>
+m/s²，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>g</mi></msub><mo>=</mo><mn>0.0219</mn></mrow><annotation encoding="application/x-tex">u_g=0.0219</annotation></semantics></math>
+m/s² →
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.022</mn><annotation encoding="application/x-tex">0.022</annotation></semantics></math>
+m/s²。</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>9.801</mn><mo>±</mo><mn>0.022</mn><mo form="postfix" stretchy="false">)</mo><mspace width="0.222em"></mspace><msup><mtext mathvariant="normal">m/s</mtext><mn>2</mn></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">g=(9.801\pm0.022)\ \text{m/s}^2 .</annotation></semantics></math></div>
+<p>周期项（0.20%）比摆长项（0.10%）大，因为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
+以平方出现。要提高精度，优先改进周期测量（例如计更多周期）。</p>
+</details>
+<h3 id="practice-p7">P7 修约</h3>
+<div class="block example"><div class="block-title">练习 · 先独立作答</div><p><mark class="hl hl-evidence" data-cat="evidence" id="hl-53">(1)
+把下列数值取三位有效数字：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3.1449</mn><annotation encoding="application/x-tex">3.1449</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3.1450</mn><annotation encoding="application/x-tex">3.1450</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3.1350</mn><annotation encoding="application/x-tex">3.1350</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3.13501</mn><annotation encoding="application/x-tex">3.13501</annotation></semantics></math>。</mark>(2)
+修约不确定度并写出结果：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>8.3472</mn></mrow><annotation encoding="application/x-tex">x=8.3472</annotation></semantics></math>
+cm，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mn>0.02310</mn></mrow><annotation encoding="application/x-tex">u=0.02310</annotation></semantics></math>
+cm；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mn>0.62381</mn></mrow><annotation encoding="application/x-tex">y=0.62381</annotation></semantics></math>
+s，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mn>0.00419</mn></mrow><annotation encoding="application/x-tex">u=0.00419</annotation></semantics></math>
+s。</p></div>
+<details>
+<summary>
+解析
+</summary>
+<p>(1)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3.14</mn><annotation encoding="application/x-tex">3.14</annotation></semantics></math>（舍去部分
+0.0049
+小于半个单位）；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3.14</mn><annotation encoding="application/x-tex">3.14</annotation></semantics></math>（恰好是
+5，凑偶，4
+为偶数不进）；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3.14</mn><annotation encoding="application/x-tex">3.14</annotation></semantics></math>（恰好是
+5，3
+为奇数进位）；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3.14</mn><annotation encoding="application/x-tex">3.14</annotation></semantics></math>（舍去部分大于
+5，进位）。<mark class="hl hl-counter" data-cat="counter" id="hl-54">注意第一个数：不能先修约成 3.145 再修约成
+3.15，修约只能一次完成。</mark></p>
+<p>(2)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mn>0.02310</mn></mrow><annotation encoding="application/x-tex">u=0.02310</annotation></semantics></math>
+首位 2，保留两位，后一位 3 非零进位得
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.024</mn><annotation encoding="application/x-tex">0.024</annotation></semantics></math>
+cm，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>8.347</mn><mo>±</mo><mn>0.024</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">x=(8.347\pm0.024)</annotation></semantics></math>
+cm。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mn>0.00419</mn></mrow><annotation encoding="application/x-tex">u=0.00419</annotation></semantics></math>
+首位 4，保留一位，进位得
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.005</mn><annotation encoding="application/x-tex">0.005</annotation></semantics></math>
+s，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>0.624</mn><mo>±</mo><mn>0.005</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y=(0.624\pm0.005)</annotation></semantics></math>
+s。</p>
+</details>
+<h3 id="practice-p8">P8 有效数字运算</h3>
+<div class="block example"><div class="block-title">练习 · 先独立作答</div><p><mark class="hl hl-evidence" data-cat="evidence" id="hl-55">按有效数字规则计算：(1)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>57.3</mn><mo>+</mo><mn>0.264</mn><mo>−</mo><mn>3.15</mn></mrow><annotation encoding="application/x-tex">57.3+0.264-3.15</annotation></semantics></math>；</mark>(2)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4.12</mn><mo>×</mo><mn>0.0350</mn></mrow><annotation encoding="application/x-tex">4.12\times0.0350</annotation></semantics></math>；(3)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle displaystyle="true"><mfrac><mrow><mn>8.30</mn><mo>×</mo><mn>2.1</mn></mrow><mn>0.5000</mn></mfrac></mstyle><annotation encoding="application/x-tex">\dfrac{8.30\times2.1}{0.5000}</annotation></semantics></math>。</p></div>
+<details>
+<summary>
+解析
+</summary>
+<p>(1) 末位最高的是 57.3
+的十分位：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>54.414</mn><mo>→</mo><mn>54.4</mn></mrow><annotation encoding="application/x-tex">54.414\to54.4</annotation></semantics></math>。</p>
+<p>(2) 两数都是 3
+位：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.1442</mn><mo>→</mo><mn>0.144</mn></mrow><annotation encoding="application/x-tex">0.1442\to0.144</annotation></semantics></math>。</p>
+<p>(3) 2.1 只有 2
+位：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>34.86</mn><mo>→</mo><mn>35</mn></mrow><annotation encoding="application/x-tex">34.86\to35</annotation></semantics></math>。</p>
+</details>
+<h3 id="practice-p9">P9 逐差法</h3>
+<div class="block example"><div class="block-title">练习 · 先独立作答</div><p><mark class="hl hl-evidence" data-cat="evidence" id="hl-56">杨氏模量实验中，每加 1 kg 砝码记录一次标尺读数，共 8
+次（cm）：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.00</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0.99</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>1.85</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>2.75</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>3.66</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>4.55</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>5.45</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>6.32</mn></mrow><annotation encoding="application/x-tex">0.00,\ 0.99,\ 1.85,\ 2.75,\ 3.66,\ 4.55,\ 5.45,\ 6.32</annotation></semantics></math>。</mark><mark class="hl hl-counter" data-cat="counter" id="hl-57">用逐差法求每加
+1 kg 的平均伸长，并说明为什么不能逐项相减取平均。</mark></p></div>
+<details>
+<summary>
+解析
+</summary>
+<p>分成前后两组各 4 个，对应相减（跨 4 kg）：</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3.66</mn><mo>−</mo><mn>0.00</mn><mo>=</mo><mn>3.66</mn><mo>,</mo><mspace width="1.0em"></mspace><mn>4.55</mn><mo>−</mo><mn>0.99</mn><mo>=</mo><mn>3.56</mn><mo>,</mo><mspace width="1.0em"></mspace><mn>5.45</mn><mo>−</mo><mn>1.85</mn><mo>=</mo><mn>3.60</mn><mo>,</mo><mspace width="1.0em"></mspace><mn>6.32</mn><mo>−</mo><mn>2.75</mn><mo>=</mo><mn>3.57</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">3.66-0.00=3.66,\quad4.55-0.99=3.56,\quad5.45-1.85=3.60,\quad6.32-2.75=3.57 .</annotation></semantics></math></div>
+<p>平均
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>14.39</mn><mi>/</mi><mn>4</mn><mo>=</mo><mn>3.5975</mn></mrow><annotation encoding="application/x-tex">14.39/4=3.5975</annotation></semantics></math>
+cm，每 1 kg 伸长
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3.5975</mn><mi>/</mi><mn>4</mn><mo>=</mo><mn>0.899</mn></mrow><annotation encoding="application/x-tex">3.5975/4=0.899</annotation></semantics></math>
+cm。逐项相减再平均等于
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mn>6.32</mn><mo>−</mo><mn>0.00</mn><mo form="postfix" stretchy="false">)</mo><mi>/</mi><mn>7</mn><mo>=</mo><mn>0.903</mn></mrow><annotation encoding="application/x-tex">(6.32-0.00)/7=0.903</annotation></semantics></math>
+cm，只用到首尾两个数据，中间 6
+个数据完全浪费，受端点读数误差的影响也最大。</p>
+</details>
+<h3 id="practice-p10">P10 最小二乘法</h3>
+<div class="block example"><div class="block-title">练习 · 先独立作答</div><p><mark class="hl hl-evidence" data-cat="evidence" id="hl-58">测得一组
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math>：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2.1</mn><mo form="postfix" stretchy="false">)</mo><mo>,</mo><mo form="prefix" stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>3.9</mn><mo form="postfix" stretchy="false">)</mo><mo>,</mo><mo form="prefix" stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>6.2</mn><mo form="postfix" stretchy="false">)</mo><mo>,</mo><mo form="prefix" stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>7.8</mn><mo form="postfix" stretchy="false">)</mo><mo>,</mo><mo form="prefix" stretchy="false">(</mo><mn>5</mn><mo>,</mo><mn>10.1</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1,2.1),(2,3.9),(3,6.2),(4,7.8),(5,10.1)</annotation></semantics></math>。</mark>求最佳直线
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">y=bx+a</annotation></semantics></math>
+和相关系数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>。</p></div>
+<details>
+<summary>
+解析
+</summary>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\bar x=3</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>y</mi></mrow><mo>=</mo><mn>6.02</mn></mrow><annotation encoding="application/x-tex">\bar y=6.02</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>11</mn></mrow><annotation encoding="application/x-tex">\overline{x^2}=11</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mrow><mi>x</mi><mi>y</mi></mrow></mrow><mo>=</mo><mn>21.26</mn></mrow><annotation encoding="application/x-tex">\overline{xy}=21.26</annotation></semantics></math>。</p>
+<div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mfrac><mrow><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>y</mi></mrow><mo>−</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mrow><mi>x</mi><mi>y</mi></mrow></mrow></mrow><mrow><msup><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mn>2</mn></msup><mo>−</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>18.06</mn><mo>−</mo><mn>21.26</mn></mrow><mrow><mn>9</mn><mo>−</mo><mn>11</mn></mrow></mfrac><mo>=</mo><mn>1.99</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>a</mi><mo>=</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>y</mi></mrow><mo>−</mo><mi>b</mi><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mo>=</mo><mn>0.05</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">b=\frac{\bar x\bar y-\overline{xy}}{\bar x^2-\overline{x^2}}=\frac{18.06-21.26}{9-11}=1.99,\qquad a=\bar y-b\bar x=0.05 .</annotation></semantics></math></div>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo>−</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><msup><mo form="postfix" stretchy="false">)</mo><mn>2</mn></msup><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\sum(x-\bar x)^2=10</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mo form="prefix" stretchy="false">(</mo><mi>y</mi><mo>−</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>y</mi></mrow><msup><mo form="postfix" stretchy="false">)</mo><mn>2</mn></msup><mo>=</mo><mn>39.708</mn></mrow><annotation encoding="application/x-tex">\sum(y-\bar y)^2=39.708</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo>−</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>x</mi></mrow><mo form="postfix" stretchy="false">)</mo><mo form="prefix" stretchy="false">(</mo><mi>y</mi><mo>−</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>y</mi></mrow><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mn>19.9</mn></mrow><annotation encoding="application/x-tex">\sum(x-\bar x)(y-\bar y)=19.9</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>19.9</mn><msqrt><mrow><mn>10</mn><mo>×</mo><mn>39.708</mn></mrow></msqrt></mfrac></mstyle><mo>=</mo><mn>0.9987</mn></mrow><annotation encoding="application/x-tex">r=\dfrac{19.9}{\sqrt{10\times39.708}}=0.9987</annotation></semantics></math>。</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+略低于物理实验一般要求的 0.999。<mark class="hl hl-counter" data-cat="counter" id="hl-59">残差依次为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.06</mn><mo>,</mo><mspace width="0.222em"></mspace><mo>−</mo><mn>0.13</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0.18</mn><mo>,</mo><mspace width="0.222em"></mspace><mo>−</mo><mn>0.21</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>0.10</mn></mrow><annotation encoding="application/x-tex">0.06,\ -0.13,\ 0.18,\ -0.21,\ 0.10</annotation></semantics></math>，正负交替、没有明显趋势，说明偏差主要是随机分散而不是模型不对；</mark><mark class="hl hl-counter" data-cat="counter" id="hl-60">要提高
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+应改进
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+的测量，而不是换模型。</mark></p>
+</details>
+<h3 id="practice-concepts">C 概念检查</h3>
+<div class="block example"><div class="block-title">练习 · 先独立作答</div><ol>
+<li><mark class="hl hl-evidence" data-cat="evidence" id="hl-61">多测几次取平均，可以消除零位误差。</mark></li>
+<li>仪器允差属于已定系统误差，应在结果中修正。</li>
+<li>单次测量没有 A 类分量，所以不确定度为零。</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mo form="prefix" stretchy="false">(</mo><mn>2.35</mn><mo>±</mo><mn>0.0432</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">x=(2.35\pm0.0432)</annotation></semantics></math>
+cm 是正确的结果写法。</li>
+<li>游标卡尺读数也要估读一位。</li>
+<li>相关系数
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mn>0.9999</mn></mrow><annotation encoding="application/x-tex">r=0.9999</annotation></semantics></math>，说明实验没有系统误差。</li>
+<li>电表读数越接近满量程，相对误差越小。</li>
+<li>逐差法适用于任何成组数据。</li>
+</ol></div>
+<details>
+<summary>
+核对
+</summary>
+<ol>
+<li>错。取平均只减小随机误差；零位是已定系统误差，要修正。</li>
+<li>错。<mark class="hl hl-counter" data-cat="counter" id="hl-62">允差是未定系统误差，只知道范围，不能修正，计入 B
+类不确定度。</mark></li>
+<li>错。单次测量
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><msub><mi>u</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">u=u_B</annotation></semantics></math>。</li>
+<li>错。不确定度首位 4 只保留一位，进位为 0.05，写成
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mn>2.35</mn><mo>±</mo><mn>0.05</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(2.35\pm0.05)</annotation></semantics></math>
+cm。</li>
+<li>错。对齐的游标格数就是最后一位，不再估读。</li>
+<li>错。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+只检验线性，整体偏移时仍可
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>≈</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">r\approx1</annotation></semantics></math>。</li>
+<li>对。允差按量程计算、与读数无关，读数越大相对误差越小。所以选量程时应使读数尽量超过满量程的
+2/3。</li>
+<li>错。要求自变量等间距且关系为线性。</li>
+</ol>
+</details><footer>配图选自物理实验教学中心《大学物理实验绪论》课件（2025.9）。讲义按课件内容重组，补充了推导、纠错与完整练习。<br/><a href="讲义制作要求与经验.md">制作要求与经验</a></footer></main><dialog aria-label="图片放大"><button class="close">关闭 ×</button><img alt=""/><p></p></dialog><script>
+const details=[...document.querySelectorAll('details')],toggle=document.querySelector('#toggle');toggle.onclick=()=>{const expand=details.some(d=>!d.open);details.forEach(d=>d.open=expand);toggle.textContent=expand?'收起答案与拓展':'展开答案与拓展'};document.querySelector('#print').onclick=()=>window.print();let printState=[];window.addEventListener('beforeprint',()=>{printState=details.map(d=>d.open);details.forEach(d=>d.open=true)});window.addEventListener('afterprint',()=>details.forEach((d,i)=>d.open=printState[i]));const toc=document.querySelector('#toc-button');function showToc(open){document.body.classList.toggle('toc-open',open);toc.setAttribute('aria-expanded',String(open))}toc.onclick=()=>showToc(!document.body.classList.contains('toc-open'));document.querySelector('.scrim').onclick=()=>showToc(false);document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>showToc(false)));const modal=document.querySelector('dialog');document.querySelectorAll('.figure-open').forEach(b=>b.onclick=()=>{const im=b.querySelector('img');modal.querySelector('img').src=im.src;modal.querySelector('img').alt=im.alt;modal.querySelector('p').textContent=b.closest('figure').querySelector('figcaption').textContent;modal.showModal()});modal.querySelector('.close').onclick=()=>modal.close();modal.onclick=e=>{if(e.target===modal)modal.close()};const headings=[...document.querySelectorAll('main h2')];const links=[...document.querySelectorAll('nav a')];function markChapter(){let current=headings[0];for(const h of headings){if(h.getBoundingClientRect().top<Math.max(180,innerHeight*.35))current=h;else break}links.forEach(a=>a.classList.toggle('active',decodeURIComponent(a.hash.slice(1))===current.id))}window.addEventListener('scroll',markChapter,{passive:true});markChapter();
+</script><script src="ADHD工具/outline.js?v=267732c8"></script></body></html>

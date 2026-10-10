@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" font-family="Helvetica, Arial, sans-serif">
+  <rect width="560" height="300" fill="#ffffff"/>
+  <!-- top plate (+Q) -->
+  <rect x="150" y="70" width="260" height="12" fill="#444"/>
+  <!-- bottom plate (-Q) -->
+  <rect x="150" y="200" width="260" height="12" fill="#444"/>
+  <!-- field lines -->
+  <g stroke="#2b6cb0" stroke-width="1.6" fill="none" marker-end="url(#arr)">
+    <line x1="200" y1="90" x2="200" y2="196"/>
+    <line x1="280" y1="90" x2="280" y2="196"/>
+    <line x1="360" y1="90" x2="360" y2="196"/>
+  </g>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2b6cb0"/>
+    </marker>
+  </defs>
+  <!-- charges -->
+  <g fill="#c53030" font-size="16" font-weight="bold">
+    <text x="150" y="60">+Q</text>
+    <text x="150" y="232">−Q</text>
+  </g>
+  <!-- dimension d -->
+  <g stroke="#333" stroke-width="1.2">
+    <line x1="440" y1="82" x2="440" y2="200"/>
+    <line x1="434" y1="82" x2="446" y2="82"/>
+    <line x1="434" y1="200" x2="446" y2="200"/>
+  </g>
+  <text x="452" y="146" font-size="15" fill="#333">d</text>
+  <!-- area S -->
+  <text x="300" y="58" font-size="15" fill="#333" text-anchor="middle">面积 S</text>
+  <!-- labels -->
+  <text x="280" y="270" font-size="15" fill="#333" text-anchor="middle">板间匀强场 E = σ/ε₀ = Q/(ε₀S)，方向由正板指向负板</text>
+  <text x="280" y="290" font-size="13" fill="#666" text-anchor="middle">板外场为零；电荷只分布在相对的内表面</text>
+</svg>

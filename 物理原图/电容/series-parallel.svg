@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" font-family="Helvetica, Arial, sans-serif">
+  <rect width="640" height="260" fill="#ffffff"/>
+  <text x="150" y="30" font-size="16" fill="#333" text-anchor="middle" font-weight="bold">串联：电量相同，电压相加</text>
+  <g stroke="#333" stroke-width="2" fill="none">
+    <line x1="40" y1="90" x2="100" y2="90"/>
+    <line x1="100" y1="70" x2="100" y2="110"/>
+    <line x1="106" y1="60" x2="106" y2="120"/>
+    <line x1="106" y1="90" x2="200" y2="90"/>
+    <line x1="200" y1="70" x2="200" y2="110"/>
+    <line x1="206" y1="60" x2="206" y2="120"/>
+    <line x1="206" y1="90" x2="260" y2="90"/>
+  </g>
+  <text x="103" y="55" font-size="14" fill="#333" text-anchor="middle">C₁</text>
+  <text x="203" y="55" font-size="14" fill="#333" text-anchor="middle">C₂</text>
+  <text x="150" y="150" font-size="14" fill="#333" text-anchor="middle">1/C = 1/C₁ + 1/C₂</text>
+  <text x="470" y="30" font-size="16" fill="#333" text-anchor="middle" font-weight="bold">并联：电压相同，电量相加</text>
+  <g stroke="#333" stroke-width="2" fill="none">
+    <line x1="380" y1="60" x2="560" y2="60"/>
+    <line x1="380" y1="130" x2="560" y2="130"/>
+    <line x1="380" y1="60" x2="380" y2="130"/>
+    <line x1="560" y1="60" x2="560" y2="130"/>
+    <line x1="440" y1="50" x2="440" y2="140"/>
+    <line x1="446" y1="50" x2="446" y2="140"/>
+    <line x1="500" y1="50" x2="500" y2="140"/>
+    <line x1="506" y1="50" x2="506" y2="140"/>
+  </g>
+  <text x="443" y="160" font-size="14" fill="#333" text-anchor="middle">C₁</text>
+  <text x="503" y="160" font-size="14" fill="#333" text-anchor="middle">C₂</text>
+  <text x="470" y="200" font-size="14" fill="#333" text-anchor="middle">C = C₁ + C₂</text>
+  <text x="320" y="240" font-size="13" fill="#666" text-anchor="middle">示意图：左为串联，右为并联</text>
+</svg>

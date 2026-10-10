@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 330" font-family="Helvetica, Arial, sans-serif">
+<rect width="780" height="330" fill="#ffffff"/>
+<defs><marker id="m" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#555"/></marker></defs>
+<text x="130.0" y="36.0" font-size="14" fill="#333" text-anchor="middle">z 平面：边长 h 的小正方形</text>
+<polygon points="70.0,230.0 140.0,230.0 140.0,160.0 70.0,160.0" fill="#edf2f7" stroke="none"/>
+<polyline points="70.0,230.0 140.0,230.0" fill="none" stroke="#c53030" stroke-width="3"/>
+<polyline points="70.0,230.0 70.0,160.0" fill="none" stroke="#2b6cb0" stroke-width="3"/>
+<polyline points="140.0,230.0 140.0,160.0 70.0,160.0" fill="none" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3"/>
+<circle cx="70.0" cy="230.0" r="4" fill="#333"/>
+<text x="64.0" y="248.0" font-size="13" fill="#333" text-anchor="start">z₀</text>
+<text x="105.0" y="250.0" font-size="12" fill="#c53030" text-anchor="middle">Δz = h</text>
+<text x="62.0" y="195.0" font-size="12" fill="#2b6cb0" text-anchor="end">Δz = ih</text>
+<line x1="185" y1="150" x2="255" y2="150" stroke="#555" stroke-width="2" marker-end="url(#m)"/>
+<text x="220.0" y="140.0" font-size="14" fill="#333" text-anchor="middle"></text>
+<text x="345.0" y="36.0" font-size="14" fill="#333" text-anchor="middle">f = x + 2yi</text>
+<polygon points="300.0,250.0 370.0,250.0 370.0,110.0 300.0,110.0" fill="#fff5f5" stroke="none"/>
+<polyline points="300.0,250.0 370.0,250.0" fill="none" stroke="#c53030" stroke-width="3"/>
+<polyline points="300.0,250.0 300.0,110.0" fill="none" stroke="#2b6cb0" stroke-width="3"/>
+<polyline points="370.0,250.0 370.0,110.0 300.0,110.0" fill="none" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="335.0" y="270.0" font-size="12" fill="#c53030" text-anchor="middle">Δw = h：差商 1</text>
+<text x="380.0" y="180.0" font-size="12" fill="#2b6cb0" text-anchor="start">Δw = 2ih：差商 2</text>
+<text x="345.0" y="300.0" font-size="12" fill="#666" text-anchor="middle">正方形变成长方形：两个方向伸缩率不同</text>
+<text x="345.0" y="318.0" font-size="12" fill="#666" text-anchor="middle">没有统一的“伸缩加旋转”，不可导</text>
+<text x="640.0" y="36.0" font-size="14" fill="#333" text-anchor="middle">f′(z₀) = 1 + i 的情形</text>
+<polygon points="600.0,240.0 656.0,184.0 600.0,128.0 544.0,184.0" fill="#ebf8ff" stroke="none"/>
+<polyline points="600.0,240.0 656.0,184.0" fill="none" stroke="#c53030" stroke-width="3"/>
+<polyline points="600.0,240.0 544.0,184.0" fill="none" stroke="#2b6cb0" stroke-width="3"/>
+<polyline points="656.0,184.0 600.0,128.0 544.0,184.0" fill="none" stroke="#888" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="640.0" y="300.0" font-size="12" fill="#666" text-anchor="middle">两个方向都伸缩 √2 倍、转 45°</text>
+<text x="640.0" y="318.0" font-size="12" fill="#666" text-anchor="middle">正方形仍是正方形：差商与方向无关</text>
+<line x1="500" y1="50" x2="500" y2="320" stroke="#ddd"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" font-family="Helvetica, Arial, sans-serif">
+  <rect width="520" height="300" fill="#ffffff"/>
+  <circle cx="160" cy="150" r="60" fill="#e2e8f0" stroke="#444" stroke-width="2"/>
+  <g stroke="#2b6cb0" stroke-width="1.6" marker-end="url(#arr4)">
+    <line x1="160" y1="210" x2="160" y2="280"/>
+    <line x1="120" y1="200" x2="80" y2="265"/>
+    <line x1="200" y1="200" x2="240" y2="265"/>
+    <line x1="100" y1="150" x2="30" y2="150"/>
+    <line x1="220" y1="150" x2="290" y2="150"/>
+    <line x1="120" y1="100" x2="80" y2="35"/>
+    <line x1="200" y1="100" x2="240" y2="35"/>
+  </g>
+  <defs>
+    <marker id="arr4" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2b6cb0"/>
+    </marker>
+  </defs>
+  <text x="160" y="155" font-size="16" fill="#c53030" font-weight="bold" text-anchor="middle">+Q</text>
+  <text x="160" y="110" font-size="13" fill="#333" text-anchor="middle">R</text>
+  <line x1="160" y1="150" x2="220" y2="150" stroke="#333" stroke-width="1.2"/>
+  <text x="400" y="120" font-size="14" fill="#333" text-anchor="middle">电荷只在表面，球外场如同点电荷</text>
+  <text x="400" y="145" font-size="14" fill="#333" text-anchor="middle">U = Q / (4πε₀R)（取无穷远为零势）</text>
+  <text x="400" y="170" font-size="14" fill="#333" text-anchor="middle">C = Q/U = 4πε₀R</text>
+  <text x="260" y="296" font-size="13" fill="#666" text-anchor="middle">示意图：孤立金属球，场线自球面径向伸向无穷远</text>
+</svg>

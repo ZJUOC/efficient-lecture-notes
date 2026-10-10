@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" font-family="Helvetica, Arial, sans-serif">
+  <rect width="420" height="260" fill="#ffffff"/>
+  <circle cx="210" cy="130" r="6" fill="#333"/>
+  <g stroke="#2b6cb0" stroke-width="2" fill="none" marker-end="url(#a6)">
+    <line x1="60" y1="130" x2="200" y2="130"/>
+    <line x1="210" y1="50" x2="210" y2="122"/>
+    <line x1="220" y1="138" x2="220" y2="210"/>
+    <line x1="220" y1="130" x2="360" y2="130"/>
+  </g>
+  <defs>
+    <marker id="a6" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2b6cb0"/>
+    </marker>
+  </defs>
+  <text x="110" y="118" font-size="15" fill="#333">i₁</text>
+  <text x="175" y="90" font-size="15" fill="#333">i₂</text>
+  <text x="240" y="180" font-size="15" fill="#333">i₃</text>
+  <text x="300" y="118" font-size="15" fill="#333">i₄</text>
+  <text x="210" y="240" font-size="13" fill="#666" text-anchor="middle">流入节点的电流之和 = 流出节点的电流之和（即代数和为零）</text>
+  <text x="210" y="24" font-size="13" fill="#666" text-anchor="middle">图示：i₁、i₂ 流入节点，i₃、i₄ 流出节点，故 i₁ + i₂ = i₃ + i₄</text>
+</svg>

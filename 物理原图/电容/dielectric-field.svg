@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" font-family="Helvetica, Arial, sans-serif">
+  <rect width="600" height="260" fill="#ffffff"/>
+  <text x="140" y="26" font-size="15" fill="#333" text-anchor="middle" font-weight="bold">真空：E₀ = σ₀/ε₀</text>
+  <rect x="60" y="60" width="160" height="10" fill="#444"/>
+  <rect x="60" y="180" width="160" height="10" fill="#444"/>
+  <defs>
+    <marker id="arr5" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2b6cb0"/>
+    </marker>
+  </defs>
+  <g stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#arr5)">
+    <line x1="100" y1="75" x2="100" y2="176"/>
+    <line x1="140" y1="75" x2="140" y2="176"/>
+    <line x1="180" y1="75" x2="180" y2="176"/>
+  </g>
+  <text x="440" y="26" font-size="15" fill="#333" text-anchor="middle" font-weight="bold">充满电介质：E = E₀ / εᵣ</text>
+  <rect x="360" y="60" width="160" height="10" fill="#444"/>
+  <rect x="360" y="180" width="160" height="10" fill="#444"/>
+  <rect x="360" y="70" width="160" height="110" fill="#eef6ff" stroke="#9cc3e6"/>
+  <g stroke="#2b6cb0" stroke-width="1" marker-end="url(#arr5)">
+    <line x1="400" y1="80" x2="400" y2="172"/>
+    <line x1="440" y1="80" x2="440" y2="172"/>
+    <line x1="480" y1="80" x2="480" y2="172"/>
+  </g>
+  <text x="300" y="245" font-size="14" fill="#333" text-anchor="middle">断开电源时：电量 Q 不变，介质中的场比真空中弱，箭头示意场强减小</text>
+</svg>

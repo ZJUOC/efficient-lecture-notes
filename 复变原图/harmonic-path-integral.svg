@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" font-family="Helvetica, Arial, sans-serif">
+<rect width="520" height="320" fill="#ffffff"/>
+<defs><marker id="ar8" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#2b6cb0"/></marker></defs>
+<line x1="40" y1="250" x2="480" y2="250" stroke="#999"/><line x1="70" y1="290" x2="70" y2="30" stroke="#999"/>
+<text x="470" y="270" font-size="13" fill="#666">x</text><text x="52" y="40" font-size="13" fill="#666">y</text>
+<line x1="70" y1="250" x2="360" y2="250" stroke="#2b6cb0" stroke-width="3" marker-end="url(#ar8)"/>
+<line x1="360" y1="250" x2="360" y2="90" stroke="#2b6cb0" stroke-width="3" marker-end="url(#ar8)"/>
+<path d="M 70 250 C 150 120, 250 80, 360 90" fill="none" stroke="#aaa" stroke-width="1.6" stroke-dasharray="6 4"/>
+<circle cx="70" cy="250" r="5" fill="#333"/><text x="62" y="270" font-size="14" fill="#333">(0,0)</text>
+<circle cx="360" cy="250" r="5" fill="#333"/><text x="350" y="270" font-size="14" fill="#333">(x,0)</text>
+<circle cx="360" cy="90" r="5" fill="#333"/><text x="370" y="84" font-size="14" fill="#333">(x,y)</text>
+<text x="215.0" y="238" font-size="13" fill="#2b6cb0" text-anchor="middle">dy=0：只积 −u_y(x,0) dx</text>
+<text x="372" y="170.0" font-size="13" fill="#2b6cb0">dx=0：只积 u_x dy</text>
+<text x="165" y="118" font-size="12" fill="#888">任意其他路径，结果相同</text>
+<text x="260.0" y="312" font-size="13" fill="#666" text-anchor="middle">v(x,y) = ∫(−u_y dx + u_x dy) + C；u 调和 ⇒ 积分与路径无关</text>
+</svg>

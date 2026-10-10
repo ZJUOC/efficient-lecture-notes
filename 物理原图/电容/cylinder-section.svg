@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" font-family="Helvetica, Arial, sans-serif">
+  <rect width="420" height="320" fill="#ffffff"/>
+  <!-- outer conductor (-λ) -->
+  <circle cx="210" cy="160" r="120" fill="none" stroke="#444" stroke-width="10"/>
+  <!-- inner conductor (+λ) -->
+  <circle cx="210" cy="160" r="40" fill="#777" stroke="#444" stroke-width="2"/>
+  <!-- radial field lines -->
+  <g stroke="#2b6cb0" stroke-width="1.6" marker-end="url(#arr2)">
+    <line x1="210" y1="200" x2="210" y2="262"/>
+    <line x1="170" y1="190" x2="140" y2="240"/>
+    <line x1="250" y1="190" x2="280" y2="240"/>
+    <line x1="170" y1="130" x2="130" y2="100"/>
+    <line x1="250" y1="130" x2="290" y2="100"/>
+  </g>
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2b6cb0"/>
+    </marker>
+  </defs>
+  <!-- labels -->
+  <text x="210" y="165" font-size="16" fill="#c53030" font-weight="bold" text-anchor="middle">+λ</text>
+  <text x="210" y="62" font-size="16" fill="#c53030" font-weight="bold" text-anchor="middle">−λ</text>
+  <!-- radii -->
+  <line x1="210" y1="160" x2="250" y2="160" stroke="#333" stroke-width="1.2"/>
+  <text x="232" y="152" font-size="14" fill="#333">a</text>
+  <line x1="210" y1="160" x2="90" y2="160" stroke="#333" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="120" y="152" font-size="14" fill="#333">b</text>
+  <text x="210" y="300" font-size="14" fill="#333" text-anchor="middle">同轴圆柱截面（长 L ≫ b）：E = λ/(2πε₀r)，a &lt; r &lt; b</text>
+</svg>

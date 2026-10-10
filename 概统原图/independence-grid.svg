@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 290" font-family="Helvetica, Arial, sans-serif">
+  <rect width="600" height="290" fill="#ffffff"/>
+  <!-- 左：独立。Ω 为单位正方形 200×200，A 为左侧宽 0.5 的竖条，B 为上方高 0.4 的横条 -->
+  <text x="150" y="24" font-size="15" fill="#222" text-anchor="middle" font-weight="bold">独立</text>
+  <rect x="50" y="40" width="200" height="200" fill="#f7fafc" stroke="#333"/>
+  <rect x="50" y="40" width="100" height="200" fill="#90cdf4" fill-opacity="0.55"/>
+  <rect x="50" y="40" width="200" height="80" fill="#feb2b2" fill-opacity="0.55"/>
+  <rect x="50" y="40" width="200" height="200" fill="none" stroke="#333"/>
+  <text x="100" y="185" font-size="14" fill="#222" text-anchor="middle">A</text>
+  <text x="200" y="85" font-size="14" fill="#222" text-anchor="middle">B</text>
+  <text x="100" y="85" font-size="13" fill="#222" text-anchor="middle">AB</text>
+  <text x="150" y="262" font-size="12" fill="#444" text-anchor="middle">P(A)=0.5，P(B)=0.4，P(AB)=0.2=P(A)P(B)</text>
+  <text x="150" y="280" font-size="12" fill="#444" text-anchor="middle">A 内外 B 所占比例都是 0.4</text>
+  <!-- 右：不独立。B 在 A 内占 0.8，在 A 外占 0.2 -->
+  <text x="450" y="24" font-size="15" fill="#222" text-anchor="middle" font-weight="bold">不独立</text>
+  <rect x="350" y="40" width="200" height="200" fill="#f7fafc" stroke="#333"/>
+  <rect x="350" y="40" width="100" height="200" fill="#90cdf4" fill-opacity="0.55"/>
+  <rect x="350" y="40" width="100" height="160" fill="#feb2b2" fill-opacity="0.55"/>
+  <rect x="450" y="40" width="100" height="40" fill="#feb2b2" fill-opacity="0.55"/>
+  <rect x="350" y="40" width="200" height="200" fill="none" stroke="#333"/>
+  <text x="400" y="225" font-size="14" fill="#222" text-anchor="middle">A</text>
+  <text x="500" y="66" font-size="14" fill="#222" text-anchor="middle">B</text>
+  <text x="400" y="125" font-size="13" fill="#222" text-anchor="middle">AB</text>
+  <text x="450" y="262" font-size="12" fill="#444" text-anchor="middle">P(A)=0.5，P(B)=0.5，P(AB)=0.4≠0.25</text>
+  <text x="450" y="280" font-size="12" fill="#444" text-anchor="middle">P(B|A)=0.8，P(B|Ā)=0.2</text>
+</svg>

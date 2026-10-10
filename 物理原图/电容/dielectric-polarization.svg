@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" font-family="Helvetica, Arial, sans-serif">
+  <rect width="560" height="300" fill="#ffffff"/>
+  <!-- plates -->
+  <rect x="120" y="60" width="320" height="10" fill="#444"/>
+  <rect x="120" y="230" width="320" height="10" fill="#444"/>
+  <text x="120" y="52" font-size="15" fill="#c53030" font-weight="bold">+σ₀（自由电荷）</text>
+  <text x="120" y="262" font-size="15" fill="#c53030" font-weight="bold">−σ₀（自由电荷）</text>
+  <!-- dielectric slab -->
+  <rect x="120" y="70" width="320" height="160" fill="#eef6ff" stroke="#9cc3e6"/>
+  <!-- aligned dipoles: − on the left/top end, + on the right/bottom end, shown as small arrows -->
+  <g stroke="#2b6cb0" stroke-width="2" marker-end="url(#arr3)">
+    <line x1="170" y1="120" x2="190" y2="130"/>
+    <line x1="230" y1="120" x2="250" y2="130"/>
+    <line x1="290" y1="120" x2="310" y2="130"/>
+    <line x1="350" y1="120" x2="370" y2="130"/>
+    <line x1="170" y1="180" x2="190" y2="190"/>
+    <line x1="230" y1="180" x2="250" y2="190"/>
+    <line x1="290" y1="180" x2="310" y2="190"/>
+    <line x1="350" y1="180" x2="370" y2="190"/>
+  </g>
+  <defs>
+    <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2b6cb0"/>
+    </marker>
+  </defs>
+  <!-- bound charges -->
+  <text x="112" y="90" font-size="15" fill="#c53030" font-weight="bold" text-anchor="end">+σ′</text>
+  <text x="112" y="215" font-size="15" fill="#2b6cb0" font-weight="bold" text-anchor="end">−σ′</text>
+  <text x="280" y="125" font-size="13" fill="#333" text-anchor="middle">极化：分子电偶极子沿场向排列</text>
+  <text x="280" y="290" font-size="14" fill="#333" text-anchor="middle">介质内部仍为电中性；束缚面电荷 σ′ = P·n̂ 削弱了自由电荷产生的场</text>
+</svg>

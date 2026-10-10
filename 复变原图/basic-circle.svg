@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" font-family="Helvetica, Arial, sans-serif">
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/></marker></defs>
+  <rect width="320" height="260" fill="#ffffff"/>
+  <line x1="20" y1="220" x2="300" y2="220" stroke="#999"/>
+  <line x1="40" y1="245" x2="40" y2="15" stroke="#999"/>
+  <text x="292" y="236" font-size="13" fill="#666">x</text>
+  <text x="46" y="24" font-size="13" fill="#666">y</text>
+  <circle cx="180" cy="120" r="80" fill="#ebf4ff" stroke="#2b6cb0" stroke-width="2"/>
+  <path d="M 260 120 A 80 80 0 0 0 236.6 63.4" fill="none" stroke="#2b6cb0" stroke-width="2.2" marker-end="url(#ah)"/>
+  <circle cx="180" cy="120" r="3.5" fill="#c53030"/>
+  <text x="164" y="140" font-size="14" fill="#c53030" font-style="italic">z₀</text>
+  <line x1="180" y1="120" x2="236.6" y2="176.6" stroke="#333" stroke-dasharray="4 3"/>
+  <text x="214" y="146" font-size="14" fill="#333" font-style="italic">r</text>
+  <text x="250" y="40" font-size="13" fill="#2b6cb0">C：正向</text>
+  <text x="180" y="252" font-size="12" fill="#666" text-anchor="middle">z = z₀ + r·e^(iθ)，θ：0 → 2π</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" font-family="Helvetica, Arial, sans-serif">
+  <rect width="560" height="260" fill="#ffffff"/>
+  <!-- z-plane with cut on negative real axis -->
+  <text x="140" y="24" font-size="15" fill="#333" text-anchor="middle" font-weight="bold">z 平面：沿负实轴剪开</text>
+  <line x1="20" y1="140" x2="260" y2="140" stroke="#999"/>
+  <line x1="140" y1="30" x2="140" y2="240" stroke="#999"/>
+  <line x1="20" y1="140" x2="140" y2="140" stroke="#c53030" stroke-width="3"/>
+  <circle cx="140" cy="140" r="3" fill="#333"/>
+  <path d="M 200 140 A 60 60 0 0 0 175 91" fill="none" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#ah)"/>
+  <text x="206" y="112" font-size="14" fill="#2b6cb0">arg z ∈ (−π, π]</text>
+  <!-- w-plane: Ln z principal value -->
+  <text x="420" y="24" font-size="15" fill="#333" text-anchor="middle" font-weight="bold">w = ln z（主值）：虚部取 (−π, π]</text>
+  <line x1="320" y1="140" x2="540" y2="140" stroke="#999"/>
+  <line x1="420" y1="30" x2="420" y2="240" stroke="#999"/>
+  <line x1="320" y1="72" x2="540" y2="72" stroke="#c53030" stroke-dasharray="5 4"/>
+  <line x1="320" y1="208" x2="540" y2="208" stroke="#c53030" stroke-dasharray="5 4"/>
+  <text x="532" y="68" font-size="13" fill="#c53030" text-anchor="end">Im = π</text>
+  <text x="532" y="224" font-size="13" fill="#c53030" text-anchor="end">Im = −π</text>
+  <text x="280" y="250" font-size="13" fill="#666" text-anchor="middle">负实轴两侧的值相差 2πi，主值在此处跳变</text>
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2b6cb0"/>
+    </marker>
+  </defs>
+</svg>
