@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" font-family="Helvetica, Arial, sans-serif">
+<rect width="800" height="360" fill="#ffffff"/>
+<defs><marker id="m2b6cb0" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/></marker></defs>
+<line x1="61.4" y1="276.6" x2="378.6" y2="276.6" stroke="#999" stroke-width="1"/>
+<line x1="206.4" y1="340.0" x2="206.4" y2="50.0" stroke="#999" stroke-width="1"/>
+<text x="374.6" y="270.6" font-size="12" fill="#666" text-anchor="end" font-style="italic">x</text>
+<text x="212.4" y="62.0" font-size="12" fill="#666" text-anchor="start" font-style="italic">y</text>
+<line x1="61.4" y1="276.6" x2="206.4" y2="276.6" stroke="#c53030" stroke-width="3" stroke-dasharray="7 4"/>
+<line x1="297.0" y1="185.9" x2="206.4" y2="95.3" stroke="#2b6cb0" stroke-width="2.6" marker-end="url(#m2b6cb0)"/>
+<line x1="206.4" y1="276.6" x2="297.0" y2="185.9" stroke="#666" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="206.4" y1="276.6" x2="206.4" y2="95.3" stroke="#666" stroke-width="1" stroke-dasharray="3 3"/>
+<polyline points="244.9,238.1 244.1,237.3 243.3,236.6 242.5,235.9 241.6,235.1 240.8,234.4 239.9,233.8 239.1,233.1 238.2,232.4 237.3,231.8 236.4,231.2 235.5,230.6 234.5,230.0 233.6,229.5 232.6,228.9 231.7,228.4 230.7,227.9 229.7,227.4 228.7,227.0 227.7,226.5 226.7,226.1 225.7,225.7 224.7,225.3 223.6,225.0 222.6,224.6 221.5,224.3 220.5,224.0 219.4,223.8 218.4,223.5 217.3,223.3 216.2,223.1 215.1,222.9 214.0,222.7 213.0,222.6 211.9,222.5 210.8,222.4 209.7,222.3 208.6,222.2 207.5,222.2 206.4,222.2" fill="none" stroke="#c05621" stroke-width="2"/>
+<circle cx="297.0" cy="185.9" r="3.5" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="206.4" cy="95.3" r="3.5" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<text x="306.1" y="185.9" font-size="13" fill="#2b6cb0" text-anchor="start">1 + i</text>
+<text x="215.5" y="86.2" font-size="13" fill="#2b6cb0" text-anchor="start">2i</text>
+<text x="235.4" y="208.6" font-size="12" fill="#c05621" text-anchor="start">π/4</text>
+<text x="65.9" y="294.6" font-size="12" fill="#c53030" text-anchor="start">割线</text>
+<text x="460.0" y="96.0" font-size="13" fill="#333" text-anchor="start">线段在上半平面，不碰割线 ⇒ 主值 ln z 可用</text>
+<text x="460.0" y="132.0" font-size="13" fill="#333" text-anchor="start">∫ dz/z = ln(2i) − ln(1 + i)</text>
+<text x="460.0" y="158.0" font-size="13" fill="#333" text-anchor="start">实部：ln|2i| − ln|1 + i| = ln 2 − ½ln 2 = ½ln 2</text>
+<text x="460.0" y="180.0" font-size="12" fill="#666" text-anchor="start">（终点、起点到原点的距离之比取对数）</text>
+<text x="460.0" y="214.0" font-size="13" fill="#c05621" text-anchor="start">虚部：π/2 − π/4 = π/4</text>
+<text x="460.0" y="236.0" font-size="12" fill="#666" text-anchor="start">（沿途辐角转过的角度，图中橙色弧）</text>
+<text x="460.0" y="276.0" font-size="14" fill="#2b6cb0" text-anchor="start" font-weight="bold">结果 ½ln 2 + iπ/4</text>
+<text x="400.0" y="26.0" font-size="15" fill="#333" text-anchor="middle">∫ dz/z = Δ ln|z| + i·Δarg z</text>
+</svg>
