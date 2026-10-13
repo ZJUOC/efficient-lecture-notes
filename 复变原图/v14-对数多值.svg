@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" font-family="Helvetica, Arial, sans-serif">
+<rect width="800" height="470" fill="#ffffff"/>
+<defs><marker id="m2b6cb0" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/></marker><marker id="m666" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#666"/></marker></defs>
+<line x1="20.0" y1="303.5" x2="320.0" y2="303.5" stroke="#999" stroke-width="1"/>
+<line x1="89.2" y1="407.3" x2="89.2" y2="72.7" stroke="#999" stroke-width="1"/>
+<text x="316.0" y="297.5" font-size="12" fill="#666" text-anchor="end" font-style="italic">x</text>
+<text x="95.2" y="84.7" font-size="12" fill="#666" text-anchor="start" font-style="italic">y</text>
+<line x1="89.2" y1="303.5" x2="204.6" y2="188.1" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<circle cx="204.6" cy="188.1" r="3.5" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<text x="218.5" y="174.2" font-size="13" fill="#2b6cb0" text-anchor="start">1 + i</text>
+<polyline points="141.2,303.5 141.1,302.4 141.1,301.4 141.1,300.3 141.0,299.3 140.9,298.2 140.8,297.2 140.6,296.2 140.5,295.1 140.3,294.1 140.1,293.1 139.9,292.1 139.6,291.0 139.4,290.0 139.1,289.0 138.8,288.0 138.5,287.0 138.1,286.0 137.8,285.0 137.4,284.1 137.0,283.1 136.6,282.2 136.1,281.2 135.7,280.3 135.2,279.3 134.7,278.4 134.2,277.5 133.7,276.6 133.1,275.7 132.5,274.8 132.0,274.0 131.4,273.1 130.7,272.3 130.1,271.4 129.5,270.6 128.8,269.8 128.1,269.0 127.4,268.3 126.7,267.5 125.9,266.7" fill="none" stroke="#2b6cb0" stroke-width="1.4"/>
+<text x="158.5" y="280.4" font-size="12" fill="#2b6cb0" text-anchor="start">π/4</text>
+<text x="106.5" y="355.4" font-size="12" fill="#333" text-anchor="start">|z| = √2，arg z = π/4</text>
+<text x="170.0" y="40.0" font-size="14" fill="#333" text-anchor="middle">z 平面：一个点</text>
+<rect x="493.5" y="207.0" width="192.9" height="147.8" fill="#f7fafc"/>
+<line x1="493.5" y1="280.9" x2="686.5" y2="280.9" stroke="#999" stroke-width="1"/>
+<line x1="521.8" y1="455.0" x2="521.8" y2="55.0" stroke="#999" stroke-width="1"/>
+<text x="682.5" y="274.9" font-size="12" fill="#666" text-anchor="end" font-style="italic">u</text>
+<text x="527.8" y="67.0" font-size="12" fill="#666" text-anchor="start" font-style="italic">v</text>
+<line x1="493.5" y1="207.0" x2="686.5" y2="207.0" stroke="#999" stroke-width="1" stroke-dasharray="5 4"/>
+<line x1="493.5" y1="354.8" x2="686.5" y2="354.8" stroke="#999" stroke-width="1" stroke-dasharray="5 4"/>
+<text x="684.1" y="201.0" font-size="11" fill="#666" text-anchor="end">v = π</text>
+<text x="684.1" y="368.8" font-size="11" fill="#666" text-anchor="end">v = −π</text>
+<text x="684.1" y="332.6" font-size="12" fill="#666" text-anchor="end">主值带形</text>
+<circle cx="529.9" cy="410.2" r="4.0" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<text x="539.9" y="414.2" font-size="12" fill="#2b6cb0" text-anchor="start">ln√2 + i(π/4 − 2π)</text>
+<circle cx="529.9" cy="262.4" r="4.0" fill="#c53030" stroke="#c53030" stroke-width="1"/>
+<text x="539.9" y="266.4" font-size="12" fill="#c53030" text-anchor="start">ln√2 + iπ/4（主值 ln z）</text>
+<circle cx="529.9" cy="114.6" r="4.0" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<text x="539.9" y="118.6" font-size="12" fill="#2b6cb0" text-anchor="start">ln√2 + i(π/4 + 2π)</text>
+<line x1="515.9" y1="405.2" x2="515.9" y2="269.4" stroke="#666" stroke-width="1" marker-end="url(#m666)"/>
+<text x="509.9" y="340.3" font-size="11" fill="#666" text-anchor="end">+2πi</text>
+<line x1="515.9" y1="257.4" x2="515.9" y2="121.6" stroke="#666" stroke-width="1" marker-end="url(#m666)"/>
+<text x="509.9" y="192.5" font-size="11" fill="#666" text-anchor="end">+2πi</text>
+<text x="543.9" y="71.5" font-size="14" fill="#666" text-anchor="middle">⋮</text>
+<text x="543.9" y="438.5" font-size="14" fill="#666" text-anchor="middle">⋮</text>
+<text x="590.0" y="40.0" font-size="14" fill="#333" text-anchor="middle">w 平面：Ln(1+i) 的值排成一列</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" font-family="Helvetica, Arial, sans-serif">
+<rect width="860" height="420" fill="#ffffff"/>
+<defs><marker id="m2b6cb0" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/></marker><marker id="m2f855a" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f855a"/></marker></defs>
+<line x1="20.0" y1="294.1" x2="420.0" y2="294.1" stroke="#999" stroke-width="1"/>
+<line x1="255.9" y1="345.4" x2="255.9" y2="114.6" stroke="#999" stroke-width="1"/>
+<text x="416.0" y="288.1" font-size="12" fill="#666" text-anchor="end" font-style="italic">x</text>
+<text x="261.9" y="126.6" font-size="12" fill="#666" text-anchor="start" font-style="italic">y</text>
+<polyline points="50.8,294.1 255.9,140.3 324.3,175.7 346.6,203.4 355.5,221.8 359.5,234.3 361.5,243.2 362.5,249.9 363.0,255.1 363.2,259.2 363.3,262.6 363.2,265.3 363.1,267.7 363.0,269.6 362.9,271.4 362.8,272.8 362.6,274.1 362.5,275.3 362.4,276.3 362.3,277.3 362.1,278.1 362.0,278.8 361.9,279.5 361.8,280.2 361.7,280.7 361.6,281.3 361.5,281.8 361.5,282.2 361.4,282.6 361.3,283.0 361.2,283.4 361.2,283.7 361.1,284.1 361.0,284.4 361.0,284.6 360.9,284.9 360.9,285.2 360.8,285.4 360.8,285.6 360.7,285.9" fill="none" stroke="#cbd5e0" stroke-width="1"/>
+<circle cx="50.8" cy="294.1" r="3.4" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<text x="50.8" y="284.1" font-size="12" fill="#2b6cb0" text-anchor="middle" font-style="italic">z₁</text>
+<circle cx="255.9" cy="140.3" r="3.4" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<text x="267.9" y="144.3" font-size="12" fill="#2b6cb0" text-anchor="start" font-style="italic">z₂</text>
+<circle cx="324.3" cy="175.7" r="3.4" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<text x="336.3" y="169.7" font-size="12" fill="#2b6cb0" text-anchor="start" font-style="italic">z₃</text>
+<circle cx="346.6" cy="203.4" r="3.4" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<text x="358.6" y="197.4" font-size="12" fill="#2b6cb0" text-anchor="start" font-style="italic">z₄</text>
+<circle cx="355.5" cy="221.8" r="3.4" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<text x="367.5" y="217.8" font-size="12" fill="#2b6cb0" text-anchor="start" font-style="italic">z₅</text>
+<circle cx="359.5" cy="234.3" r="3.4" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="361.5" cy="243.2" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="362.5" cy="249.9" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="363.0" cy="255.1" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="363.2" cy="259.2" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="363.3" cy="262.6" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="363.2" cy="265.3" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="363.1" cy="267.7" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="363.0" cy="269.6" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="362.9" cy="271.4" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="362.8" cy="272.8" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="362.6" cy="274.1" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="362.5" cy="275.3" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="362.4" cy="276.3" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="362.3" cy="277.3" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="362.1" cy="278.1" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="362.0" cy="278.8" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="361.9" cy="279.5" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="361.8" cy="280.2" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="361.7" cy="280.7" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="361.6" cy="281.3" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="361.5" cy="281.8" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="361.5" cy="282.2" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="361.4" cy="282.6" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="361.3" cy="283.0" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="361.2" cy="283.4" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="361.2" cy="283.7" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="361.1" cy="284.1" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="361.0" cy="284.4" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="361.0" cy="284.6" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="360.9" cy="284.9" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="360.9" cy="285.2" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="360.8" cy="285.4" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="360.8" cy="285.6" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="360.7" cy="285.9" r="2.2" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<circle cx="358.5" cy="294.1" r="22.6" fill="none" stroke="#c05621" stroke-width="1.4" stroke-dasharray="4 3"/>
+<circle cx="358.5" cy="294.1" r="3.5" fill="#c53030" stroke="#c53030" stroke-width="1"/>
+<text x="358.5" y="332.7" font-size="12" fill="#c53030" text-anchor="middle">极限 1</text>
+<text x="30.3" y="330.0" font-size="11" fill="#c05621" text-anchor="start">橙圈：从某一项起全部落入</text>
+<text x="220.0" y="40.0" font-size="13" fill="#333" text-anchor="middle">例 (1)：zₙ = (1 + 1/n)·e^(iπ/n)</text>
+<text x="484.7" y="343.2" font-size="12" fill="#333" text-anchor="end" font-style="italic">S₁</text>
+<text x="705.0" y="241.0" font-size="12" fill="#333" text-anchor="start" font-style="italic">S₂</text>
+<text x="552.8" y="189.9" font-size="12" fill="#333" text-anchor="end" font-style="italic">S₃</text>
+<circle cx="492.7" cy="327.2" r="3.0" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="618.1" y1="359.8" x2="618.1" y2="90.2" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="460.0" y1="122.8" x2="840.0" y2="122.8" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="492.7" y1="327.2" x2="697.0" y2="225.0" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<line x1="697.0" y1="225.0" x2="560.8" y2="173.9" stroke="#2b6cb0" stroke-width="1.4" marker-end="url(#m2b6cb0)"/>
+<line x1="560.8" y1="173.9" x2="662.9" y2="148.4" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<line x1="662.9" y1="148.4" x2="581.2" y2="135.6" stroke="#2b6cb0" stroke-width="1.4" marker-end="url(#m2b6cb0)"/>
+<line x1="581.2" y1="135.6" x2="649.3" y2="129.2" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<line x1="649.3" y1="129.2" x2="590.9" y2="126.0" stroke="#2b6cb0" stroke-width="1.4" marker-end="url(#m2b6cb0)"/>
+<polyline points="590.9,126.0 642.0,124.4 596.6,123.6 637.5,123.2 600.3,123.0 634.4,122.9 603.0,122.9 632.1,122.9 604.9,122.9 630.4,122.9 606.4,122.9 629.1,122.9 607.6,122.9 628.0,122.8 608.6,122.8 627.1,122.8 609.4,122.8 626.4,122.8 610.1,122.8 625.8,122.8 610.6,122.8 625.2,122.8 611.1,122.8 624.8,122.8 611.6,122.8 624.4,122.8 612.0,122.8 624.0,122.8 612.3,122.8 623.7,122.8 612.6,122.8 623.4,122.8 612.9,122.8 623.1,122.8" fill="none" stroke="#2b6cb0" stroke-width="0.9"/>
+<circle cx="618.1" cy="122.8" r="4.0" fill="#c53030" stroke="#c53030" stroke-width="1"/>
+<text x="626.1" y="112.8" font-size="12" fill="#c53030" text-anchor="start">−ln 2 + i</text>
+<text x="845.0" y="327.2" font-size="11" fill="#333" text-anchor="end">虚部（1/2ᵏ）很快到 1；</text>
+<text x="845.0" y="342.2" font-size="11" fill="#333" text-anchor="end">实部（交错调和）左右摆动、慢慢收拢</text>
+<text x="655.0" y="40.0" font-size="13" fill="#333" text-anchor="middle">例 (3)：部分和 Sₙ 一步一箭头</text>
+<text x="430.0" y="20.0" font-size="15" fill="#333" text-anchor="middle">复数列、复数项级数的收敛：点越来越挤向极限</text>
+</svg>

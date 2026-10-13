@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 450" font-family="Helvetica, Arial, sans-serif">
+<rect width="860" height="450" fill="#ffffff"/>
+<defs><marker id="m2b6cb0" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/></marker><marker id="m2f855a" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f855a"/></marker><marker id="mc53030" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c53030"/></marker></defs>
+<line x1="20.0" y1="220.0" x2="270.0" y2="220.0" stroke="#999" stroke-width="1"/>
+<line x1="145.0" y1="345.0" x2="145.0" y2="95.0" stroke="#999" stroke-width="1"/>
+<text x="266.0" y="214.0" font-size="12" fill="#666" text-anchor="end" font-style="italic">x</text>
+<text x="151.0" y="107.0" font-size="12" fill="#666" text-anchor="start" font-style="italic">y</text>
+<polyline points="228.3,220.0 228.3,217.4 228.2,214.7 228.0,212.1 227.7,209.5 227.3,206.9 226.8,204.3 226.3,201.7 225.7,199.2 225.0,196.6 224.2,194.1 223.4,191.6 222.4,189.2 221.4,186.7 220.3,184.4 219.2,182.0 217.9,179.7 216.6,177.4 215.2,175.1 213.8,173.0 212.3,170.8 210.7,168.7 209.0,166.7 207.3,164.7 205.5,162.7 203.7,160.8 201.8,159.0 199.8,157.3 197.8,155.6 195.8,153.9 193.7,152.4 191.5,150.8 189.3,149.4 187.0,148.1 184.8,146.8 182.4,145.5 180.1,144.4 177.6,143.3 175.2,142.3 172.7,141.4 170.3,140.6 167.7,139.8 165.2,139.1 162.6,138.6 160.0,138.0 157.5,137.6 154.8,137.3 152.2,137.0 149.6,136.8 147.0,136.7 144.3,136.7 141.7,136.7 139.1,136.9 136.5,137.1 133.9,137.4 131.2,137.8 128.7,138.3 126.1,138.8 123.5,139.5 121.0,140.2 118.5,141.0 116.0,141.9 113.6,142.8 111.1,143.9 108.8,145.0 106.4,146.1 104.1,147.4 101.8,148.7 99.6,150.1 97.4,151.6 95.3,153.1 93.2,154.7 91.2,156.4 89.2,158.1 87.2,159.9 85.4,161.8 83.6,163.7 81.8,165.7 80.1,167.7 78.5,169.7 77.0,171.9 75.5,174.0 74.1,176.3 72.7,178.5 71.4,180.8 70.2,183.2 69.1,185.5 68.1,188.0 67.1,190.4 66.2,192.9 65.4,195.4 64.6,197.9 64.0,200.5 63.4,203.0 62.9,205.6 62.5,208.2 62.2,210.8 61.9,213.4 61.8,216.1 61.7,218.7 61.7,221.3 61.8,223.9 61.9,226.6 62.2,229.2 62.5,231.8 62.9,234.4 63.4,237.0 64.0,239.5 64.6,242.1 65.4,244.6 66.2,247.1 67.1,249.6 68.1,252.0 69.1,254.5 70.2,256.8 71.4,259.2 72.7,261.5 74.1,263.7 75.5,266.0 77.0,268.1 78.5,270.3 80.1,272.3 81.8,274.3 83.6,276.3 85.4,278.2 87.2,280.1 89.2,281.9 91.2,283.6 93.2,285.3 95.3,286.9 97.4,288.4 99.6,289.9 101.8,291.3 104.1,292.6 106.4,293.9 108.8,295.0 111.1,296.1 113.6,297.2 116.0,298.1 118.5,299.0 121.0,299.8 123.5,300.5 126.1,301.2 128.7,301.7 131.2,302.2 133.9,302.6 136.5,302.9 139.1,303.1 141.7,303.3 144.3,303.3 147.0,303.3 149.6,303.2 152.2,303.0 154.8,302.7 157.5,302.4 160.0,302.0 162.6,301.4 165.2,300.9 167.7,300.2 170.3,299.4 172.7,298.6 175.2,297.7 177.6,296.7 180.1,295.6 182.4,294.5 184.8,293.2 187.0,291.9 189.3,290.6 191.5,289.2 193.7,287.6 195.8,286.1 197.8,284.4 199.8,282.7 201.8,281.0 203.7,279.2 205.5,277.3 207.3,275.3 209.0,273.3 210.7,271.3 212.3,269.2 213.8,267.0 215.2,264.9 216.6,262.6 217.9,260.3 219.2,258.0 220.3,255.6 221.4,253.3 222.4,250.8 223.4,248.4 224.2,245.9 225.0,243.4 225.7,240.8 226.3,238.3 226.8,235.7 227.3,233.1 227.7,230.5 228.0,227.9 228.2,225.3 228.3,222.6 228.3,220.0" fill="none" stroke="#999" stroke-width="1.2"/>
+<line x1="228.3" y1="220.0" x2="228.3" y2="193.3" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="228.3" cy="220.0" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="222.0" y1="188.1" x2="211.8" y2="163.5" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="222.0" cy="188.1" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="203.9" y1="161.1" x2="185.1" y2="142.2" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="203.9" cy="161.1" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="176.9" y1="143.0" x2="152.3" y2="132.8" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="176.9" cy="143.0" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="145.0" y1="136.7" x2="118.3" y2="136.7" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="145.0" cy="136.7" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="113.1" y1="143.0" x2="88.5" y2="153.2" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="113.1" cy="143.0" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="86.1" y1="161.1" x2="67.2" y2="179.9" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="86.1" cy="161.1" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="68.0" y1="188.1" x2="57.8" y2="212.7" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="68.0" cy="188.1" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="61.7" y1="220.0" x2="61.7" y2="246.7" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="61.7" cy="220.0" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="68.0" y1="251.9" x2="78.2" y2="276.5" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="68.0" cy="251.9" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="86.1" y1="278.9" x2="104.9" y2="297.8" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="86.1" cy="278.9" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="113.1" y1="297.0" x2="137.7" y2="307.2" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="113.1" cy="297.0" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="145.0" y1="303.3" x2="171.7" y2="303.3" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="145.0" cy="303.3" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="176.9" y1="297.0" x2="201.5" y2="286.8" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="176.9" cy="297.0" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="203.9" y1="278.9" x2="222.8" y2="260.1" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="203.9" cy="278.9" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<line x1="222.0" y1="251.9" x2="232.2" y2="227.3" stroke="#2f855a" stroke-width="1.4" marker-end="url(#m2f855a)"/>
+<circle cx="222.0" cy="251.9" r="2.4" fill="#333" stroke="#333" stroke-width="1"/>
+<text x="145.0" y="60.0" font-size="13" fill="#333" text-anchor="middle">|z| = 1 上取 16 个点</text>
+<text x="145.0" y="78.0" font-size="12" fill="#2f855a" text-anchor="middle">绿箭头：Δz = iz·Δθ</text>
+<line x1="440.0" y1="413.4" x2="440.0" y2="392.9" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<line x1="440.0" y1="392.9" x2="440.0" y2="372.5" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<line x1="440.0" y1="372.5" x2="440.0" y2="352.1" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<line x1="440.0" y1="352.1" x2="440.0" y2="331.7" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<line x1="440.0" y1="331.7" x2="440.0" y2="311.3" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<line x1="440.0" y1="311.3" x2="440.0" y2="290.8" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<line x1="440.0" y1="290.8" x2="440.0" y2="270.4" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<line x1="440.0" y1="270.4" x2="440.0" y2="250.0" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<line x1="440.0" y1="250.0" x2="440.0" y2="229.6" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<line x1="440.0" y1="229.6" x2="440.0" y2="209.2" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<line x1="440.0" y1="209.2" x2="440.0" y2="188.7" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<line x1="440.0" y1="188.7" x2="440.0" y2="168.3" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<line x1="440.0" y1="168.3" x2="440.0" y2="147.9" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<line x1="440.0" y1="147.9" x2="440.0" y2="127.5" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<line x1="440.0" y1="127.5" x2="440.0" y2="107.1" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<line x1="440.0" y1="107.1" x2="440.0" y2="86.6" stroke="#2b6cb0" stroke-width="1.8" marker-end="url(#m2b6cb0)"/>
+<circle cx="440.0" cy="413.4" r="3.5" fill="#333" stroke="#333" stroke-width="1"/>
+<text x="448.0" y="429.4" font-size="11" fill="#333" text-anchor="start">起点 0</text>
+<text x="440.0" y="48.0" font-size="13" fill="#2b6cb0" text-anchor="middle">n = 1：每段都是 i·Δθ</text>
+<circle cx="440.0" cy="86.6" r="3.5" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
+<text x="450.0" y="90.6" font-size="12" fill="#2b6cb0" text-anchor="start">终点 2πi</text>
+<text x="450.0" y="254.0" font-size="12" fill="#333" text-anchor="start">16 段同向，</text>
+<text x="450.0" y="270.0" font-size="12" fill="#333" text-anchor="start">总长 2π</text>
+<line x1="668.7" y1="260.2" x2="668.7" y2="239.8" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<line x1="668.7" y1="239.8" x2="676.5" y2="220.9" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<line x1="676.5" y1="220.9" x2="690.9" y2="206.5" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<line x1="690.9" y1="206.5" x2="709.8" y2="198.7" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<line x1="709.8" y1="198.7" x2="730.2" y2="198.7" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<line x1="730.2" y1="198.7" x2="749.1" y2="206.5" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<line x1="749.1" y1="206.5" x2="763.5" y2="220.9" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<line x1="763.5" y1="220.9" x2="771.3" y2="239.8" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<line x1="771.3" y1="239.8" x2="771.3" y2="260.2" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<line x1="771.3" y1="260.2" x2="763.5" y2="279.1" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<line x1="763.5" y1="279.1" x2="749.1" y2="293.5" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<line x1="749.1" y1="293.5" x2="730.2" y2="301.3" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<line x1="730.2" y1="301.3" x2="709.8" y2="301.3" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<line x1="709.8" y1="301.3" x2="690.9" y2="293.5" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<line x1="690.9" y1="293.5" x2="676.5" y2="279.1" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<line x1="676.5" y1="279.1" x2="668.7" y2="260.2" stroke="#c53030" stroke-width="1.8" marker-end="url(#mc53030)"/>
+<circle cx="668.7" cy="260.2" r="3.5" fill="#333" stroke="#333" stroke-width="1"/>
+<text x="658.7" y="264.2" font-size="11" fill="#333" text-anchor="end">起点 0</text>
+<text x="720.0" y="48.0" font-size="13" fill="#c53030" text-anchor="middle">n = 2：每段转一个角</text>
+<text x="720.0" y="336.2" font-size="12" fill="#333" text-anchor="middle">首尾相接，回到起点</text>
+<text x="720.0" y="352.2" font-size="12" fill="#333" text-anchor="middle">16 段之和 = 0</text>
+<text x="430.0" y="22.0" font-size="15" fill="#333" text-anchor="middle">∮ dz/zⁿ ≈ Σ f(z)·Δz：把每一小段的贡献首尾相接（三幅图同一比例）</text>
+</svg>
