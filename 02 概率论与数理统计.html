@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>概率论 · 随机事件、概率与随机变量</title><link href="data:," rel="icon"/><style>
-@font-face{font-family:"Anthropic Serif";src:url("资源/物理字体/AnthropicSerif.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:swap}@font-face{font-family:"Anthropic Sans";src:url("资源/物理字体/AnthropicSans.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:swap}@font-face{font-family:"Lecture Song";src:url("资源/概统字体/SourceHanSerifCN-Subset.woff2") format("woff2");font-weight:200 900;font-display:swap}:root{--serif:"Anthropic Serif","Lecture Song","Source Han Serif CN VF","Songti SC",Georgia,serif;--sans:"Anthropic Sans",-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;--ink:#242a35;--muted:#657080;--line:#e1e5ec;--purple:#6e4a9c;--blue:#126d9b;--green:#17815a;--orange:#9a531d;--rose:#a64355;color-scheme:light}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:#f5f4f0;color:var(--ink);font:18px/1.95 var(--serif)}aside,.utility,.legend,.block-title,figcaption,summary,footer,.kicker,table,dialog button{font-family:var(--sans)}a{color:#315e91;text-underline-offset:3px;overflow-wrap:anywhere}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #328dcc;outline-offset:4px}aside{position:fixed;inset:0 auto 0 0;width:254px;overflow:auto;padding:32px 24px;background:#f5f4f0;border-right:1px solid var(--line);font-size:13px;line-height:1.65;z-index:10}.course{font-weight:700;font-size:15px;margin:26px 0 4px}.course-sub{color:var(--muted);font-size:12px;margin-bottom:24px}nav>ul{list-style:none;padding:0}nav ul ul{list-style:none;padding:0}nav ul ul ul{display:none}nav>ul>li>a{display:none}nav li a{display:block;padding:7px 8px;text-decoration:none;border-left:2px solid transparent;color:#526071}nav li a:hover,nav li a.active{color:#523279;background:#eae6f2;border-left-color:var(--purple)}main{margin-left:254px;max-width:1100px;background:#fff;min-height:100vh;padding:46px 70px 90px}.utility{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:36px;font-size:13px;color:var(--muted)}.utility button{border:0;background:none;color:#526071;padding:7px 9px}.utility button:hover{background:#f0f2f6}.kicker{font-size:12px;color:var(--purple);letter-spacing:1.7px;font-weight:700;margin-bottom:12px}h1{font-family:var(--serif);font-size:42px;line-height:1.3;letter-spacing:1px;margin:0 0 18px}h2{font-size:27px;line-height:1.45;margin:68px 0 24px;padding:22px 0 0;border-top:1px solid #d4dae4;font-weight:700}h3{font-size:21px;line-height:1.6;margin:36px 0 18px}p{margin:1em 0}strong{font-weight:650}.legend{display:flex;flex-wrap:wrap;gap:7px 20px;margin:26px 0 32px;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px;color:#53606e}.legend span::before{content:"";display:inline-block;width:5px;height:13px;background:var(--tone);margin-right:7px;vertical-align:-2px}.definition{--tone:var(--green);--wash:#edf7f2;--edge:#cbe5d8}.theorem{--tone:var(--purple);--wash:#f0ecf7;--edge:#d8cce9}.result,.question{--tone:var(--blue);--wash:#eef7fb;--edge:#cce3ef}.example{--tone:var(--orange);--wash:#fcf2e9;--edge:#ead5c3}.warning{--tone:var(--rose);--wash:#fcf0f2;--edge:#efd1d7}.block{margin:26px 0;padding:17px 23px 19px;background:var(--wash);border:1px solid var(--edge);border-left:4px solid var(--tone);border-radius:0}.block-title{color:var(--tone);font-size:15px;font-weight:700;margin-bottom:9px}.block>:last-child{margin-bottom:0}.block p:first-of-type{margin-top:0}.block p{margin:.7em 0}.block .display.math{margin:12px 0;padding:8px 0}.display.math{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;margin:22px 0;padding:12px 4px;scrollbar-width:thin}math{font-family:math}math[display="block"]{font-size:1.09em;margin:auto;width:max-content;min-width:100%;max-width:none}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.75;margin:24px 0}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:12px 14px}th{background:#f2f4f8;font-weight:650}td:first-child{font-weight:550}figure{margin:32px 0;padding:22px 24px;background:#fff;border:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) 190px;align-items:center;gap:25px}.figure-open{display:block;padding:0;border:0;background:white;width:100%;cursor:zoom-in;line-height:0}.figure-open img{max-width:100%;width:auto;max-height:365px;height:auto;display:block;margin:auto}figcaption{font-size:14px;line-height:1.8;color:#586170}figcaption::after{content:"点击图片放大";display:block;margin-top:12px;font-size:11px;color:#7b8593}figure.slide{grid-template-columns:1fr}figure.slide img{max-height:none;width:100%}figure.slide figcaption{text-align:center}details{margin:26px 0;border:1px solid #dbe3ed;padding:14px 20px;background:#fafbfd}summary{cursor:pointer;color:#315e91;font-weight:650;font-size:16px}details[open]>summary{margin-bottom:20px}details p{font-size:17px}details figure{margin:16px 0}li{padding-left:3px;margin:10px 0}ol,ul{padding-left:25px}blockquote{border-left:3px solid #bbc8d7;margin:24px 0;padding:0 20px;color:#526071}footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}#toc-button{display:none}.scrim{display:none}dialog{border:0;padding:20px;background:#fff;max-width:96vw;max-height:94vh;box-shadow:0 15px 60px #0004}dialog::backdrop{background:#15202dcc}dialog .close{display:block;margin-left:auto;border:0;background:#f1f3f6;padding:5px 12px;font-size:14px}dialog img{display:block;max-width:88vw;max-height:74vh;object-fit:contain;margin:12px auto}dialog p{max-width:800px;font-size:14px;margin:8px auto}.chapter-hint{color:var(--muted);font-size:13px}.mobile-title{display:none}
+@font-face{font-family:"Anthropic Serif";src:url("资源/物理字体/AnthropicSerif.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:swap}@font-face{font-family:"Anthropic Sans";src:url("资源/物理字体/AnthropicSans.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:swap}@font-face{font-family:"Lecture Song";src:url("资源/概统字体/SourceHanSerifCN-Subset.woff2") format("woff2");font-weight:200 900;font-display:swap}:root{--serif:"Anthropic Serif","Lecture Song","Source Han Serif CN VF","Songti SC",Georgia,serif;--sans:"Anthropic Sans",-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;--ink:#242a35;--muted:#657080;--line:#e1e5ec;--purple:#6e4a9c;--blue:#126d9b;--green:#17815a;--orange:#9a531d;--rose:#a64355;color-scheme:light}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:#f5f4f0;color:var(--ink);font:18px/1.95 var(--serif)}aside,.utility,.legend,.block-title,figcaption,summary,footer,.kicker,table,dialog button{font-family:var(--sans)}a{color:#315e91;text-underline-offset:3px;overflow-wrap:anywhere}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #328dcc;outline-offset:4px}aside{position:fixed;inset:0 auto 0 0;width:254px;overflow:auto;padding:32px 24px;background:#f5f4f0;border-right:1px solid var(--line);font-size:13px;line-height:1.65;z-index:10}.course{font-weight:700;font-size:15px;margin:26px 0 4px}.course-sub{color:var(--muted);font-size:12px;margin-bottom:24px}nav>ul{list-style:none;padding:0}nav ul ul{list-style:none;padding:0}nav ul ul ul{display:none}nav>ul>li>a{display:none}nav li a{display:block;padding:7px 8px;text-decoration:none;border-left:2px solid transparent;color:#526071}nav li a:hover,nav li a.active{color:#523279;background:#eae6f2;border-left-color:var(--purple)}main{margin-left:254px;max-width:1100px;background:#fff;min-height:100vh;padding:46px 70px 90px}.utility{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:36px;font-size:13px;color:var(--muted)}.utility button{border:0;background:none;color:#526071;padding:7px 9px}.utility button:hover{background:#f0f2f6}.kicker{font-size:12px;color:var(--purple);letter-spacing:1.7px;font-weight:700;margin-bottom:12px}h1{font-family:var(--serif);font-size:42px;line-height:1.3;letter-spacing:1px;margin:0 0 18px}h2{font-size:27px;line-height:1.45;margin:68px 0 24px;padding:22px 0 0;border-top:1px solid #d4dae4;font-weight:700}h3{font-size:21px;line-height:1.6;margin:36px 0 18px}h4{font-size:18px;line-height:1.6;margin:30px 0 14px}p{margin:1em 0}strong{font-weight:650}.legend{display:flex;flex-wrap:wrap;gap:7px 20px;margin:26px 0 32px;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px;color:#53606e}.legend span::before{content:"";display:inline-block;width:5px;height:13px;background:var(--tone);margin-right:7px;vertical-align:-2px}.definition{--tone:var(--green);--wash:#edf7f2;--edge:#cbe5d8}.theorem{--tone:var(--purple);--wash:#f0ecf7;--edge:#d8cce9}.result,.question{--tone:var(--blue);--wash:#eef7fb;--edge:#cce3ef}.example{--tone:var(--orange);--wash:#fcf2e9;--edge:#ead5c3}.warning{--tone:var(--rose);--wash:#fcf0f2;--edge:#efd1d7}.block{margin:26px 0;padding:17px 23px 19px;background:var(--wash);border:1px solid var(--edge);border-left:4px solid var(--tone);border-radius:0}.block-title{color:var(--tone);font-size:15px;font-weight:700;margin-bottom:9px}.block>:last-child{margin-bottom:0}.block p:first-of-type{margin-top:0}.block p{margin:.7em 0}.block .display.math{margin:12px 0;padding:8px 0}.display.math{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;margin:22px 0;padding:12px 4px;scrollbar-width:thin}math{font-family:math}math[display="block"]{font-size:1.09em;margin:auto;width:max-content;min-width:100%;max-width:none}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.75;margin:24px 0}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:12px 14px}th{background:#f2f4f8;font-weight:650}td:first-child{font-weight:550}figure{margin:32px 0;padding:22px 24px;background:#fff;border:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) 190px;align-items:center;gap:25px}.figure-open{display:block;padding:0;border:0;background:white;width:100%;cursor:zoom-in;line-height:0}.figure-open img{max-width:100%;width:auto;max-height:365px;height:auto;display:block;margin:auto}figcaption{font-size:14px;line-height:1.8;color:#586170}figcaption::after{content:"点击图片放大";display:block;margin-top:12px;font-size:11px;color:#7b8593}figure.slide{grid-template-columns:1fr}figure.slide img{max-height:none;width:100%}figure.slide figcaption{text-align:center}details{margin:26px 0;border:1px solid #dbe3ed;padding:14px 20px;background:#fafbfd}summary{cursor:pointer;color:#315e91;font-weight:650;font-size:16px}details[open]>summary{margin-bottom:20px}details p{font-size:17px}details figure{margin:16px 0}li{padding-left:3px;margin:10px 0}ol,ul{padding-left:25px}blockquote{border-left:3px solid #bbc8d7;margin:24px 0;padding:0 20px;color:#526071}footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}#toc-button{display:none}.scrim{display:none}dialog{border:0;padding:20px;background:#fff;max-width:96vw;max-height:94vh;box-shadow:0 15px 60px #0004}dialog::backdrop{background:#15202dcc}dialog .close{display:block;margin-left:auto;border:0;background:#f1f3f6;padding:5px 12px;font-size:14px}dialog img{display:block;max-width:88vw;max-height:74vh;object-fit:contain;margin:12px auto}dialog p{max-width:800px;font-size:14px;margin:8px auto}.chapter-hint{color:var(--muted);font-size:13px}.mobile-title{display:none}
 @media(min-width:1450px){main{margin-left:max(254px,calc((100vw - 1000px)/2));box-shadow:0 0 0 1px #e8ebf0}}
 @media(max-width:1050px){aside{transform:translateX(-100%);transition:transform .18s}body.toc-open aside{transform:none}.scrim{position:fixed;inset:0;background:#14223855;z-index:9}body.toc-open .scrim{display:block}main{margin:0 auto;padding:32px 40px 70px;max-width:900px}#toc-button{display:inline-block}.utility{margin-bottom:28px}}
 @media(max-width:600px){body{font-size:17px;line-height:1.9}main{padding:22px 19px 60px}h1{font-size:34px}h2{font-size:25px;margin-top:48px}h3{font-size:20px}.utility{font-size:12px;gap:0}.utility button{padding:6px}.kicker{font-size:11px}.block{padding:14px 16px}.block-title{font-size:14px}figure{grid-template-columns:1fr;padding:18px;gap:14px}.figure-open img{max-height:340px}figcaption{font-size:13px;line-height:1.7}figcaption::after{margin-top:6px}table{display:block;overflow-x:auto;font-size:13px}th,td{min-width:100px;padding:10px}math[display="block"]{font-size:1em}details{padding:12px 15px}.legend{gap:8px 16px}dialog{padding:12px}dialog img{max-width:87vw}li{padding-left:0}}
@@ -269,7 +269,7 @@
 </figure>
 </div>
 <div class="block example">
-<p class="block-title"><strong>例题 · 串联与并联系统</strong></p>
+<p class="block-title"><strong>例 1 · 串联与并联系统</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-19">一个系统由
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
 个部件组成，记
@@ -346,7 +346,7 @@
 </figure>
 </div>
 <div class="block result">
-<p class="block-title"><strong>结论 · 语言与运算的对应</strong></p>
+<p class="block-title"><strong>结论 1 · 语言与运算的对应</strong></p>
 <table>
 <thead>
 <tr>
@@ -405,7 +405,7 @@
 <p>它的用处在于<mark class="kw">换一种形式计算</mark>。“至少有一个”的并<mark class="kw2">事件</mark>展开项数很多，而取<mark class="kw2">对立</mark>以后变成“<mark class="kw">全都不</mark>”的<mark class="kw2">交事件</mark>；后面学了<mark class="kw2">独立性</mark>，交<mark class="kw2">事件</mark>的概率就是<mark class="kw2">概率</mark>的乘积，计算会<mark class="kw">简单得多</mark>。</p>
 <h3 id="用运算表示复杂事件">2.5 用运算表示复杂事件</h3>
 <div class="block example">
-<p class="block-title"><strong>例题 · 写出对立事件</strong></p>
+<p class="block-title"><strong>例 2 · 写出对立事件</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-27">设
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo form="prefix" stretchy="false">{</mo></mrow><annotation encoding="application/x-tex">A=\{</annotation></semantics></math>甲产品畅销且乙产品滞销<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo form="postfix" stretchy="false">}</mo><annotation encoding="application/x-tex">\}</annotation></semantics></math>，则
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>A</mi></mrow><annotation encoding="application/x-tex">\bar A</annotation></semantics></math>
@@ -417,7 +417,7 @@
 <p>即“甲<mark class="kw2">滞销</mark>或乙畅销”。<mark class="hl hl-counter" data-cat="counter" id="hl-28"><mark class="kw">常见错误</mark>是答成“甲滞销且乙畅销”：对立的时候<mark class="kw">交要变成并</mark>。</mark></p>
 </div>
 <div class="block example">
-<p class="block-title"><strong>例题 · 三个事件的几种组合</strong></p>
+<p class="block-title"><strong>例 3 · 三个事件的几种组合</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-29">设
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A,B,C</annotation></semantics></math>
 为三个事件，用运算表示：(1) 三个事件同时发生；</mark>(2) 最多<mark class="kw2">发生</mark>两个；(3)
@@ -527,7 +527,7 @@
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo form="postfix" stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[0,1]</annotation></semantics></math>，<mark class="kw">一定哪里错了</mark>。</p>
 <h3 id="probability-properties">3.4 概率的性质</h3>
 <div class="block result">
-<p class="block-title"><strong>结论 · 概率的基本性质</strong></p>
+<p class="block-title"><strong>结论 2 · 概率的基本性质</strong></p>
 <p>(1)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>⌀</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">P(\varnothing)=0</annotation></semantics></math>。</p>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-42">(2) <strong>有限可加性</strong>：若
@@ -624,7 +624,7 @@
 项，总<mark class="kw2">项数</mark>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mfrac linethickness="0"><mi>n</mi><mn>1</mn></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mo>+</mo><mi>⋯</mi><mo>+</mo><mrow><mo form="prefix" stretchy="true">(</mo><mfrac linethickness="0"><mi>n</mi><mi>n</mi></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><msup><mn>2</mn><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\binom n1+\cdots+\binom nn=2^n-1</annotation></semantics></math>。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 至少一人参加集会的概率</strong></p>
+<p class="block-title"><strong>例 4 · 至少一人参加集会的概率</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-51">甲、乙、丙三人参加某集会的概率均为
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.4</mn><annotation encoding="application/x-tex">0.4</annotation></semantics></math>，其中至少两人参加的概率为
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.3</mn><annotation encoding="application/x-tex">0.3</annotation></semantics></math>，三人都参加的概率为
@@ -676,7 +676,7 @@
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo form="prefix" stretchy="false">{</mo><mn>5</mn><mo>,</mo><mn>6</mn><mo form="postfix" stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">A=\{5,6\}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mn>2</mn><mi>/</mi><mn>6</mn><mo>=</mo><mn>1</mn><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">P(A)=2/6=1/3</annotation></semantics></math>。</p>
 <h3 id="超几何分布">4.2 超几何分布</h3>
 <div class="block example">
-<p class="block-title"><strong>例题 · 不放回抽取中的次品数</strong></p>
+<p class="block-title"><strong>例 5 · 不放回抽取中的次品数</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-60"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
 件产品中有
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>
@@ -708,7 +708,7 @@
 </div>
 <h3 id="lottery">4.3 抽签的公平性</h3>
 <div class="block example">
-<p class="block-title"><strong>例题 · 第
+<p class="block-title"><strong>例 6 · 第
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
 次摸到红球的概率</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-61">袋中有
@@ -764,7 +764,7 @@
 </div>
 <h3 id="birthday">4.4 放球问题与生日问题</h3>
 <div class="block example">
-<p class="block-title"><strong>例题 · 放球问题</strong></p>
+<p class="block-title"><strong>例 7 · 放球问题</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-63">将
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
 个不同的球投入
@@ -955,7 +955,7 @@
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>3</mn></msub><annotation encoding="application/x-tex">A_3</annotation></semantics></math>……<mark class="kw">哪个事件作为条件更方便</mark>，就先写哪个——<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
 可以<mark class="kw">互为条件</mark>。</mark></p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 由条件概率求并的概率</strong></p>
+<p class="block-title"><strong>例 8 · 由条件概率求并的概率</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-73">已知
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow><annotation encoding="application/x-tex">P(A)=\frac14</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>B</mi><mo>∣</mo><mi>A</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">P(B\mid A)=\frac13</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo>∣</mo><mi>B</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">P(A\mid B)=\frac12</annotation></semantics></math>，求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo>∪</mo><mi>B</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(A\cup B)</annotation></semantics></math>
@@ -994,7 +994,7 @@
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>12</mn></mfrac><annotation encoding="application/x-tex">\frac1{12}</annotation></semantics></math>。</figcaption>
 </figure>
 <div class="block example">
-<p class="block-title"><strong>例题 · 三次考核机会</strong></p>
+<p class="block-title"><strong>例 9 · 三次考核机会</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-75">某行业进行技能考核，每人每月最多考 3 次。</mark>第一次通过的<mark class="kw2">概率</mark>为
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.6</mn><annotation encoding="application/x-tex">0.6</annotation></semantics></math>；第一次未通过则<mark class="kw2">参加</mark>第二次，此时通过的<mark class="kw2">概率</mark>为
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.8</mn><annotation encoding="application/x-tex">0.8</annotation></semantics></math>；前两次都未通过则<mark class="kw2">参加</mark>第三次，通过的<mark class="kw2">概率</mark>为
@@ -1021,7 +1021,7 @@
 <p><mark class="hl hl-claim" data-cat="claim" id="hl-78">只需算一项，更简单。</mark></p>
 </div>
 <div class="block example">
-<p class="block-title"><strong>例题 · 匹配问题</strong></p>
+<p class="block-title"><strong>例 10 · 匹配问题</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-79"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
 名士兵各有一把外形相同的枪。</mark><mark class="kw2">紧急集合</mark>时每人随机取一把，求至少有一人<mark class="kw2">拿到</mark>自己的枪的<mark class="kw2">概率</mark>。</p>
 <p>记
@@ -1156,7 +1156,7 @@
 称为<mark class="kw">后验概率</mark>（观察到<mark class="kw2">结果</mark>后的<mark class="kw2">修正</mark>）。</p>
 <h3 id="例题">6.4 例题</h3>
 <div class="block example">
-<p class="block-title"><strong>例题 · 小麦种子的发芽率</strong></p>
+<p class="block-title"><strong>例 11 · 小麦种子的发芽率</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-85">一批小麦种子中一、二、三等品各占
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>70</mn><mi>%</mi><mo>,</mo><mn>20</mn><mi>%</mi><mo>,</mo><mn>10</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">70\%,20\%,10\%</annotation></semantics></math>，它们的发芽率分别为
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>90</mn><mi>%</mi><mo>,</mo><mn>70</mn><mi>%</mi><mo>,</mo><mn>50</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">90\%,70\%,50\%</annotation></semantics></math>。</mark>(1)
@@ -1175,7 +1175,7 @@
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.768</mn><annotation encoding="application/x-tex">0.768</annotation></semantics></math>。</p>
 </div>
 <div class="block example">
-<p class="block-title"><strong>例题 · 癌症检测能否用于普查</strong></p>
+<p class="block-title"><strong>例 12 · 癌症检测能否用于普查</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-86">某种癌症诊断试验有
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">5\%</annotation></semantics></math>
 的假阳性与
@@ -1202,7 +1202,7 @@
 <figcaption aria-hidden="true">癌症检测的树形图与贝叶斯计算。上面的路径是患癌者检测阳性，下面的路径是健康人被误报为阳性。</figcaption>
 </figure>
 <div class="block example">
-<p class="block-title"><strong>例题 · 昆虫下一代的幼虫数</strong></p>
+<p class="block-title"><strong>例 13 · 昆虫下一代的幼虫数</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-88">一只昆虫产
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
 个卵的概率为
@@ -1326,7 +1326,7 @@
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>B</mi></mrow><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo>−</mo><mi>B</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo form="postfix" stretchy="false">)</mo><mo>−</mo><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mi>B</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo form="postfix" stretchy="false">)</mo><mo>−</mo><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo form="postfix" stretchy="false">)</mo><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>B</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo form="postfix" stretchy="false">)</mo><mo form="prefix" stretchy="false">[</mo><mn>1</mn><mo>−</mo><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>B</mi><mo form="postfix" stretchy="false">)</mo><mo form="postfix" stretchy="false">]</mo><mo>=</mo><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo form="postfix" stretchy="false">)</mo><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>B</mi></mrow><mo form="postfix" stretchy="false">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">P(A\bar B)=P(A-B)=P(A)-P(AB)=P(A)-P(A)P(B)=P(A)[1-P(B)]=P(A)P(\bar B).</annotation></semantics></math></div>
 <p>其余<mark class="kw2">同理</mark>。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 独立时并的概率</strong></p>
+<p class="block-title"><strong>例 14 · 独立时并的概率</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-93"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">P(A)=0.5</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>B</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mn>0.4</mn></mrow><annotation encoding="application/x-tex">P(B)=0.4</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A,B</annotation></semantics></math>
 独立，求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>A</mi><mo>∪</mo><mi>B</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(A\cup B)</annotation></semantics></math>。</mark></p>
@@ -1359,7 +1359,7 @@
 相互独立。</mark></p>
 </div>
 <div class="block example">
-<p class="block-title"><strong>例题 · 两两独立不等于相互独立</strong></p>
+<p class="block-title"><strong>例 15 · 两两独立不等于相互独立</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-98">一个正四面体，一面涂红色，一面涂黄色，一面涂蓝色，第四面涂红、黄、蓝三色。</mark>随机抛掷，令
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A,B,C</annotation></semantics></math>
 分别表示<mark class="kw2">着地</mark>的一面含<mark class="kw2">红色</mark>、含<mark class="kw2">黄色</mark>、含<mark class="kw2">蓝色</mark>。</p>
@@ -1405,7 +1405,7 @@
 个。所以直接验证<mark class="kw2">独立性</mark>的题目<mark class="kw">一般只到三个事件</mark>；独立性更多是<strong class="kt" data-cat="term" id="hl-214">反过来用</strong>：<mark class="kw">由试验背景判断独立</mark>（各人<mark class="kw2">射击</mark>互不影响、各<mark class="kw2">部件</mark>独立工作），再把积的<mark class="kw2">概率</mark>直接写成<mark class="kw2">概率</mark>的积，<mark class="kw">代替乘法公式</mark>里一串条件概率。</p>
 <h3 id="利用独立性计算">7.3 利用独立性计算</h3>
 <div class="block example">
-<p class="block-title"><strong>例题 · 100 名士兵射击</strong></p>
+<p class="block-title"><strong>例 16 · 100 名士兵射击</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-100">100 名士兵对同一目标射击，每人命中的概率为
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.7</mn><annotation encoding="application/x-tex">0.7</annotation></semantics></math>，各人命中与否相互独立，求目标被命中的概率。</mark></p>
 <p>记
@@ -1422,7 +1422,7 @@
 也<mark class="kw2">相互独立</mark>。</p>
 </div>
 <div class="block example">
-<p class="block-title"><strong>例题 · 至少 3 个部件正常的系统</strong></p>
+<p class="block-title"><strong>例 17 · 至少 3 个部件正常的系统</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-102">系统由 4 个独立工作的部件组成，第
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
 个部件正常工作的概率为
@@ -2009,7 +2009,7 @@ C <mark class="kw">都失效</mark>：</mark></p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">非负性：</mtext><msub><mi>p</mi><mi>k</mi></msub><mo>≥</mo><mn>0</mn><mo>;</mo><mspace width="2.0em"></mspace><mtext mathvariant="normal">归一性：</mtext><munder><mo>∑</mo><mi>k</mi></munder><msub><mi>p</mi><mi>k</mi></msub><mo>=</mo><mn>1</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\text{非负性：}p_k\ge0;\qquad\text{归一性：}\sum_kp_k=1 .</annotation></semantics></math></div>
 <p>算完分布律<mark class="kw">先检查这两条</mark>，有一条不<mark class="kw2">满足</mark>，分布律<mark class="kw">一定算错了</mark>。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 袋中摸球</strong></p>
+<p class="block-title"><strong>例 18 · 袋中摸球</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-134">袋中有 5 个球，2 个白球、3 个红球，任取 2
 个，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
 表示取到的白球数，求
@@ -2044,7 +2044,7 @@ C <mark class="kw">都失效</mark>：</mark></p>
 <p>归一性也可以<mark class="kw">反过来用</mark>：分布律里<mark class="kw">含未知常数</mark>时，令全部<mark class="kw2">概率之和</mark>等于
 1，就能<mark class="kw">求出它</mark>。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 求常数
+<p class="block-title"><strong>例 19 · 求常数
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math></strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-135"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>X</mi><mo>=</mo><mi>k</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>c</mi><msup><mi>λ</mi><mi>k</mi></msup></mrow><mrow><mi>k</mi><mi>!</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">P(X=k)=\dfrac{c\lambda^k}{k!}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">k=0,1,2,\ldots</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda&gt;0</annotation></semantics></math>。</mark>求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>。</p>
@@ -2059,7 +2059,7 @@ C <mark class="kw">都失效</mark>：</mark></p>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>X</mi><mo>=</mo><mi>k</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><msup><mi>λ</mi><mi>k</mi></msup><mrow><mi>k</mi><mi>!</mi></mrow></mfrac></mstyle><msup><mi>e</mi><mrow><mi>−</mi><mi>λ</mi></mrow></msup></mrow><annotation encoding="application/x-tex">P(X=k)=\dfrac{\lambda^k}{k!}e^{-\lambda}</annotation></semantics></math>，这就是后面的<mark class="kw">泊松分布</mark>。</p>
 </div>
 <div class="block example">
-<p class="block-title"><strong>例题 · 两个期末填空题</strong></p>
+<p class="block-title"><strong>例 20 · 两个期末填空题</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-136">(1)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>X</mi><mo>=</mo><mi>k</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mi>α</mi><msup><mi>β</mi><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">P(X=k)=\alpha\beta^k</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">k=1,2,\ldots</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\alpha&gt;0</annotation></semantics></math>。</mark><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow><annotation encoding="application/x-tex">\alpha,\beta</annotation></semantics></math>
 <mark class="kw2">满足</mark>什么关系时这是<mark class="kw2">分布律</mark>？</p>
@@ -2227,7 +2227,7 @@ C <mark class="kw">都失效</mark>：</mark></p>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
 个独立 0-1 分布的<mark class="kw">叠加</mark>。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 直接代公式</strong></p>
+<p class="block-title"><strong>例 21 · 直接代公式</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-148"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>∼</mo><mi>B</mi><mo form="prefix" stretchy="false">(</mo><mn>100</mn><mo>,</mo><mn>0.05</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">X\sim B(100,0.05)</annotation></semantics></math>，求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>X</mi><mo>=</mo><mn>10</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(X=10)</annotation></semantics></math>
 与
@@ -2235,7 +2235,7 @@ C <mark class="kw">都失效</mark>：</mark></p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>X</mi><mo>=</mo><mn>10</mn><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mrow><mo form="prefix" stretchy="true">(</mo><mfrac linethickness="0"><mn>100</mn><mn>10</mn></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><msup><mn>0.05</mn><mn>10</mn></msup><mspace width="0.167em"></mspace><msup><mn>0.95</mn><mn>90</mn></msup><mo>≈</mo><mn>0.0167</mn><mo>,</mo><mspace width="2.0em"></mspace><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>X</mi><mo>≤</mo><mn>10</mn><mo form="postfix" stretchy="false">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mn>10</mn></munderover><mrow><mo form="prefix" stretchy="true">(</mo><mfrac linethickness="0"><mn>100</mn><mi>k</mi></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><msup><mn>0.05</mn><mi>k</mi></msup><mspace width="0.167em"></mspace><msup><mn>0.95</mn><mrow><mn>100</mn><mo>−</mo><mi>k</mi></mrow></msup><mo>≈</mo><mn>0.9885</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">P(X=10)=\binom{100}{10}0.05^{10}\,0.95^{90}\approx0.0167,\qquad P(X\le10)=\sum_{k=0}^{10}\binom{100}{k}0.05^k\,0.95^{100-k}\approx0.9885 .</annotation></semantics></math></div>
 </div>
 <div class="block example">
-<p class="block-title"><strong>例题 · 维修工人的两种配备方案</strong></p>
+<p class="block-title"><strong>例 22 · 维修工人的两种配备方案</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-149">有 80 台同类设备，各台工作相互独立，每台发生故障的概率为
 0.01，一台设备的故障能由一个人处理。</mark>方案一：由 4 人<mark class="kw2">维护</mark>，每人<mark class="kw2">负责</mark> 20
 台；<mark class="kw2">方案</mark>二：由 3 人共同<mark class="kw2">维护</mark> 80
@@ -2302,7 +2302,7 @@ C <mark class="kw">都失效</mark>：</mark></p>
 <p><mark class="hl hl-counter" data-cat="counter" id="hl-158"><mark class="kw">注意</mark>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mi>!</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0!=1</annotation></semantics></math>：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>X</mi><mo>=</mo><mn>0</mn><mo form="postfix" stretchy="false">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>λ</mi></mrow></msup></mrow><annotation encoding="application/x-tex">P(X=0)=e^{-\lambda}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>X</mi><mo>=</mo><mn>1</mn><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mi>λ</mi><msup><mi>e</mi><mrow><mi>−</mi><mi>λ</mi></mrow></msup></mrow><annotation encoding="application/x-tex">P(X=1)=\lambda e^{-\lambda}</annotation></semantics></math>。</mark></p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 车站候车人数</strong></p>
+<p class="block-title"><strong>例 23 · 车站候车人数</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-159">某汽车停靠站候车人数
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>∼</mo><mi>π</mi><mo form="prefix" stretchy="false">(</mo><mn>4.5</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">X\sim\pi(4.5)</annotation></semantics></math>。</mark>(1)
 求至少有两<mark class="kw2">人候车</mark>的概率；(2)
@@ -2347,7 +2347,7 @@ C <mark class="kw">都失效</mark>：</mark></p>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>&gt;</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">n&gt;10</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>&lt;</mo><mn>0.1</mn></mrow><annotation encoding="application/x-tex">p&lt;0.1</annotation></semantics></math>）时</p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><msup><mi>p</mi><mi>k</mi></msup><mo form="prefix" stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><msup><mo form="postfix" stretchy="false">)</mo><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></msup><mo>≈</mo><mfrac><mrow><msup><mi>λ</mi><mi>k</mi></msup><msup><mi>e</mi><mrow><mi>−</mi><mi>λ</mi></mrow></msup></mrow><mrow><mi>k</mi><mi>!</mi></mrow></mfrac><mo>,</mo><mspace width="2.0em"></mspace><mi>λ</mi><mo>=</mo><mi>n</mi><mi>p</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\binom nkp^k(1-p)^{n-k}\approx\frac{\lambda^ke^{-\lambda}}{k!},\qquad\lambda=np .</annotation></semantics></math></div>
 <div class="block example">
-<p class="block-title"><strong>例题 · 用泊松近似重算维修工人问题</strong></p>
+<p class="block-title"><strong>例 24 · 用泊松近似重算维修工人问题</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-161">方案一中
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>∼</mo><mi>B</mi><mo form="prefix" stretchy="false">(</mo><mn>20</mn><mo>,</mo><mn>0.01</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">X\sim B(20,0.01)</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mn>20</mn><mo>×</mo><mn>0.01</mn><mo>=</mo><mn>0.2</mn></mrow><annotation encoding="application/x-tex">\lambda=20\times0.01=0.2</annotation></semantics></math>：</mark></p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>X</mi><mo>≥</mo><mn>2</mn><mo form="postfix" stretchy="false">)</mo><mo>≈</mo><mn>1</mn><mo>−</mo><msup><mi>e</mi><mrow><mi>−</mi><mn>0.2</mn></mrow></msup><mo>−</mo><mn>0.2</mn><msup><mi>e</mi><mrow><mi>−</mi><mn>0.2</mn></mrow></msup><mo>≈</mo><mn>0.0175</mn><mo>,</mo><mspace width="2.0em"></mspace><mn>1</mn><mo>−</mo><mo form="prefix" stretchy="false">(</mo><mn>1</mn><mo>−</mo><mn>0.0175</mn><msup><mo form="postfix" stretchy="false">)</mo><mn>4</mn></msup><mo>≈</mo><mn>0.0683</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">P(X\ge2)\approx1-e^{-0.2}-0.2e^{-0.2}\approx0.0175,\qquad 1-(1-0.0175)^4\approx0.0683 .</annotation></semantics></math></div>
@@ -2414,7 +2414,7 @@ C <mark class="kw">都失效</mark>：</mark></p>
 <h3 id="求离散型的分布函数">12.2 求离散型的分布函数</h3>
 <p><mark class="hl hl-claim" data-cat="claim" id="hl-165"><mark class="kw">方法是固定的</mark>：<strong>用各取值点把实轴分段，在每一段里把左侧的概率累加起来</strong>。</mark></p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 0-1 分布的分布函数</strong></p>
+<p class="block-title"><strong>例 25 · 0-1 分布的分布函数</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-166"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
 的分布律为
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>X</mi><mo>=</mo><mn>0</mn><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">P(X=0)=q</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo form="prefix" stretchy="false">(</mo><mi>X</mi><mo>=</mo><mn>1</mn><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">P(X=1)=p</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>,</mo><mi>q</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">p,q&gt;0</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>+</mo><mi>q</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">p+q=1</annotation></semantics></math>。</mark>求

@@ -27,7 +27,7 @@
 
 ## 怎么做的
 
-讲义由 Claude Code Skill [course-lecture-notes](https://github.com/ZJUOC/course-lecture-notes-skill) 生成：Markdown 构建源经 Pandoc 转为 HTML，阅读器（荧光、概念图、大纲）由脚本从同一份底稿生成。制作标准见 [讲义制作要求与经验.md](讲义制作要求与经验.md) 和 [制作记录/](制作记录/)。
+讲义由 Claude Code Skill [learn-everything-in-html](https://github.com/ZJUOC/learn-everything-in-html)（原名 course-lecture-notes） 生成：Markdown 构建源经 Pandoc 转为 HTML，阅读器（荧光、概念图、大纲）由脚本从同一份底稿生成。制作标准见 [讲义制作要求与经验.md](讲义制作要求与经验.md) 和 [制作记录/](制作记录/)。
 
 ## 版权
 

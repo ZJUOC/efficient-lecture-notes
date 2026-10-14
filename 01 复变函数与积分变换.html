@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>复变函数 · 复数、解析函数、复积分与级数初步</title><link href="data:," rel="icon"/><style>
-@font-face{font-family:"Anthropic Serif";src:url("资源/物理字体/AnthropicSerif.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:swap}@font-face{font-family:"Anthropic Sans";src:url("资源/物理字体/AnthropicSans.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:swap}@font-face{font-family:"Lecture Song";src:url("资源/复变字体/SourceHanSerifCN-Subset.woff2") format("woff2");font-weight:200 900;font-display:swap}:root{--serif:"Anthropic Serif","Lecture Song","Source Han Serif CN VF","Songti SC",Georgia,serif;--sans:"Anthropic Sans",-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;--ink:#242a35;--muted:#657080;--line:#e1e5ec;--purple:#6e4a9c;--blue:#126d9b;--green:#17815a;--orange:#9a531d;--rose:#a64355;color-scheme:light}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:#f5f4f0;color:var(--ink);font:18px/1.95 var(--serif)}aside,.utility,.legend,.block-title,figcaption,summary,footer,.kicker,table,dialog button{font-family:var(--sans)}a{color:#315e91;text-underline-offset:3px;overflow-wrap:anywhere}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #328dcc;outline-offset:4px}aside{position:fixed;inset:0 auto 0 0;width:254px;overflow:auto;padding:32px 24px;background:#f5f4f0;border-right:1px solid var(--line);font-size:13px;line-height:1.65;z-index:10}.course{font-weight:700;font-size:15px;margin:26px 0 4px}.course-sub{color:var(--muted);font-size:12px;margin-bottom:24px}nav>ul{list-style:none;padding:0}nav ul ul{list-style:none;padding:0}nav ul ul ul{display:none}nav>ul>li>a{display:none}nav li a{display:block;padding:7px 8px;text-decoration:none;border-left:2px solid transparent;color:#526071}nav li a:hover,nav li a.active{color:#523279;background:#eae6f2;border-left-color:var(--purple)}main{margin-left:254px;max-width:1100px;background:#fff;min-height:100vh;padding:46px 70px 90px}.utility{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:36px;font-size:13px;color:var(--muted)}.utility button{border:0;background:none;color:#526071;padding:7px 9px}.utility button:hover{background:#f0f2f6}.kicker{font-size:12px;color:var(--purple);letter-spacing:1.7px;font-weight:700;margin-bottom:12px}h1{font-family:var(--serif);font-size:42px;line-height:1.3;letter-spacing:1px;margin:0 0 18px}h2{font-size:27px;line-height:1.45;margin:68px 0 24px;padding:22px 0 0;border-top:1px solid #d4dae4;font-weight:700}h3{font-size:21px;line-height:1.6;margin:36px 0 18px}p{margin:1em 0}strong{font-weight:650}.legend{display:flex;flex-wrap:wrap;gap:7px 20px;margin:26px 0 32px;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px;color:#53606e}.legend span::before{content:"";display:inline-block;width:5px;height:13px;background:var(--tone);margin-right:7px;vertical-align:-2px}.definition{--tone:var(--green);--wash:#edf7f2;--edge:#cbe5d8}.theorem{--tone:var(--purple);--wash:#f0ecf7;--edge:#d8cce9}.result,.question{--tone:var(--blue);--wash:#eef7fb;--edge:#cce3ef}.example{--tone:var(--orange);--wash:#fcf2e9;--edge:#ead5c3}.warning{--tone:var(--rose);--wash:#fcf0f2;--edge:#efd1d7}.block{margin:26px 0;padding:17px 23px 19px;background:var(--wash);border:1px solid var(--edge);border-left:4px solid var(--tone);border-radius:0}.block-title{color:var(--tone);font-size:15px;font-weight:700;margin-bottom:9px}.block>:last-child{margin-bottom:0}.block p:first-of-type{margin-top:0}.block p{margin:.7em 0}.block .display.math{margin:12px 0;padding:8px 0}.display.math{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;margin:22px 0;padding:12px 4px;scrollbar-width:thin}math{font-family:math}math[display="block"]{font-size:1.09em;margin:auto;width:max-content;min-width:100%;max-width:none}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.75;margin:24px 0}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:12px 14px}th{background:#f2f4f8;font-weight:650}td:first-child{font-weight:550}figure{margin:32px 0;padding:22px 24px;background:#fff;border:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) 190px;align-items:center;gap:25px}.figure-open{display:block;padding:0;border:0;background:white;width:100%;cursor:zoom-in;line-height:0}.figure-open img{max-width:100%;width:auto;max-height:365px;height:auto;display:block;margin:auto}figcaption{font-size:14px;line-height:1.8;color:#586170}figcaption::after{content:"点击图片放大";display:block;margin-top:12px;font-size:11px;color:#7b8593}figure.slide{grid-template-columns:1fr}figure.slide img{max-height:none;width:100%}figure.slide figcaption{text-align:center}details{margin:26px 0;border:1px solid #dbe3ed;padding:14px 20px;background:#fafbfd}summary{cursor:pointer;color:#315e91;font-weight:650;font-size:16px}details[open]>summary{margin-bottom:20px}details p{font-size:17px}details figure{margin:16px 0}li{padding-left:3px;margin:10px 0}ol,ul{padding-left:25px}blockquote{border-left:3px solid #bbc8d7;margin:24px 0;padding:0 20px;color:#526071}footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}#toc-button{display:none}.scrim{display:none}dialog{border:0;padding:20px;background:#fff;max-width:96vw;max-height:94vh;box-shadow:0 15px 60px #0004}dialog::backdrop{background:#15202dcc}dialog .close{display:block;margin-left:auto;border:0;background:#f1f3f6;padding:5px 12px;font-size:14px}dialog img{display:block;max-width:88vw;max-height:74vh;object-fit:contain;margin:12px auto}dialog p{max-width:800px;font-size:14px;margin:8px auto}.chapter-hint{color:var(--muted);font-size:13px}.mobile-title{display:none}
+@font-face{font-family:"Anthropic Serif";src:url("资源/物理字体/AnthropicSerif.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:swap}@font-face{font-family:"Anthropic Sans";src:url("资源/物理字体/AnthropicSans.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:swap}@font-face{font-family:"Lecture Song";src:url("资源/复变字体/SourceHanSerifCN-Subset.woff2") format("woff2");font-weight:200 900;font-display:swap}:root{--serif:"Anthropic Serif","Lecture Song","Source Han Serif CN VF","Songti SC",Georgia,serif;--sans:"Anthropic Sans",-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;--ink:#242a35;--muted:#657080;--line:#e1e5ec;--purple:#6e4a9c;--blue:#126d9b;--green:#17815a;--orange:#9a531d;--rose:#a64355;color-scheme:light}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:#f5f4f0;color:var(--ink);font:18px/1.95 var(--serif)}aside,.utility,.legend,.block-title,figcaption,summary,footer,.kicker,table,dialog button{font-family:var(--sans)}a{color:#315e91;text-underline-offset:3px;overflow-wrap:anywhere}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #328dcc;outline-offset:4px}aside{position:fixed;inset:0 auto 0 0;width:254px;overflow:auto;padding:32px 24px;background:#f5f4f0;border-right:1px solid var(--line);font-size:13px;line-height:1.65;z-index:10}.course{font-weight:700;font-size:15px;margin:26px 0 4px}.course-sub{color:var(--muted);font-size:12px;margin-bottom:24px}nav>ul{list-style:none;padding:0}nav ul ul{list-style:none;padding:0}nav ul ul ul{display:none}nav>ul>li>a{display:none}nav li a{display:block;padding:7px 8px;text-decoration:none;border-left:2px solid transparent;color:#526071}nav li a:hover,nav li a.active{color:#523279;background:#eae6f2;border-left-color:var(--purple)}main{margin-left:254px;max-width:1100px;background:#fff;min-height:100vh;padding:46px 70px 90px}.utility{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:36px;font-size:13px;color:var(--muted)}.utility button{border:0;background:none;color:#526071;padding:7px 9px}.utility button:hover{background:#f0f2f6}.kicker{font-size:12px;color:var(--purple);letter-spacing:1.7px;font-weight:700;margin-bottom:12px}h1{font-family:var(--serif);font-size:42px;line-height:1.3;letter-spacing:1px;margin:0 0 18px}h2{font-size:27px;line-height:1.45;margin:68px 0 24px;padding:22px 0 0;border-top:1px solid #d4dae4;font-weight:700}h3{font-size:21px;line-height:1.6;margin:36px 0 18px}h4{font-size:18px;line-height:1.6;margin:30px 0 14px}p{margin:1em 0}strong{font-weight:650}.legend{display:flex;flex-wrap:wrap;gap:7px 20px;margin:26px 0 32px;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px;color:#53606e}.legend span::before{content:"";display:inline-block;width:5px;height:13px;background:var(--tone);margin-right:7px;vertical-align:-2px}.definition{--tone:var(--green);--wash:#edf7f2;--edge:#cbe5d8}.theorem{--tone:var(--purple);--wash:#f0ecf7;--edge:#d8cce9}.result,.question{--tone:var(--blue);--wash:#eef7fb;--edge:#cce3ef}.example{--tone:var(--orange);--wash:#fcf2e9;--edge:#ead5c3}.warning{--tone:var(--rose);--wash:#fcf0f2;--edge:#efd1d7}.block{margin:26px 0;padding:17px 23px 19px;background:var(--wash);border:1px solid var(--edge);border-left:4px solid var(--tone);border-radius:0}.block-title{color:var(--tone);font-size:15px;font-weight:700;margin-bottom:9px}.block>:last-child{margin-bottom:0}.block p:first-of-type{margin-top:0}.block p{margin:.7em 0}.block .display.math{margin:12px 0;padding:8px 0}.display.math{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;margin:22px 0;padding:12px 4px;scrollbar-width:thin}math{font-family:math}math[display="block"]{font-size:1.09em;margin:auto;width:max-content;min-width:100%;max-width:none}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.75;margin:24px 0}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:12px 14px}th{background:#f2f4f8;font-weight:650}td:first-child{font-weight:550}figure{margin:32px 0;padding:22px 24px;background:#fff;border:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) 190px;align-items:center;gap:25px}.figure-open{display:block;padding:0;border:0;background:white;width:100%;cursor:zoom-in;line-height:0}.figure-open img{max-width:100%;width:auto;max-height:365px;height:auto;display:block;margin:auto}figcaption{font-size:14px;line-height:1.8;color:#586170}figcaption::after{content:"点击图片放大";display:block;margin-top:12px;font-size:11px;color:#7b8593}figure.slide{grid-template-columns:1fr}figure.slide img{max-height:none;width:100%}figure.slide figcaption{text-align:center}details{margin:26px 0;border:1px solid #dbe3ed;padding:14px 20px;background:#fafbfd}summary{cursor:pointer;color:#315e91;font-weight:650;font-size:16px}details[open]>summary{margin-bottom:20px}details p{font-size:17px}details figure{margin:16px 0}li{padding-left:3px;margin:10px 0}ol,ul{padding-left:25px}blockquote{border-left:3px solid #bbc8d7;margin:24px 0;padding:0 20px;color:#526071}footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}#toc-button{display:none}.scrim{display:none}dialog{border:0;padding:20px;background:#fff;max-width:96vw;max-height:94vh;box-shadow:0 15px 60px #0004}dialog::backdrop{background:#15202dcc}dialog .close{display:block;margin-left:auto;border:0;background:#f1f3f6;padding:5px 12px;font-size:14px}dialog img{display:block;max-width:88vw;max-height:74vh;object-fit:contain;margin:12px auto}dialog p{max-width:800px;font-size:14px;margin:8px auto}.chapter-hint{color:var(--muted);font-size:13px}.mobile-title{display:none}
 @media(min-width:1450px){main{margin-left:max(254px,calc((100vw - 1000px)/2));box-shadow:0 0 0 1px #e8ebf0}}
 @media(max-width:1050px){aside{transform:translateX(-100%);transition:transform .18s}body.toc-open aside{transform:none}.scrim{position:fixed;inset:0;background:#14223855;z-index:9}body.toc-open .scrim{display:block}main{margin:0 auto;padding:32px 40px 70px;max-width:900px}#toc-button{display:inline-block}.utility{margin-bottom:28px}}
 @media(max-width:600px){body{font-size:17px;line-height:1.9}main{padding:22px 19px 60px}h1{font-size:34px}h2{font-size:25px;margin-top:48px}h3{font-size:20px}.utility{font-size:12px;gap:0}.utility button{padding:6px}.kicker{font-size:11px}.block{padding:14px 16px}.block-title{font-size:14px}figure{grid-template-columns:1fr;padding:18px;gap:14px}.figure-open img{max-height:340px}figcaption{font-size:13px;line-height:1.7}figcaption::after{margin-top:6px}table{display:block;overflow-x:auto;font-size:13px}th,td{min-width:100px;padding:10px}math[display="block"]{font-size:1em}details{padding:12px 15px}.legend{gap:8px 16px}dialog{padding:12px}dialog img{max-width:87vw}li{padding-left:0}}
@@ -290,7 +290,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math>
 描述<mark class="kw2">同一个点</mark>：代数形式是<mark class="kw">直角坐标</mark>，指数形式是<mark class="kw">极坐标</mark>。两种<mark class="kw2">形式</mark>各有擅长：<mark class="kw">加减法用代数形式</mark>，<mark class="kw">乘除、乘方、开方用指数形式</mark>，下一<mark class="kw2">单元</mark>会看到<mark class="kw2">原因</mark>。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 两种形式的互化</strong></p>
+<p class="block-title"><strong>例 1 · 两种形式的互化</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-15">把下列复数化成三角形式与指数形式：(1)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mi>−</mi><msqrt><mn>12</mn></msqrt><mo>−</mo><mn>2</mn><mi>i</mi></mrow><annotation encoding="application/x-tex">z=-\sqrt{12}-2i</annotation></semantics></math>；</mark>(2)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mstyle displaystyle="true"><mfrac><mi>π</mi><mn>5</mn></mfrac></mstyle><mo>+</mo><mi>i</mi><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mstyle displaystyle="true"><mfrac><mi>π</mi><mn>5</mn></mfrac></mstyle></mrow><annotation encoding="application/x-tex">z=\sin\dfrac\pi5+i\cos\dfrac\pi5</annotation></semantics></math>。</p>
@@ -337,7 +337,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 个根（计重数）——后面用复变函数的工具只需几行就能证明。</mark></p>
 <p><mark class="kw2">共轭</mark>运算把点关于<mark class="kw2">实轴</mark>作<mark class="kw">镜像</mark>。它与四则运算可以<mark class="kw">交换次序</mark>，并把模与<mark class="kw2">实部</mark>、<mark class="kw2">虚部</mark>联系起来：</p>
 <div class="block result">
-<p class="block-title"><strong>结论 · 共轭的常用性质</strong></p>
+<p class="block-title"><strong>结论 1 · 共轭的常用性质</strong></p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>±</mo><msub><mi>z</mi><mn>2</mn></msub></mrow></mrow><mo>=</mo><msub><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>z</mi></mrow><mn>1</mn></msub><mo>±</mo><msub><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>z</mi></mrow><mn>2</mn></msub><mo>,</mo><mspace width="2.0em"></mspace><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mrow><msub><mi>z</mi><mn>1</mn></msub><msub><mi>z</mi><mn>2</mn></msub></mrow></mrow><mo>=</mo><msub><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>z</mi></mrow><mn>1</mn></msub><mspace width="0.167em"></mspace><msub><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>z</mi></mrow><mn>2</mn></msub><mo>,</mo><mspace width="2.0em"></mspace><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>z</mi><mn>1</mn></msub><mi>/</mi><msub><mi>z</mi><mn>2</mn></msub><mo form="postfix" stretchy="true">)</mo></mrow></mrow><mo>=</mo><msub><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>z</mi></mrow><mn>1</mn></msub><mi>/</mi><msub><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>z</mi></mrow><mn>2</mn></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">\overline{z_1\pm z_2}=\bar z_1\pm\bar z_2,\qquad \overline{z_1z_2}=\bar z_1\,\bar z_2,\qquad \overline{\left(z_1/z_2\right)}=\bar z_1/\bar z_2,</annotation></semantics></math></div>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>z</mi></mrow><mo>=</mo><mo form="prefix" stretchy="false">|</mo><mi>z</mi><msup><mo form="prefix" stretchy="false">|</mo><mn>2</mn></msup><mo>,</mo><mspace width="2.0em"></mspace><mi>z</mi><mo>+</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>z</mi></mrow><mo>=</mo><mn>2</mn><mrow><mi mathvariant="normal">Re</mi><mo>⁡</mo></mrow><mi>z</mi><mo>,</mo><mspace width="2.0em"></mspace><mi>z</mi><mo>−</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>z</mi></mrow><mo>=</mo><mn>2</mn><mi>i</mi><mrow><mi mathvariant="normal">Im</mi><mo>⁡</mo></mrow><mi>z</mi><mo>,</mo><mspace width="2.0em"></mspace><mo form="prefix" stretchy="false">|</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>z</mi></mrow><mo form="prefix" stretchy="false">|</mo><mo>=</mo><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo form="prefix" stretchy="false">|</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">z\bar z=|z|^2,\qquad z+\bar z=2\operatorname{Re}z,\qquad z-\bar z=2i\operatorname{Im}z,\qquad |\bar z|=|z| .</annotation></semantics></math></div>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-17"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
@@ -416,7 +416,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 </figure>
 <p>辐角等式是<mark class="kw">集合等式</mark>：左边<mark class="kw2">集合</mark>中的每一个值，都能在右边找到<mark class="kw2">相等</mark>的值，<mark class="kw">反之亦然</mark>。右边的“<mark class="kw2">集合</mark>相加”指从两个<mark class="kw2">集合</mark>各取一个元素<mark class="kw2">相加</mark>，所得全部<mark class="kw2">结果</mark>组成的<mark class="kw2">集合</mark>。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 乘积的辐角</strong></p>
+<p class="block-title"><strong>例 2 · 乘积的辐角</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-21">设
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>=</mo><mi>−</mi><mn>1</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>z</mi><mn>2</mn></msub><mo>=</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">z_1=-1,\ z_2=i</annotation></semantics></math>，求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mn>1</mn></msub><msub><mi>z</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">z_1z_2</annotation></semantics></math>
@@ -510,7 +510,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k=0,1,\ldots,n-1</annotation></semantics></math>
 给出<mark class="kw2">互不相同</mark>的根：</p>
 <div class="block result">
-<p class="block-title"><strong>结论 · 方根公式</strong></p>
+<p class="block-title"><strong>结论 2 · 方根公式</strong></p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mroot><mi>z</mi><mi>n</mi></mroot><mo>=</mo><mroot><mi>r</mi><mi>n</mi></mroot><mrow><mo form="prefix" stretchy="true">(</mo><mi mathvariant="normal">cos</mi><mfrac><mrow><mi>θ</mi><mo>+</mo><mn>2</mn><mi>k</mi><mi>π</mi></mrow><mi>n</mi></mfrac><mo>+</mo><mi>i</mi><mi mathvariant="normal">sin</mi><mfrac><mrow><mi>θ</mi><mo>+</mo><mn>2</mn><mi>k</mi><mi>π</mi></mrow><mi>n</mi></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mroot><mi>r</mi><mi>n</mi></mroot><mspace width="0.167em"></mspace><msup><mi>e</mi><mrow><mi>i</mi><mfrac><mrow><mi>θ</mi><mo>+</mo><mn>2</mn><mi>k</mi><mi>π</mi></mrow><mi>n</mi></mfrac></mrow></msup><mo>,</mo><mspace width="2.0em"></mspace><mi>k</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>n</mi><mo>−</mo><mn>1</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\sqrt[n]z=\sqrt[n]r\left(\cos\frac{\theta+2k\pi}n+i\sin\frac{\theta+2k\pi}n\right)=\sqrt[n]r\,e^{i\frac{\theta+2k\pi}{n}},\qquad k=0,1,\ldots,n-1 .</annotation></semantics></math></div>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-25">非零复数<mark class="kw">恰有</mark>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
@@ -535,7 +535,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
 个值；这是<mark class="kw">代数基本定理最简单的情形</mark>。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 求
+<p class="block-title"><strong>例 3 · 求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mroot><mrow><mn>1</mn><mo>+</mo><mi>i</mi></mrow><mn>4</mn></mroot><annotation encoding="application/x-tex">\sqrt[4]{1+i}</annotation></semantics></math></strong></p>
 <p>先写
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mi>i</mi><mo>=</mo><msqrt><mn>2</mn></msqrt><mrow><mo form="prefix" stretchy="true">(</mo><mi mathvariant="normal">cos</mi><mfrac><mi>π</mi><mn>4</mn></mfrac><mo>+</mo><mi>i</mi><mi mathvariant="normal">sin</mi><mfrac><mi>π</mi><mn>4</mn></mfrac><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">1+i=\sqrt2\left(\cos\frac\pi4+i\sin\frac\pi4\right)</annotation></semantics></math>。于是</p>
@@ -778,7 +778,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 </ul>
 <p><mark class="kw2">几何路线</mark>快，<mark class="kw2">代数路线</mark>稳妥，两者互相<mark class="kw2">检验</mark>。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 过两点的直线</strong></p>
+<p class="block-title"><strong>例 4 · 过两点的直线</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-55">写出通过
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mi>i</mi><msub><mi>y</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">z_1=x_1+iy_1</annotation></semantics></math>
 与
@@ -819,7 +819,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 不是实数，不在直线上。按公式绘制。</figcaption>
 </figure>
 <div class="block example">
-<p class="block-title"><strong>例题 · 三个方程表示的曲线</strong></p>
+<p class="block-title"><strong>例 5 · 三个方程表示的曲线</strong></p>
 <p>(1)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo>+</mo><mi>i</mi><mo form="prefix" stretchy="false">|</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">|z+i|=2</annotation></semantics></math>；(2)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo>−</mo><mn>2</mn><mi>i</mi><mo form="prefix" stretchy="false">|</mo><mo>=</mo><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo>+</mo><mn>2</mn><mo form="prefix" stretchy="false">|</mo></mrow><annotation encoding="application/x-tex">|z-2i|=|z+2|</annotation></semantics></math>；(3)
@@ -871,7 +871,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 </figure>
 <p><mark class="kw2">不等式</mark>表示的是点的<mark class="kw2">集合</mark>，通常是<mark class="kw2">区域</mark>。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 三个不等式表示的区域</strong></p>
+<p class="block-title"><strong>例 6 · 三个不等式表示的区域</strong></p>
 <p>(1)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo>−</mo><mi>α</mi><mo form="prefix" stretchy="false">|</mo><mo>&lt;</mo><mi>R</mi></mrow><annotation encoding="application/x-tex">|z-\alpha|&lt;R</annotation></semantics></math>；<mark class="hl hl-evidence" data-cat="evidence" id="hl-57">(2)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>&lt;</mo><mrow><mi mathvariant="normal">arg</mi><mo>⁡</mo></mrow><mi>z</mi><mo>&lt;</mo><mi>β</mi></mrow><annotation encoding="application/x-tex">\alpha&lt;\arg z&lt;\beta</annotation></semantics></math>（<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>π</mi><mo>&lt;</mo><mi>α</mi><mo>&lt;</mo><mi>β</mi><mo>≤</mo><mi>π</mi></mrow><annotation encoding="application/x-tex">-\pi&lt;\alpha&lt;\beta\le\pi</annotation></semantics></math>）；</mark>(3)
@@ -1177,7 +1177,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">u,v</annotation></semantics></math>
 满足的方程。</mark>求完要<mark class="kw">检查参数范围</mark>，像可能只是所得<mark class="kw2">曲线</mark>的一部分。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 四条曲线的像</strong></p>
+<p class="block-title"><strong>例 7 · 四条曲线的像</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-73">(1) 圆周
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">x^2+y^2=8</annotation></semantics></math>
 在
@@ -1404,7 +1404,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 的路径，沿它们的极限不同（或某条路径上极限不存在），极限就不存在。</strong>
 注意<mark class="kw">反过来不成立</mark>：沿所有直线的极限都相同，并不能证明极限存在，因为还有<mark class="kw">曲线路径</mark>。</mark></p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 证明
+<p class="block-title"><strong>例 8 · 证明
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi>z</mi><mo>→</mo><mn>0</mn></mrow></munder><mstyle displaystyle="true"><mfrac><mrow><mrow><mi mathvariant="normal">Re</mi><mo>⁡</mo></mrow><mi>z</mi></mrow><mrow><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo form="prefix" stretchy="false">|</mo></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\lim\limits_{z\to0}\dfrac{\operatorname{Re}z}{|z|}</annotation></semantics></math>
 不存在</strong></p>
 <p>令
@@ -1477,7 +1477,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 的整体来看，也可以直接用<mark class="kw">模估计</mark>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><mi>f</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mo>−</mo><mi>f</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo form="postfix" stretchy="false">)</mo><mo form="prefix" stretchy="false">|</mo></mrow><annotation encoding="application/x-tex">|f(z)-f(z_0)|</annotation></semantics></math>，两种方式本质相同。</mark></p>
 <div class="block result">
-<p class="block-title"><strong>结论 · 连续函数的性质</strong></p>
+<p class="block-title"><strong>结论 3 · 连续函数的性质</strong></p>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-90">(1) 连续函数的和、差、积、商（分母不为零）仍连续；</mark></p>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-91">(2) 连续函数的复合仍连续；</mark></p>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-92">(3) 连续函数的模
@@ -1521,7 +1521,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>，所以它<mark class="kw">连续但不一致连续</mark>。在有界<mark class="kw2">闭区域</mark>上，<mark class="kw2">函数</mark>在边界上也<mark class="kw2">有定义</mark>且连续，不会出现这种“<mark class="kw">越靠近边界越陡</mark>”的情况。</p>
 <h3 id="continuity-examples">5.4 讨论连续性的两种方法</h3>
 <div class="block example">
-<p class="block-title"><strong>例题 · 辐角主值
+<p class="block-title"><strong>例 9 · 辐角主值
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mrow><mi mathvariant="normal">arg</mi><mo>⁡</mo></mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">f(z)=\arg z</annotation></semantics></math>
 的连续性</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-97">在
@@ -1546,7 +1546,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>π</mi></mrow><annotation encoding="application/x-tex">-\pi</annotation></semantics></math>。</figcaption>
 </figure>
 <div class="block example">
-<p class="block-title"><strong>例题 · 讨论
+<p class="block-title"><strong>例 10 · 讨论
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>z</mi><mrow><mi mathvariant="normal">Im</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><msup><mi>z</mi><mn>2</mn></msup><mo form="postfix" stretchy="false">)</mo></mrow><mrow><mo form="prefix" stretchy="false">|</mo><mi>z</mi><msup><mo form="prefix" stretchy="false">|</mo><mn>2</mn></msup></mrow></mfrac></mstyle><mspace width="0.222em"></mspace><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo>≠</mo><mn>0</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(z)=\dfrac{z\operatorname{Im}(z^2)}{|z|^2}\ (z\ne0)</annotation></semantics></math>
 的连续性</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-98"><strong>方法一：拆成实部、虚部。</strong>
@@ -1622,7 +1622,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mo>−</mo><mi>f</mi><mo form="prefix" stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>w</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>z</mi></mrow></mfrac></mstyle><mo>⋅</mo><mi mathvariant="normal">Δ</mi><mi>z</mi><mo>→</mo><msup><mi>f</mi><mo>′</mo></msup><mo form="prefix" stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo form="postfix" stretchy="false">)</mo><mo>⋅</mo><mn>0</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f(z_0+\Delta z)-f(z_0)=\dfrac{\Delta w}{\Delta z}\cdot\Delta z\to f'(z_0)\cdot0=0</annotation></semantics></math>
 即得。<mark class="hl hl-counter" data-cat="counter" id="hl-108"><mark class="kw">反之不成立</mark>，下面马上会看到连续却处处不可导的函数。</mark></p>
 <div class="block example">
-<p class="block-title"><strong>例题 ·
+<p class="block-title"><strong>例 11 ·
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f(z)=z^2</annotation></semantics></math>
 的导数</strong></p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi mathvariant="normal">lim</mi><mrow><mi mathvariant="normal">Δ</mi><mi>z</mi><mo>→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>z</mi><msup><mo form="postfix" stretchy="false">)</mo><mn>2</mn></msup><mo>−</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>z</mi></mrow></mfrac><mo>=</mo><munder><mi mathvariant="normal">lim</mi><mrow><mi mathvariant="normal">Δ</mi><mi>z</mi><mo>→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mn>2</mn><mi>z</mi><mi mathvariant="normal">Δ</mi><mi>z</mi><mo>+</mo><mo form="prefix" stretchy="false">(</mo><mi mathvariant="normal">Δ</mi><mi>z</mi><msup><mo form="postfix" stretchy="false">)</mo><mn>2</mn></msup></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>z</mi></mrow></mfrac><mo>=</mo><munder><mi mathvariant="normal">lim</mi><mrow><mi mathvariant="normal">Δ</mi><mi>z</mi><mo>→</mo><mn>0</mn></mrow></munder><mo form="prefix" stretchy="false">(</mo><mn>2</mn><mi>z</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mn>2</mn><mi>z</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\lim_{\Delta z\to0}\frac{(z+\Delta z)^2-z^2}{\Delta z}=\lim_{\Delta z\to0}\frac{2z\Delta z+(\Delta z)^2}{\Delta z}=\lim_{\Delta z\to0}(2z+\Delta z)=2z .</annotation></semantics></math></div>
@@ -1654,7 +1654,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 的形式，或含有
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>z</mi></mrow><annotation encoding="application/x-tex">\bar z</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo form="prefix" stretchy="false">|</mo></mrow><annotation encoding="application/x-tex">|z|</annotation></semantics></math>，就<mark class="kw">不能直接套法则</mark>。</mark><mark class="hl hl-counter" data-cat="counter" id="hl-111"><mark class="kw">回到定义</mark>：只要找到<mark class="kw">两个趋近方向</mark>，差商的极限不同，函数就不可导。</mark>最<mark class="kw2">方便</mark>的两个<mark class="kw2">方向</mark>是<mark class="kw">沿实轴</mark>（<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>z</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\Delta z=\Delta x</annotation></semantics></math>）和<mark class="kw">沿虚轴</mark>（<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>z</mi><mo>=</mo><mi>i</mi><mi mathvariant="normal">Δ</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">\Delta z=i\Delta y</annotation></semantics></math>）。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 ·
+<p class="block-title"><strong>例 12 ·
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">f(z)=x+2yi</annotation></semantics></math>
 是否可导</strong></p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>f</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mo>−</mo><mi>f</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo form="postfix" stretchy="false">)</mo></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>z</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><mo form="postfix" stretchy="false">)</mo><mo>+</mo><mn>2</mn><mo form="prefix" stretchy="false">(</mo><mi>y</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>y</mi><mo form="postfix" stretchy="false">)</mo><mi>i</mi><mo>−</mo><mi>x</mi><mo>−</mo><mn>2</mn><mi>y</mi><mi>i</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>x</mi><mo>+</mo><mi>i</mi><mi mathvariant="normal">Δ</mi><mi>y</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>x</mi><mo>+</mo><mn>2</mn><mi>i</mi><mi mathvariant="normal">Δ</mi><mi>y</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>x</mi><mo>+</mo><mi>i</mi><mi mathvariant="normal">Δ</mi><mi>y</mi></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">\frac{f(z+\Delta z)-f(z)}{\Delta z}=\frac{(x+\Delta x)+2(y+\Delta y)i-x-2yi}{\Delta x+i\Delta y}=\frac{\Delta x+2i\Delta y}{\Delta x+i\Delta y}.</annotation></semantics></math></div>
@@ -1680,7 +1680,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 7 单元的<mark class="kw">柯西–黎曼方程</mark>。</p>
 </div>
 <div class="block example">
-<p class="block-title"><strong>例题 ·
+<p class="block-title"><strong>例 13 ·
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mo form="prefix" stretchy="false">|</mo><mi>z</mi><msup><mo form="prefix" stretchy="false">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f(z)=|z|^2</annotation></semantics></math>
 的可导性</strong></p>
 <p>利用
@@ -1728,7 +1728,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 内解析。</mark><mark class="hl hl-term" data-cat="term" id="hl-120">在整个复平面上解析的函数称为<strong>整函数</strong>。</mark></p>
 </div>
 <div class="block result">
-<p class="block-title"><strong>结论 · 可导与解析的关系</strong></p>
+<p class="block-title"><strong>结论 4 · 可导与解析的关系</strong></p>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-121">在一点：解析
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇒</mo><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math>
 可导，反之不一定成立。</mark><mark class="hl hl-thesis" data-cat="thesis" id="hl-122"> 在区域内：解析
@@ -1753,7 +1753,7 @@ Cardano）在解三次<mark class="kw2">方程时</mark>遇到<mark class="kw">�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>D</mi></mrow><annotation encoding="application/x-tex">\overline D</annotation></semantics></math>
 上<mark class="kw2">连续</mark>”。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 几个函数的解析性</strong></p>
+<p class="block-title"><strong>例 14 · 几个函数的解析性</strong></p>
 <ul>
 <li><mark class="hl hl-evidence" data-cat="evidence" id="hl-125"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>,</mo><mspace width="0.222em"></mspace><msup><mi>z</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">z^2,\ z^3</annotation></semantics></math>：处处可导，是整函数。</mark></li>
 <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><mi>z</mi><msup><mo form="prefix" stretchy="false">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|z|^2</annotation></semantics></math>：仅<mark class="kw2">在原点可导</mark>，<mark class="kw2">处处不解析</mark>。</li>
@@ -1960,7 +1960,7 @@ C-R
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>=</mo><msub><mi>u</mi><mi>x</mi></msub><mo>+</mo><mi>i</mi><msub><mi>v</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">f'=u_x+iv_x</annotation></semantics></math>
 写出<mark class="kw2">导数</mark>。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 用 C-R 方程求导数</strong></p>
+<p class="block-title"><strong>例 15 · 用 C-R 方程求导数</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-140">已知
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><mi>y</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">f(z)=x^2-y^2+2xyi</annotation></semantics></math>，求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mo>′</mo></msup><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f'(z)</annotation></semantics></math>。</mark></p>
@@ -1975,7 +1975,7 @@ C-R
 <mark class="kw">一致</mark>。</p>
 </div>
 <div class="block example">
-<p class="block-title"><strong>例题 · 判断
+<p class="block-title"><strong>例 16 · 判断
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><mrow style="border-top:0.065em solid;padding-top:0.18em;margin-top:0.05em"><mi>z</mi></mrow></mrow><annotation encoding="application/x-tex">w=\bar z</annotation></semantics></math>
 与
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><mi>z</mi><mrow><mi mathvariant="normal">Re</mi><mo>⁡</mo></mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">w=z\operatorname{Re}z</annotation></semantics></math>
@@ -1999,7 +1999,7 @@ C-R 方程<mark class="kw">处处不成立</mark>，所以<mark class="kw">处�
 可导（<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mo>′</mo></msup><mo form="prefix" stretchy="false">(</mo><mn>0</mn><mo form="postfix" stretchy="false">)</mo><mo>=</mo><msub><mi>u</mi><mi>x</mi></msub><mo>+</mo><mi>i</mi><msub><mi>v</mi><mi>x</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f'(0)=u_x+iv_x=0</annotation></semantics></math>），在复平面上<mark class="kw">处处不解析</mark>。</p>
 </div>
 <div class="block example">
-<p class="block-title"><strong>例题 · 用 C-R 方程重新判断
+<p class="block-title"><strong>例 17 · 用 C-R 方程重新判断
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><mi>z</mi><msup><mo form="prefix" stretchy="false">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|z|^2</annotation></semantics></math>
 与
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">x+2yi</annotation></semantics></math></strong></p>
@@ -2012,7 +2012,7 @@ C-R 方程。</mark></p>
 <p><mark class="hl hl-counter" data-cat="counter" id="hl-144"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">f=x+2yi</annotation></semantics></math>：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>x</mi></msub><mo>=</mo><mn>1</mn><mo>≠</mo><mn>2</mn><mo>=</mo><msub><mi>v</mi><mi>y</mi></msub></mrow><annotation encoding="application/x-tex">u_x=1\ne2=v_y</annotation></semantics></math>，<mark class="kw">处处不满足</mark>，处处不可导。</mark></p>
 </div>
 <div class="block example">
-<p class="block-title"><strong>例题 · 函数
+<p class="block-title"><strong>例 18 · 函数
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup><mo form="prefix" stretchy="false">(</mo><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>y</mi><mo>+</mo><mi>i</mi><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>y</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(z)=e^x(\cos y+i\sin y)</annotation></semantics></math></strong></p>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>y</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>v</mi><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">u=e^x\cos y,\ v=e^x\sin y</annotation></semantics></math>，</p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>x</mi></msub><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>y</mi><mo>=</mo><msub><mi>v</mi><mi>y</mi></msub><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>v</mi><mi>x</mi></msub><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>y</mi><mo>=</mo><mi>−</mi><msub><mi>u</mi><mi>y</mi></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">u_x=e^x\cos y=v_y,\qquad v_x=e^x\sin y=-u_y ,</annotation></semantics></math></div>
@@ -2029,7 +2029,7 @@ C-R 方程。</mark></p>
 是<mark class="kw2">整函数</mark>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><msup><mi>e</mi><mi>z</mi></msup><msup><mo form="postfix" stretchy="false">)</mo><mo>′</mo></msup><mo>=</mo><msup><mi>e</mi><mi>z</mi></msup></mrow><annotation encoding="application/x-tex">(e^z)'=e^z</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mn>0</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">e^0=1</annotation></semantics></math>。</p>
 </div>
 <div class="block result">
-<p class="block-title"><strong>结论 · 导数恒为零的解析函数是常数</strong></p>
+<p class="block-title"><strong>结论 5 · 导数恒为零的解析函数是常数</strong></p>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-145">若
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>
 在区域
@@ -2252,7 +2252,7 @@ C-R 方程，</p>
 C-R
 方程可以求出<mark class="kw">另一部分</mark>，从而得到<mark class="kw2">解析</mark>函数。另一部分只确定到<mark class="kw">一个实常数</mark>，用题目给的<mark class="kw">一个函数值</mark>来定。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 已知
+<p class="block-title"><strong>例 19 · 已知
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">u=x^2-y^2+xy</annotation></semantics></math>，求解析函数
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mi>u</mi><mo>+</mo><mi>i</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">f=u+iv</annotation></semantics></math>，使
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo form="prefix" stretchy="false">(</mo><mn>0</mn><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f(0)=0</annotation></semantics></math></strong></p>
@@ -2337,7 +2337,7 @@ C-R
 7.3 节已用 C-R 方程验证它<mark class="kw">处处解析</mark>，且
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><msup><mi>e</mi><mi>z</mi></msup><msup><mo form="postfix" stretchy="false">)</mo><mo>′</mo></msup><mo>=</mo><msup><mi>e</mi><mi>z</mi></msup></mrow><annotation encoding="application/x-tex">(e^z)'=e^z</annotation></semantics></math>。</p>
 <div class="block result">
-<p class="block-title"><strong>结论 · 指数函数的性质</strong></p>
+<p class="block-title"><strong>结论 6 · 指数函数的性质</strong></p>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-164">(1)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><msup><mi>e</mi><mi>z</mi></msup><mo form="prefix" stretchy="false">|</mo><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">|e^z|=e^x&gt;0</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Arg</mi><mo>⁡</mo></mrow><msup><mi>e</mi><mi>z</mi></msup><mo>=</mo><mi>y</mi><mo>+</mo><mn>2</mn><mi>k</mi><mi>π</mi></mrow><annotation encoding="application/x-tex">\operatorname{Arg}e^z=y+2k\pi</annotation></semantics></math>，所以
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mi>z</mi></msup><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">e^z\ne0</annotation></semantics></math>；</mark></p>
@@ -2360,7 +2360,7 @@ C-R
 <mark class="kw">永不为零</mark>，所以<strong>罗尔中值定理在复数中不成立</strong>，拉格朗日中值定理同样失效。</mark>而洛必达法则<mark class="kw">仍然成立</mark>（练习
 A8），因为它的<mark class="kw2">证明</mark>只用<mark class="kw2">导数定义</mark>，不需要中值<mark class="kw2">定理</mark>。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 求
+<p class="block-title"><strong>例 20 · 求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">exp</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><msup><mi>e</mi><mi>z</mi></msup><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\exp(e^z)</annotation></semantics></math>
 的实部与虚部</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-170"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mi>z</mi></msup><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>y</mi><mo>+</mo><mi>i</mi><msup><mi>e</mi><mi>x</mi></msup><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">e^z=e^x\cos y+ie^x\sin y</annotation></semantics></math>，把它整体当作新的指数：</mark></p>
@@ -2379,7 +2379,7 @@ A8），因为它的<mark class="kw2">证明</mark>只用<mark class="kw2">导�
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>z</mi><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mi>i</mi><mi>z</mi></mrow></msup><mo>−</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mi>z</mi></mrow></msup></mrow><mrow><mn>2</mn><mi>i</mi></mrow></mfrac><mo>,</mo><mspace width="2.0em"></mspace><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>z</mi><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mi>i</mi><mi>z</mi></mrow></msup><mo>+</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mi>z</mi></mrow></msup></mrow><mn>2</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">\sin z=\frac{e^{iz}-e^{-iz}}{2i},\qquad \cos z=\frac{e^{iz}+e^{-iz}}2 .</annotation></semantics></math></div>
 </div>
 <div class="block result">
-<p class="block-title"><strong>结论 · 三角函数的性质</strong></p>
+<p class="block-title"><strong>结论 7 · 三角函数的性质</strong></p>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-171">(1)
 欧拉公式对复数仍成立：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>i</mi><mi>z</mi></mrow></msup><mo>=</mo><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>z</mi><mo>+</mo><mi>i</mi><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">e^{iz}=\cos z+i\sin z</annotation></semantics></math>；</mark></p>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-172">(2)
@@ -2446,7 +2446,7 @@ A8），因为它的<mark class="kw2">证明</mark>只用<mark class="kw2">导�
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-179">例如
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi>i</mi><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi>e</mi><mrow><mi>−</mi><mi>z</mi></mrow></msup><mo>+</mo><msup><mi>e</mi><mi>z</mi></msup></mrow><mn>2</mn></mfrac></mstyle><mo>=</mo><mrow><mi mathvariant="normal">ch</mi><mo>⁡</mo></mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">\cos(iz)=\dfrac{e^{-z}+e^{z}}2=\operatorname{ch}z</annotation></semantics></math>，直接代入定义即得。</mark>在复数中，<mark class="kw2">三角函数</mark>和双曲函数只是<mark class="kw">同一个指数函数</mark>的两种组合。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 解方程
+<p class="block-title"><strong>例 21 · 解方程
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>z</mi><mo>=</mo><mi>i</mi><mrow><mi mathvariant="normal">sh</mi><mo>⁡</mo></mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">\sin z=i\operatorname{sh}1</annotation></semantics></math></strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-180">令
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mi>x</mi><mo>+</mo><mi>i</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">z=x+iy</annotation></semantics></math>，用两角和公式，再用上面的关系
@@ -2545,7 +2545,7 @@ A8），因为它的<mark class="kw2">证明</mark>只用<mark class="kw2">导�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\ln(1+i)</annotation></semantics></math>。按公式绘制。</figcaption>
 </figure>
 <div class="block example">
-<p class="block-title"><strong>例题 · 求
+<p class="block-title"><strong>例 22 · 求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Ln</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi>−</mi><mn>1</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{Ln}(-1)</annotation></semantics></math>
 与
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi>−</mi><mn>1</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\ln(-1)</annotation></semantics></math></strong></p>
@@ -2557,7 +2557,7 @@ A8），因为它的<mark class="kw2">证明</mark>只用<mark class="kw2">导�
 <p>负数在<mark class="kw2">复数</mark>中也有<mark class="kw2">对数</mark>，只是没有<mark class="kw2">实数值</mark>。</p>
 </div>
 <div class="block result">
-<p class="block-title"><strong>结论 · 对数函数的性质</strong></p>
+<p class="block-title"><strong>结论 8 · 对数函数的性质</strong></p>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-183">(1) 定义域为
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo form="prefix" stretchy="false">|</mo><mo>&lt;</mo><mi>+</mi><mi>∞</mi></mrow><annotation encoding="application/x-tex">0&lt;|z|&lt;+\infty</annotation></semantics></math>；</mark><mark class="hl hl-thesis" data-cat="thesis" id="hl-184"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">Ln</mi><mo>⁡</mo></mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">\operatorname{Ln}z</annotation></semantics></math>
 <mark class="kw">无穷多值</mark>，任意两个值相差
@@ -2705,7 +2705,7 @@ A8），因为它的<mark class="kw2">证明</mark>只用<mark class="kw2">导�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
 变化，同样有<mark class="kw2">无穷多个值</mark>。</p>
 <div class="block result">
-<p class="block-title"><strong>结论 · 幂函数的解析性</strong></p>
+<p class="block-title"><strong>结论 9 · 幂函数的解析性</strong></p>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-191"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">k=0</annotation></semantics></math>
 的值
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>α</mi><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mi>z</mi></mrow></msup><annotation encoding="application/x-tex">e^{\alpha\ln z}</annotation></semantics></math>
@@ -2734,7 +2734,7 @@ A8），因为它的<mark class="kw2">证明</mark>只用<mark class="kw2">导�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>z</mi><mi>α</mi></msup><annotation encoding="application/x-tex">z^\alpha</annotation></semantics></math>
 取<mark class="kw">同一个分支</mark>来理解。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 求
+<p class="block-title"><strong>例 23 · 求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>1</mn><msqrt><mn>2</mn></msqrt></msup><annotation encoding="application/x-tex">1^{\sqrt2}</annotation></semantics></math>
 与
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>i</mi><mi>i</mi></msup><annotation encoding="application/x-tex">i^i</annotation></semantics></math></strong></p>
@@ -2765,7 +2765,7 @@ A8），因为它的<mark class="kw2">证明</mark>只用<mark class="kw2">导�
 的三个值，都是正实数。按公式绘制。</figcaption>
 </figure>
 <div class="block example">
-<p class="block-title"><strong>例题 · 解对数方程</strong></p>
+<p class="block-title"><strong>例 24 · 解对数方程</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-195">解方程：(1)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mi>z</mi><mo>=</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mi>i</mi></mrow><annotation encoding="application/x-tex">\ln z=\frac\pi2i</annotation></semantics></math>；</mark>(2)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">ln</mi><mo>⁡</mo></mrow><mi>z</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>π</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">\ln z=1+\pi i</annotation></semantics></math>；(3)
@@ -2959,7 +2959,7 @@ A8），因为它的<mark class="kw2">证明</mark>只用<mark class="kw2">导�
 上<mark class="kw2">连续</mark>（<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
 不必是<mark class="kw2">简单曲线</mark>）。</p>
 <div class="block result">
-<p class="block-title"><strong>结论 · 复积分的性质</strong></p>
+<p class="block-title"><strong>结论 10 · 复积分的性质</strong></p>
 <ol>
 <li><mark class="hl hl-thesis" data-cat="thesis" id="hl-214"><mark class="kw">线性</mark>：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∫</mo><mi>C</mi></msub><mo form="prefix" stretchy="false">[</mo><mi>a</mi><mi>f</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mo>+</mo><mi>b</mi><mi>g</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mo form="postfix" stretchy="false">]</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>z</mi><mo>=</mo><mi>a</mi><msub><mo>∫</mo><mi>C</mi></msub><mi>f</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>z</mi><mo>+</mo><mi>b</mi><msub><mo>∫</mo><mi>C</mi></msub><mi>g</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo form="postfix" stretchy="false">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">\displaystyle\int_C[af(z)+bg(z)]\,dz=a\int_Cf(z)\,dz+b\int_Cg(z)\,dz</annotation></semantics></math>（<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a,b</annotation></semantics></math>
 为复常数）；</mark></li>
@@ -2996,7 +2996,7 @@ A8），因为它的<mark class="kw2">证明</mark>只用<mark class="kw2">导�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><msub><mo>∫</mo><mi>C</mi></msub><mi>d</mi><mi>s</mi><mo>=</mo><mi>M</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">M\int_Cds=ML</annotation></semantics></math>。</p>
 <h3 id="例题">10.5 例题</h3>
 <div class="block example">
-<p class="block-title"><strong>例题 · 积分与路径有关</strong></p>
+<p class="block-title"><strong>例 25 · 积分与路径有关</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-218">计算
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∫</mo><mi>C</mi></msub><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo form="prefix" stretchy="false">|</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">\displaystyle\int_C|z|\,dz</annotation></semantics></math>：(1)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
@@ -3055,7 +3055,7 @@ A8），因为它的<mark class="kw2">证明</mark>只用<mark class="kw2">导�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>x</mi></msub><mo>=</mo><mfrac><mi>x</mi><mrow><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo form="prefix" stretchy="false">|</mo></mrow></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">u_x=\frac x{|z|}=0</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>y</mi></msub><mo>=</mo><mfrac><mi>y</mi><mrow><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo form="prefix" stretchy="false">|</mo></mrow></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">u_y=\frac y{|z|}=0</annotation></semantics></math>，不能成立。</mark></p>
 </div>
 <div class="block example">
-<p class="block-title"><strong>例题 · 积分与路径无关</strong></p>
+<p class="block-title"><strong>例 26 · 积分与路径无关</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-222">计算
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∫</mo><mi>C</mi></msub><msup><mi>z</mi><mn>2</mn></msup><mspace width="0.167em"></mspace><mi>d</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">\displaystyle\int_Cz^2\,dz</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
 从 1 到
@@ -3088,7 +3088,7 @@ A8），因为它的<mark class="kw2">证明</mark>只用<mark class="kw2">导�
 </div>
 <p>下面的例子是后面<mark class="kw">全部积分理论的基础</mark>，要把它<mark class="kw">当作定理熟记</mark>，并会<mark class="kw2">推导</mark>。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 一个基本积分</strong></p>
+<p class="block-title"><strong>例 27 · 一个基本积分</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-223">设
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
 为整数，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>:</mo><mspace width="0.222em"></mspace><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo>−</mo><msub><mi>z</mi><mn>0</mn></msub><mo form="prefix" stretchy="false">|</mo><mo>=</mo><mi>r</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">C:\ |z-z_0|=r&gt;0</annotation></semantics></math>，取正向。</mark>计算</p>
@@ -3162,7 +3162,7 @@ A8），因为它的<mark class="kw2">证明</mark>只用<mark class="kw2">导�
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>0</mn></msub><annotation encoding="application/x-tex">z_0</annotation></semantics></math>
 一圈的<mark class="kw2">简单闭曲线</mark>，<mark class="kw">结论不变</mark>。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 估值</strong></p>
+<p class="block-title"><strong>例 28 · 估值</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-224">证明
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" maxsize="180%" minsize="180%" stretchy="true">|</mo><msub><mo>∮</mo><mi>C</mi></msub><mfrac><mrow><mi>z</mi><mo>+</mo><mn>1</mn></mrow><mrow><mi>z</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mspace width="0.167em"></mspace><mi>d</mi><mi>z</mi><mo form="prefix" maxsize="180%" minsize="180%" stretchy="true">|</mo><mo>≤</mo><mn>8</mn><mi>π</mi></mrow><annotation encoding="application/x-tex">\displaystyle\Big|\oint_C\frac{z+1}{z-1}\,dz\Big|\le8\pi</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>:</mo><mspace width="0.222em"></mspace><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo>−</mo><mn>1</mn><mo form="prefix" stretchy="false">|</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">C:\ |z-1|=2</annotation></semantics></math>。</mark></p>
 <p>在
@@ -3415,7 +3415,7 @@ E7）。</p>
 <p>(2)
 是计算的主要<mark class="kw2">工具</mark>：<strong>大曲线上的积分，等于围绕每个奇点的小曲线上的积分之和。</strong></p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 用两种方法计算
+<p class="block-title"><strong>例 29 · 用两种方法计算
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∮</mo><mi>C</mi></msub><mfrac><mrow><mi>d</mi><mi>z</mi></mrow><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>−</mo><mi>z</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\oint_C\frac{dz}{z^2-z}</annotation></semantics></math></strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-239"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
 是包含
@@ -3614,7 +3614,7 @@ E7）。</p>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mn>0</mn><mi>i</mi></msubsup><mi>z</mi><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><msup><mi>z</mi><mn>2</mn></msup><mspace width="0.167em"></mspace><mi>d</mi><mi>z</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><msup><mi>z</mi><mn>2</mn></msup><msubsup><mo form="prefix" maxsize="120%" minsize="120%" stretchy="true">|</mo><mn>0</mn><mi>i</mi></msubsup><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mn>2</mn></mfrac><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">\int_0^iz\cos z^2\,dz=\frac12\sin z^2\big|_0^i=-\frac12\sin1</annotation></semantics></math>。</mark></p>
 <h3 id="例题-1">11.5 例题</h3>
 <div class="block example">
-<p class="block-title"><strong>例题 · 求
+<p class="block-title"><strong>例 30 · 求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mi>z</mi></mfrac><annotation encoding="application/x-tex">\frac1z</annotation></semantics></math>
 在割开的平面上的原函数</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-246">在单连通区域
@@ -3655,7 +3655,7 @@ E7）。</p>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>π</mi></mrow><annotation encoding="application/x-tex">-\pi</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∮</mo><mfrac><mrow><mi>d</mi><mi>z</mi></mrow><mi>z</mi></mfrac><mo>=</mo><mn>2</mn><mi>π</mi><mi>i</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\oint\frac{dz}z=2\pi i\ne0</annotation></semantics></math>，所以不存在单值原函数。按公式绘制。</figcaption>
 </figure>
 <div class="block example">
-<p class="block-title"><strong>例题 · 沿右半圆计算
+<p class="block-title"><strong>例 31 · 沿右半圆计算
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∫</mo><mi>C</mi></msub><mfrac><mrow><mi>d</mi><mi>z</mi></mrow><msup><mi>z</mi><mn>2</mn></msup></mfrac></mrow><annotation encoding="application/x-tex">\int_C\frac{dz}{z^2}</annotation></semantics></math></strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-247"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
 是右半圆周
@@ -3713,7 +3713,7 @@ E7）。</p>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>π</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">2\pi i</annotation></semantics></math>。按公式绘制。</figcaption>
 </figure>
 <div class="block example">
-<p class="block-title"><strong>例题 · 取定分支的
+<p class="block-title"><strong>例 32 · 取定分支的
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mi>z</mi></msqrt><annotation encoding="application/x-tex">\sqrt z</annotation></semantics></math>
 沿圆周积分</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-249">求
@@ -3751,7 +3751,7 @@ E7）。</p>
 绕过了支点，在它上面不能用柯西积分定理。按公式绘制。</figcaption>
 </figure>
 <div class="block example">
-<p class="block-title"><strong>例题 · 用两种方法计算
+<p class="block-title"><strong>例 33 · 用两种方法计算
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∫</mo><mi>C</mi></msub><mfrac><mrow><mi>d</mi><mi>z</mi></mrow><mi>z</mi></mfrac></mrow><annotation encoding="application/x-tex">\int_C\frac{dz}z</annotation></semantics></math></strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-251"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
 是从
@@ -3909,7 +3909,7 @@ E7）。</p>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
 内。使用时把被积函数<mark class="kw">写成</mark>“<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle displaystyle="true"><mfrac><mrow><mrow><mtext mathvariant="normal">在 </mtext><mspace width="0.333em"></mspace></mrow><mi>C</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 内解析的部分</mtext></mrow></mrow><mrow><mi>z</mi><mo>−</mo><msub><mi>z</mi><mn>0</mn></msub></mrow></mfrac></mstyle><annotation encoding="application/x-tex">\dfrac{\text{在 }C\text{ 内解析的部分}}{z-z_0}</annotation></semantics></math>”。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 只有一个奇点在曲线内</strong></p>
+<p class="block-title"><strong>例 34 · 只有一个奇点在曲线内</strong></p>
 <p>求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∮</mo><mrow><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo form="prefix" stretchy="false">|</mo><mo>=</mo><mn>2</mn></mrow></msub><mfrac><mi>z</mi><mrow><mo form="prefix" stretchy="false">(</mo><mn>9</mn><mo>−</mo><msup><mi>z</mi><mn>2</mn></msup><mo form="postfix" stretchy="false">)</mo><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo>+</mo><mi>i</mi><mo form="postfix" stretchy="false">)</mo></mrow></mfrac><mspace width="0.167em"></mspace><mi>d</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">\displaystyle\oint_{|z|=2}\frac{z}{(9-z^2)(z+i)}\,dz</annotation></semantics></math>。</p>
 <p>奇点
@@ -3946,7 +3946,7 @@ E7）。</p>
 <h3 id="两个推论">12.2 两个推论</h3>
 <div class="cpt-head" data-c="平均值公式"><div class="cpt-name">平均值公式</div><div class="cpt-note"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
 取圆周时：圆心的值 = 圆周上的平均值。</div></div><div class="block result">
-<p class="block-title"><strong>推论 · 平均值公式</strong></p>
+<p class="block-title"><strong>结论 11 · 平均值公式</strong></p>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-256">若
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
 是圆周
@@ -3972,7 +3972,7 @@ F6 的
 正是它的一半。按公式绘制。</figcaption>
 </figure>
 <div class="cpt-head" data-c="二连通区域上的公式"><div class="cpt-name">二连通区域上的公式</div><div class="cpt-note">外边界的积分减去内边界的积分，两条都取逆时针。</div></div><div class="block result">
-<p class="block-title"><strong>推论 · 二连通区域上的柯西积分公式</strong></p>
+<p class="block-title"><strong>结论 12 · 二连通区域上的柯西积分公式</strong></p>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-259">设
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(z)</annotation></semantics></math>
 在由外边界
@@ -4015,7 +4015,7 @@ F6 的
 的小圆周。</figcaption>
 </figure>
 <div class="block example">
-<p class="block-title"><strong>例题 · 计算
+<p class="block-title"><strong>例 35 · 计算
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∮</mo><mrow><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo form="prefix" stretchy="false">|</mo><mo>=</mo><mi>r</mi></mrow></msub><mfrac><msup><mi>e</mi><mi>z</mi></msup><mrow><mi>z</mi><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo>+</mo><mn>1</mn><mo form="postfix" stretchy="false">)</mo><mo form="prefix" stretchy="false">(</mo><mi>z</mi><mo>−</mo><mn>2</mn><mo form="postfix" stretchy="false">)</mo></mrow></mfrac><mspace width="0.167em"></mspace><mi>d</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">\oint_{|z|=r}\frac{e^z}{z(z+1)(z-2)}\,dz</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>≠</mo><mn>1</mn><mo>,</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">r\ne1,2</annotation></semantics></math></strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-261">奇点
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mspace width="0.167em"></mspace><mo>−</mo><mn>1</mn><mo>,</mo><mspace width="0.167em"></mspace><mn>2</mn></mrow><annotation encoding="application/x-tex">0,\,-1,\,2</annotation></semantics></math>
@@ -4153,7 +4153,7 @@ F6 的
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mn>1</mn></msub><annotation encoding="application/x-tex">C_1</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mn>2</mn></msub><annotation encoding="application/x-tex">C_2</annotation></semantics></math>。</figcaption>
 </figure>
 <div class="block example">
-<p class="block-title"><strong>例题 · 用高阶导数公式计算两个积分</strong></p>
+<p class="block-title"><strong>例 36 · 用高阶导数公式计算两个积分</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-265"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
 是正向圆周
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo form="prefix" stretchy="false">|</mo><mo>=</mo><mi>r</mi><mo>&gt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">|z|=r&gt;1</annotation></semantics></math>。</mark>求</p>
@@ -4399,7 +4399,7 @@ D5，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantic
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mi>f</mi></mfrac><annotation encoding="application/x-tex">\frac1f</annotation></semantics></math>
 用<mark class="kw2">最大模原理</mark>，<mark class="kw2">才能</mark>得到最小模在<mark class="kw2">边界</mark>上取到。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 求
+<p class="block-title"><strong>例 37 · 求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><msup><mi>e</mi><mi>z</mi></msup><mo form="prefix" stretchy="false">|</mo></mrow><annotation encoding="application/x-tex">|e^z|</annotation></semantics></math>
 与
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><msup><mi>z</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mo form="prefix" stretchy="false">|</mo></mrow><annotation encoding="application/x-tex">|z^2+1|</annotation></semantics></math>
@@ -4502,7 +4502,7 @@ D5，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantic
 <p>由<mark class="kw2">定理</mark>
 20，它直接来自<mark class="kw2">实数</mark>列的<mark class="kw2">柯西准则</mark>。好处是<mark class="kw">不必事先知道极限</mark>是什么。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 判断两个数列的敛散性</strong></p>
+<p class="block-title"><strong>例 38 · 判断两个数列的敛散性</strong></p>
 <p>(1)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mi>n</mi></msub><mo>=</mo><mo form="prefix" maxsize="180%" minsize="180%" stretchy="true">(</mo><mn>1</mn><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>n</mi></mfrac></mstyle><mo form="postfix" maxsize="180%" minsize="180%" stretchy="true">)</mo><msup><mi>e</mi><mrow><mi>i</mi><mfrac><mi>π</mi><mi>n</mi></mfrac></mrow></msup></mrow><annotation encoding="application/x-tex">z_n=\Big(1+\dfrac1n\Big)e^{i\frac\pi n}</annotation></semantics></math>；(2)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">(</mo><mi>i</mi><mi>n</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">z_n=n\cos(in)</annotation></semantics></math>。</p>
@@ -4564,7 +4564,7 @@ D5，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantic
 把复数项级数的收敛问题<mark class="kw">转化为实数项级数</mark>的收敛问题。</mark>由<mark class="kw2">实级数</mark>收敛的<mark class="kw2">必要条件</mark>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a_n\to0</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mi>n</mi></msub><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b_n\to0</annotation></semantics></math>，立即得到：</p>
 <div class="block result">
-<p class="block-title"><strong>推论 · 级数收敛的必要条件</strong></p>
+<p class="block-title"><strong>结论 13 · 级数收敛的必要条件</strong></p>
 <p><mark class="hl hl-thesis" data-cat="thesis" id="hl-289">若
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><msub><mi>z</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">\sum z_n</annotation></semantics></math>
 收敛，则
@@ -4610,7 +4610,7 @@ D5，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantic
 都<mark class="kw2">绝对收敛</mark>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mo form="prefix" stretchy="false">|</mo><msub><mi>z</mi><mi>n</mi></msub><mo form="prefix" stretchy="false">|</mo></mrow><annotation encoding="application/x-tex">\sum|z_n|</annotation></semantics></math>
 是正项<mark class="kw2">级数</mark>，可以直接用<mark class="kw2">比较法</mark>、<mark class="kw2">比值</mark>法、<mark class="kw2">根值</mark>法等正项<mark class="kw2">级数</mark>的判别法。</p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 三个级数的敛散性与绝对收敛性</strong></p>
+<p class="block-title"><strong>例 39 · 三个级数的敛散性与绝对收敛性</strong></p>
 <p>(1)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi></msubsup><mfrac><mn>1</mn><mi>n</mi></mfrac><mo form="prefix" maxsize="180%" minsize="180%" stretchy="true">(</mo><mn>1</mn><mo>+</mo><mfrac><mi>i</mi><mi>n</mi></mfrac><mo form="postfix" maxsize="180%" minsize="180%" stretchy="true">)</mo></mrow><annotation encoding="application/x-tex">\displaystyle\sum_{n=1}^\infty\frac1n\Big(1+\frac in\Big)</annotation></semantics></math>；(2)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi>∞</mi></msubsup><mfrac><mrow><mo form="prefix" stretchy="false">(</mo><mn>8</mn><mi>i</mi><msup><mo form="postfix" stretchy="false">)</mo><mi>n</mi></msup></mrow><mrow><mi>n</mi><mi>!</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\displaystyle\sum_{n=0}^\infty\frac{(8i)^n}{n!}</annotation></semantics></math>；(3)
@@ -4785,7 +4785,7 @@ D5，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantic
 为圆心的<mark class="kw2">圆盘</mark>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">|</mo><mi>z</mi><mo>−</mo><mi>a</mi><mo form="prefix" stretchy="false">|</mo><mo>&lt;</mo><mi>R</mi></mrow><annotation encoding="application/x-tex">|z-a|&lt;R</annotation></semantics></math>。<mark class="hl hl-counter" data-cat="counter" id="hl-303"><strong>在收敛圆周上是否收敛，不能一概而论</strong>，要逐点讨论。</mark></p>
 <div class="block example">
-<p class="block-title"><strong>例题 · 求
+<p class="block-title"><strong>例 40 · 求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><msup><mi>z</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\sum z^n</annotation></semantics></math>
 的收敛范围与和函数</strong></p>
 <p><mark class="hl hl-evidence" data-cat="evidence" id="hl-304">求幂级数
