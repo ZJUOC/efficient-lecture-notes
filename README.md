@@ -13,13 +13,13 @@
 | 电子电路基础及实验 | [04 电子电路基础及实验.html](04%20电子电路基础及实验.html) |
 | 大学物理实验 | [05 大学物理实验.html](05%20大学物理实验.html) |
 
-每门课除标准版外，还有三个 ADHD 友好版本：
+每门课只有一个页面，阅读方式在页面里切换：
 
-- **ADHD版**：句子按作用分色，结论、方法、例子、易错、概念各一种颜色。
-- **ADHD大纲版**：右侧显示当前小节的概念大纲。
-- **ADHD概念图版**：右侧显示概念关系图，正文有词语荧光。
+- 句子按作用分色：结论、方法、例子、易错、概念各用一种颜色，关键词另有词语荧光。左下角可以按类别开关。
+- 右侧面板有三个标签：**概念**（当前小节的概念关系图）、**大纲**（当前小节的大纲）、**地图**（整页荧光句的分布）。
+- 点“原文”关掉全部荧光，点“×”收起面板，就是不加标注的普通讲义。
 
-各版本的详细用法见 [00 阅读指南.md](00%20阅读指南.md)。
+详细用法见 [00 阅读指南.md](00%20阅读指南.md)。
 
 ## 范围说明
 
@@ -27,9 +27,9 @@
 
 ## 怎么做的
 
-讲义由 Claude Code Skill [course-lecture-notes](https://github.com/ZJUOC/course-lecture-notes-skill) 生成：Markdown 构建源经 Pandoc 转为 HTML，ADHD 各版本由脚本派生。制作标准见 [讲义制作要求与经验.md](讲义制作要求与经验.md) 和 [制作记录/](制作记录/)。
+讲义由 Claude Code Skill [course-lecture-notes](https://github.com/ZJUOC/course-lecture-notes-skill) 生成：Markdown 构建源经 Pandoc 转为 HTML，阅读器（荧光、概念图、大纲）由脚本从同一份底稿生成。制作标准见 [讲义制作要求与经验.md](讲义制作要求与经验.md) 和 [制作记录/](制作记录/)。
 
 ## 版权
 
 - **讲义正文与图示**：采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)，可以非商业转载、改编，须署名并以相同协议共享。课程内容的知识产权归各任课教师和教材作者所有。若你是权利人，认为某部分不宜公开，请提 Issue，我们会尽快删除。
-- **中文字体**：思源宋体（Source Han Serif）的子集，遵循 SIL Open Font License 1.1，见各 `*字体/SourceHanSerif-LICENSE.txt`。拉丁字体不随仓库分发，页面会自动回退到系统衬线字体。
+- **中文字体**：思源宋体（Source Han Serif）的子集，遵循 SIL Open Font License 1.1，见 `资源/*字体/SourceHanSerif-LICENSE.txt`。拉丁字体不随仓库分发，页面会自动回退到系统衬线字体。
