@@ -1,0 +1,54 @@
+{
+ "xie1011-ex1": {
+  "source": "/private/tmp/claude-501/-Users-macute-Library-Mobile-Documents-com-apple-CloudDocs-Academic/8b8126d2-559c-4cba-a7a5-2287c2a3b320/scratchpad/xie/大雾_谢小平_1011_1/images/066.jpg",
+  "crop_box": [
+   610,
+   330,
+   1090,
+   650
+  ],
+  "size": [
+   480,
+   320
+  ]
+ },
+ "xie1011-ex2": {
+  "source": "/private/tmp/claude-501/-Users-macute-Library-Mobile-Documents-com-apple-CloudDocs-Academic/8b8126d2-559c-4cba-a7a5-2287c2a3b320/scratchpad/xie/大雾_谢小平_1011_1/images/080.jpg",
+  "crop_box": [
+   790,
+   210,
+   1130,
+   400
+  ],
+  "size": [
+   340,
+   190
+  ]
+ },
+ "xie1011-ex3": {
+  "source": "/private/tmp/claude-501/-Users-macute-Library-Mobile-Documents-com-apple-CloudDocs-Academic/8b8126d2-559c-4cba-a7a5-2287c2a3b320/scratchpad/xie/大雾_谢小平_1011_1/images/100.jpg",
+  "crop_box": [
+   700,
+   20,
+   1100,
+   610
+  ],
+  "size": [
+   400,
+   590
+  ]
+ },
+ "xie1011-ex4": {
+  "source": "/private/tmp/claude-501/-Users-macute-Library-Mobile-Documents-com-apple-CloudDocs-Academic/8b8126d2-559c-4cba-a7a5-2287c2a3b320/scratchpad/xie/大雾_谢小平_1011_1/images/105.jpg",
+  "crop_box": [
+   725,
+   205,
+   1080,
+   390
+  ],
+  "size": [
+   355,
+   185
+  ]
+ }
+}
