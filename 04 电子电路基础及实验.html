@@ -39,9 +39,9 @@
 </ul></nav></aside><main><div class="utility"><div><button aria-controls="contents" aria-expanded="false" id="toc-button">☰ 目录</button><span>课程讲义 / 电子电路</span></div><div><button id="toggle">展开答案与拓展</button><button id="print">打印 / 保存 PDF</button></div></div><div class="kicker">CIRCUIT FUNDAMENTALS</div><h1 id="电路模型分析方法与正弦稳态">电路模型、分析方法与正弦稳态</h1>
 <p><strong>电子电路基础及实验 · 应迪清课程学习讲义（第 1、2、4 章与第 5
 章 5.1—5.3.3）</strong></p><div aria-label="内容颜色说明" class="legend"><span class="definition">定义</span><span class="theorem">定理</span><span class="result">结论</span><span class="example">例题</span><span class="warning">易错</span></div>
-<p>分析一个<mark class="kw2">电路</mark>，归根结底只用<mark class="kw">两类约束</mark>：每个<mark class="kw2">元件</mark>自身的<mark class="kw2">电压电流</mark>关系，以及<mark class="kw">元件之间怎样连接</mark>。前者由<mark class="kw2">元件模型</mark>给出，后者由<mark class="kw2">基尔霍夫定律</mark>给出。第
+<p>分析一个<mark class="kw2">电路</mark>，归根结底只用<mark class="kw">两类约束</mark>：每个<mark class="kw2">元件</mark>自身的<mark class="kw2">电压电流</mark>关系，以及<mark class="kw">元件之间怎样连接</mark>。前者由<mark class="kw2">元件模型</mark>给出，<mark class="kw2">后者</mark>由基尔霍夫定律<mark class="kw2">给出</mark>。第
 1、2
-章建立这<mark class="kw2">两类约束</mark>：什么时候能把真实<mark class="kw2">装置</mark>抽象成集<mark class="kw2">总电路</mark>，电压、电流、<mark class="kw2">功率</mark>怎样记账，电阻、电容、<mark class="kw2">电感</mark>和各种<mark class="kw2">电源</mark>的模型，<mark class="kw2">基尔霍夫定律</mark>，以及一个<mark class="kw2">电路</mark>到底能<mark class="kw2">列出</mark>几个互相<mark class="kw2">独立</mark>的方程。第
+章建立这<mark class="kw2">两类约束</mark>：什么时候能把真实<mark class="kw2">装置</mark>抽象成集<mark class="kw2">总电路</mark>，电压、电流、<mark class="kw2">功率</mark>怎样记账，电阻、电容、<mark class="kw2">电感</mark>和各种<mark class="kw2">电源</mark>的模型，基尔霍夫定律，以及一个<mark class="kw2">电路</mark>到底能<mark class="kw2">列出</mark>几个互相<mark class="kw2">独立</mark>的方程。第
 4
 章在<mark class="kw2">此基础</mark>上讲<mark class="kw2">等效变换</mark>、<mark class="kw2">支路电流法</mark>、<mark class="kw2">回路</mark>电流法、<mark class="kw2">节点电压法</mark>和叠加、替代、<mark class="kw2">戴维宁</mark>、诺顿、<mark class="kw2">最大功率传输</mark>等定理。第
 5
@@ -328,7 +328,7 @@ W，即实际<mark class="kw2">发出</mark> 5 W。</p>
 W，发出
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">-5</annotation></semantics></math>
 W，即实际<mark class="kw2">吸收</mark> 5 W。</p>
-<p>同样的<mark class="kw2">数值</mark>，<mark class="kw2">参考方向</mark>的配合<mark class="kw2">不同</mark>，<mark class="kw">结论相反</mark>。所以一个<mark class="kw2">负号</mark>本身没有<mark class="kw2">意义</mark>，必须<mark class="kw">连同参考方向一起读</mark>。</p>
+<p>同样的<mark class="kw2">数值</mark>，<mark class="kw2">参考方向</mark>的配合<mark class="kw2">不同</mark>，<mark class="kw">结论相反</mark>。所以一个<mark class="kw2">负号</mark>本身没有意义，必须<mark class="kw">连同参考方向一起读</mark>。</p>
 </div>
 <p>例 2 里的
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">I=-1</annotation></semantics></math>
@@ -764,7 +764,7 @@ W，吸收（充电）。<math display="inline" xmlns="http://www.w3.org/1998/Ma
 ms：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">u=5</annotation></semantics></math>
 V，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>5</mn><mo>×</mo><mo form="prefix" stretchy="false">(</mo><mi>−</mi><mn>0.01</mn><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mi>−</mi><mn>0.05</mn></mrow><annotation encoding="application/x-tex">p=5\times(-0.01)=-0.05</annotation></semantics></math>
 W，发出（放电）。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>∼</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">1\sim3</annotation></semantics></math>
-ms <mark class="kw2">电压</mark> 10 V 而电流为零：<mark class="kw2">电压</mark>不为零时<mark class="kw2">电流</mark>也可以为零。</p>
+ms <mark class="kw2">电压</mark> 10 V 而电流为零：<mark class="kw2">电压</mark>不为零<mark class="kw2">时电流</mark>也可以为零。</p>
 </details>
 <details>
 <summary>
@@ -865,7 +865,7 @@ A，<mark class="kw2">端电压</mark>为零，全部功率 288 W <mark class="k
 &lt;0.1%+5 mV）说明负载从空载变到满载时输出的变化量：恒压 12 V
 时电压可能变化
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mo>×</mo><mn>0.1</mn><mi>%</mi><mo>+</mo><mn>0.005</mn><mo>=</mo><mn>0.017</mn></mrow><annotation encoding="application/x-tex">12\times0.1\%+0.005=0.017</annotation></semantics></math>
-V，实际电源<mark class="kw">都不是理想源</mark>。</mark>线性电源纹波小、<mark class="kw2">成本</mark>高，<mark class="kw2">适合</mark>模拟和<mark class="kw2">光电</mark>测量；<mark class="kw2">开关电源</mark>纹波大、<mark class="kw2">效率高</mark>，一般<mark class="kw2">数字电路</mark>用它即可。</p>
+V，实际电源<mark class="kw">都不是理想源</mark>。</mark>线性电源纹波小、<mark class="kw2">成本高</mark>，<mark class="kw2">适合</mark>模拟和<mark class="kw2">光电</mark>测量；<mark class="kw2">开关电源</mark>纹波大、<mark class="kw2">效率高</mark>，一般<mark class="kw2">数字电路</mark>用它即可。</p>
 <h4 id="practice-4">习题 4 · 实际电流源带不同负载</h4>
 <div class="block example"><div class="block-title">练习 · 先独立作答</div><p><mark class="hl hl-evidence" data-cat="evidence" id="hl-62">实际电流源
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>s</mi></msub><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">I_s=10</annotation></semantics></math>
@@ -1049,7 +1049,7 @@ W：<mark class="kw2">受控源</mark>在模型里<mark class="kw2">确实</mark
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">U_1=0</annotation></semantics></math>，<mark class="kw2">受控源</mark>输出为零，所有<mark class="kw2">电压电流</mark>为零。</p>
 </details>
 <h2 id="kirchhoff">5 基尔霍夫定律</h2>
-<p><mark class="kw2">元件约束</mark>说明每个<mark class="kw2">元件</mark>自身的规律；连接<mark class="kw2">方式</mark>带来的约束只与<mark class="kw2">电路</mark>“<mark class="kw">怎样连</mark>”有关，<mark class="kw">与元件是什么无关</mark>。<mark class="kw2">基尔霍夫定律</mark>（1845
+<p><mark class="kw2">元件约束</mark>说明每个<mark class="kw2">元件</mark>自身的规律；连接<mark class="kw2">方式</mark>带来的约束只与<mark class="kw2">电路</mark>“<mark class="kw">怎样连</mark>”有关，<mark class="kw">与元件是什么无关</mark>。基尔霍夫定律（1845
 年）<mark class="kw2">给出</mark>的就是这种<mark class="kw2">约束</mark>，包括<mark class="kw2">电流定律</mark>（KCL）和<mark class="kw2">电压定律</mark>（KVL），它是后面<mark class="kw">所有分析方法的基础</mark>。</p>
 <h3 id="kcl">5.1 电路的拓扑与 KCL</h3>
 <div class="block example">
@@ -1144,7 +1144,7 @@ W。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">节点 1: </mtext><mspace width="0.333em"></mspace></mrow><mo>−</mo><msub><mi>i</mi><mn>1</mn></msub><mo>−</mo><msub><mi>i</mi><mn>2</mn></msub><mo>+</mo><msub><mi>i</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="2.0em"></mspace><mrow><mtext mathvariant="normal">节点 2: </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>i</mi><mn>2</mn></msub><mo>+</mo><msub><mi>i</mi><mn>4</mn></msub><mo>−</mo><msub><mi>i</mi><mn>5</mn></msub><mo>=</mo><mn>0</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">\text{节点 1: }-i_1-i_2+i_3=0,\qquad\text{节点 2: }i_2+i_4-i_5=0,</annotation></semantics></math></div>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">节点 3: </mtext><mspace width="0.333em"></mspace></mrow><mo>−</mo><msub><mi>i</mi><mn>4</mn></msub><mo>+</mo><msub><mi>i</mi><mn>1</mn></msub><mo>+</mo><msub><mi>i</mi><mn>6</mn></msub><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="2.0em"></mspace><mrow><mtext mathvariant="normal">节点 4: </mtext><mspace width="0.333em"></mspace></mrow><mo>−</mo><msub><mi>i</mi><mn>3</mn></msub><mo>+</mo><msub><mi>i</mi><mn>5</mn></msub><mo>−</mo><msub><mi>i</mi><mn>6</mn></msub><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\text{节点 3: }-i_4+i_1+i_6=0,\qquad\text{节点 4: }-i_3+i_5-i_6=0 .</annotation></semantics></math></div>
 <p><strong class="kt" data-cat="term" id="hl-468">KCL 的推广。</strong>
-电荷守恒对<mark class="kw">任何闭合面</mark>都成立：<mark class="kw2">流出</mark>任一<mark class="kw2">闭合面</mark>的支路电流<mark class="kw2">代数和</mark>为零。用闭合面把<mark class="kw2">节点</mark>
+电荷守恒对<mark class="kw">任何闭合面</mark>都成立：<mark class="kw2">流出</mark>任一闭合面的<mark class="kw2">支路</mark>电流代数和为零。用闭合面把<mark class="kw2">节点</mark>
 ②、④ 连同<mark class="kw2">支路</mark> 5 一起包起来，<mark class="kw2">支路</mark> 5 的<mark class="kw2">电流</mark>在面内进出抵消，得
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mn>2</mn></msub><mo>+</mo><msub><mi>i</mi><mn>4</mn></msub><mo>−</mo><msub><mi>i</mi><mn>3</mn></msub><mo>−</mo><msub><mi>i</mi><mn>6</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">i_2+i_4-i_3-i_6=0</annotation></semantics></math>，恰是<mark class="kw2">节点</mark>
 2、4
@@ -1164,7 +1164,7 @@ f。（作业 2.16）</p><figure>
 提示 · 两个“零电流”
 </summary>
 <p>(1) b、d 被<mark class="kw2">导线</mark>短接，1 Ω 与 2 Ω <mark class="kw2">串联支路</mark>两端电压为零。(2)
-用一个<mark class="kw2">闭合面</mark>包住 e、f、g 所在的右半部分：它与左半部分只通过
+用一个闭合<mark class="kw2">面包</mark>住 e、f、g 所在的右半部分：它与左半部分只通过
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mn>5</mn></msub><annotation encoding="application/x-tex">I_5</annotation></semantics></math>
 <mark class="kw2">一条</mark>支路相连。</p>
 </details>
@@ -1308,7 +1308,7 @@ V。</li>
 <p><strong class="kt" data-cat="term" id="hl-470">解。</strong>
 沿<mark class="kw2">回路</mark>顺时针绕行，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>R</mi></msub><mo>+</mo><msub><mi>u</mi><mi>L</mi></msub><mo>+</mo><msub><mi>u</mi><mi>C</mi></msub><mo>−</mo><msub><mi>u</mi><mi>s</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">u_R+u_L+u_C-u_s=0</annotation></semantics></math>。<mark class="kw2">代入元件</mark>关系：</p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mi>i</mi><mo>+</mo><mi>L</mi><mfrac><mrow><mi>d</mi><mi>i</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>+</mo><msub><mi>u</mi><mi>C</mi></msub><mo form="prefix" stretchy="false">(</mo><mn>0</mn><mo form="postfix" stretchy="false">)</mo><mo>+</mo><mfrac><mn>1</mn><mi>C</mi></mfrac><msubsup><mo>∫</mo><mn>0</mn><mi>t</mi></msubsup><mi>i</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>ξ</mi><mo>=</mo><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>t</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">Ri+L\frac{di}{dt}+u_C(0)+\frac1C\int_0^t i\,d\xi=\cos t .</annotation></semantics></math></div>
-<p>两边对时间<mark class="kw2">求导</mark>，消去<mark class="kw2">积分</mark>：</p>
+<p>两边对时间<mark class="kw2">求导</mark>，<mark class="kw2">消去</mark>积分：</p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>i</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mi>R</mi><mfrac><mrow><mi>d</mi><mi>i</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mi>C</mi></mfrac><mspace width="0.167em"></mspace><mi>i</mi><mo>=</mo><mi>−</mi><mrow><mi mathvariant="normal">sin</mi><mo>⁡</mo></mrow><mi>t</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">L\frac{d^2i}{dt^2}+R\frac{di}{dt}+\frac1C\,i=-\sin t .</annotation></semantics></math></div>
 <p>这是二阶线性常<mark class="kw2">系数</mark>微分方程，<mark class="kw2">确定</mark>通解中的两个<mark class="kw2">常数</mark>需要
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo form="prefix" stretchy="false">(</mo><mn>0</mn><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">i(0)</annotation></semantics></math>
@@ -1323,9 +1323,9 @@ V。</li>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>∑</mo><mi>k</mi></munder><msub><mi>u</mi><mi>k</mi></msub><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\sum_k u_k=0 .</annotation></semantics></math></div>
 </div>
 <p><strong class="kt" data-cat="term" id="hl-471">证明。</strong> 集总条件 (2)
-要求与<mark class="kw2">回路</mark>交链的<mark class="kw2">磁链变化率</mark>为零，<mark class="kw2">回路</mark>上没有感应<mark class="kw2">电动势</mark>，电场在<mark class="kw2">回路</mark>外部是<mark class="kw2">保守</mark>的，<mark class="kw">电位单值</mark>。从<mark class="kw2">回路</mark>上某点<mark class="kw2">出发</mark>绕行一周回到<mark class="kw2">原点</mark>，各段<mark class="kw2">电位</mark>降之和<mark class="kw2">等于</mark>终点与起点的<mark class="kw2">电位差</mark>，即零。</p>
+要求与<mark class="kw2">回路</mark>交链的<mark class="kw2">磁链变化率</mark>为零，<mark class="kw2">回路</mark>上没有感应电动势，电场在<mark class="kw2">回路</mark>外部是<mark class="kw2">保守</mark>的，<mark class="kw">电位单值</mark>。从<mark class="kw2">回路</mark>上某点<mark class="kw2">出发</mark>绕行一周回到<mark class="kw2">原点</mark>，各段<mark class="kw2">电位</mark>降之和<mark class="kw2">等于</mark>终点与起点的<mark class="kw2">电位差</mark>，即零。</p>
 <p><mark class="hl hl-claim" data-cat="claim" id="hl-84">列 KVL 的步骤：(1) <mark class="kw">选定回路绕行方向</mark>；</mark>(2)
-支路<mark class="kw2">电压参考方向</mark>与绕行<mark class="kw2">方向</mark>一致的<mark class="kw2">取正</mark>，<mark class="kw2">相反</mark>的取负；<mark class="hl hl-evidence" data-cat="evidence" id="hl-85">(3)
+支路<mark class="kw2">电压参考方向</mark>与绕行<mark class="kw2">方向</mark>一致的取正，<mark class="kw2">相反</mark>的取负；<mark class="hl hl-evidence" data-cat="evidence" id="hl-85">(3)
 再用元件关系写出每个支路电压，例如
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mi>R</mi><mi>i</mi><mo>+</mo><msub><mi>U</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">u=Ri+U_s</annotation></semantics></math>。</mark><strong>电源符号旁的“+”“−”是电源本身的极性，支路电压的参考方向另外标注，两者可以相反。</strong></p>
 <p>KVL <mark class="kw2">还有</mark>两种常用写法：</p>
@@ -1884,7 +1884,7 @@ KCL 或 KVL 方程</mark>。</mark></p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mrow><mi>a</mi><mi>b</mi></mrow></msub><mo>=</mo><mfrac><mi>R</mi><mn>2</mn></mfrac><mo>+</mo><mfrac><mi>R</mi><mn>4</mn></mfrac><mo>+</mo><mfrac><mi>R</mi><mn>4</mn></mfrac><mo>+</mo><mfrac><mi>R</mi><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mn>3</mn><mi>R</mi></mrow><mn>2</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">R_{ab}=\frac R2+\frac R4+\frac R4+\frac R2=\frac{3R}{2}.</annotation></semantics></math></div>
 <p>f 和 e、g 等电位<mark class="kw">不那么显然</mark>：沿<mark class="kw2">对角线</mark>把 f 拆成两个<mark class="kw2">节点</mark>，一个连 c、h
 一侧，一个连 d、i 一侧，两个半边电路<mark class="kw">完全对称</mark>，两个“半个
-f”<mark class="kw2">电位</mark>相等，合回去不<mark class="kw2">影响</mark>电流；e、g 分别<mark class="kw2">处在</mark>对称<mark class="kw2">位置</mark>上。所以 e、f、g
+f”<mark class="kw2">电位</mark>相等，合回去不影响<mark class="kw2">电流</mark>；e、g 分别<mark class="kw2">处在</mark>对称<mark class="kw2">位置</mark>上。所以 e、f、g
 都在中间那条反<mark class="kw2">对角线</mark>上，<mark class="kw2">电位</mark>相同。</p>
 </div>
 <p>两个<mark class="kw2">例题</mark>都在把“一大块<mark class="kw2">电路</mark>”换成“一个<mark class="kw2">电阻</mark>”，<mark class="kw">依据是等效</mark>。</p>
@@ -1903,7 +1903,7 @@ R、L、C、互感或受控源构成（含受控源仍叫无源）。</mark><mar
 <figcaption aria-hidden="true">一端口电路（上）与无源一端口电阻网络（下）：网络 P
 可以用一个电阻 R 等效。</figcaption>
 </figure>
-<p><mark class="kw2">无源一端口</mark>电阻网络的<mark class="kw2">端口电压</mark>与端口电流之比是<mark class="kw2">常数</mark>，称为<strong class="kt" data-cat="term" id="hl-484">等效电阻</strong>或<strong class="kt" data-cat="term" id="hl-485">输入电阻</strong>。</p>
+<p><mark class="kw2">无源一端口</mark>电阻网络的<mark class="kw2">端口电压</mark>与端口电流之比是常数，称为<strong class="kt" data-cat="term" id="hl-484">等效电阻</strong>或<strong class="kt" data-cat="term" id="hl-485">输入电阻</strong>。</p>
 <div class="block warning">
 <p class="block-title"><strong>易错 · 等效只对外部成立</strong></p>
 <p><mark class="hl hl-counter" data-cat="counter" id="hl-125">等效变换后，<mark class="kw">外电路</mark>的电压、电流、功率都可以在等效电路里算；</mark><mark class="hl hl-counter" data-cat="counter" id="hl-126"><strong>被替换掉的那部分内部的量不能在等效电路里算</strong>，必须<mark class="kw">回到原电路去求</mark>。</mark><mark class="kw2">等效电路</mark>由原电路本身<mark class="kw2">决定</mark>，<mark class="kw">与外电路接什么无关</mark>。</p>
@@ -2368,7 +2368,7 @@ V，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics
 </tbody>
 </table>
 <p>(b)
-中受控<mark class="kw2">电压源</mark>的实际电压与电流<mark class="kw2">方向相反</mark>，它在<mark class="kw">发出功率</mark>，相当于一个<strong class="kt" data-cat="term" id="hl-495">负电阻</strong>
+中受控<mark class="kw2">电压源</mark>的实际电压与电流方向<mark class="kw2">相反</mark>，它在<mark class="kw">发出功率</mark>，相当于一个<strong class="kt" data-cat="term" id="hl-495">负电阻</strong>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>β</mi><msub><mi>R</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">-\beta R_1</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\beta=3</annotation></semantics></math>
 时它是
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>30</mn><mspace width="0.222em"></mspace><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">-30\ \Omega</annotation></semantics></math>，正好<mark class="kw2">抵消</mark>
@@ -2799,7 +2799,7 @@ V，用回路电流法求各支路电流。</mark>（<mark class="kw2">教材</m
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>U</mi><mrow><mi>S</mi><mn>6</mn></mrow></msub><annotation encoding="application/x-tex">U_{S6}</annotation></semantics></math>）所在支路为树支。</figcaption>
 </figure>
 <p><strong class="kt" data-cat="term" id="hl-503">解。</strong>
-两个<mark class="kw2">电流源</mark>都被两个<mark class="kw2">网孔</mark>共有，<mark class="kw2">用网孔</mark>要多<mark class="kw2">设电流源电压</mark>为未知量。<mark class="hl hl-claim" data-cat="claim" id="hl-178"><mark class="kw">改用基本回路</mark>：选
+两个电流源都被两个<mark class="kw2">网孔</mark>共有，<mark class="kw2">用网孔</mark>要多<mark class="kw2">设电流源电压</mark>为未知量。<mark class="hl hl-claim" data-cat="claim" id="hl-178"><mark class="kw">改用基本回路</mark>：选
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>2</mn></msub><annotation encoding="application/x-tex">R_2</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>5</mn></msub><annotation encoding="application/x-tex">R_5</annotation></semantics></math>
 和
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>6</mn></msub><annotation encoding="application/x-tex">R_6</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>U</mi><mrow><mi>S</mi><mn>6</mn></mrow></msub><annotation encoding="application/x-tex">U_{S6}</annotation></semantics></math>
@@ -2906,9 +2906,9 @@ A 由 O <mark class="kw2">流向</mark> Q。求
 A，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mrow><mi>l</mi><mn>2</mn></mrow></msub><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">I_{l2}=6</annotation></semantics></math>
 A。三个<mark class="kw2">回路</mark>在
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>1</mn></msub><annotation encoding="application/x-tex">R_1</annotation></semantics></math>
-上<mark class="kw2">方向</mark>相同，<mark class="kw2">回路</mark> 2 与回路 3 在
+上方向相同，<mark class="kw2">回路</mark> 2 与回路 3 在
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>2</mn></msub><annotation encoding="application/x-tex">R_2</annotation></semantics></math>
-上<mark class="kw2">方向</mark>相同：</p>
+上方向相同：</p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><msub><mi>R</mi><mn>1</mn></msub><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub><mo>+</mo><msub><mi>R</mi><mn>3</mn></msub><mo form="postfix" stretchy="false">)</mo><msub><mi>I</mi><mrow><mi>l</mi><mn>3</mn></mrow></msub><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub><msub><mi>I</mi><mrow><mi>l</mi><mn>2</mn></mrow></msub><mo>+</mo><msub><mi>R</mi><mn>1</mn></msub><mo form="prefix" stretchy="false">(</mo><msub><mi>I</mi><mrow><mi>l</mi><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>I</mi><mrow><mi>l</mi><mn>2</mn></mrow></msub><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mn>0</mn><mspace width="0.222em"></mspace><mo>⇒</mo><mspace width="0.222em"></mspace><mn>6</mn><msub><mi>I</mi><mrow><mi>l</mi><mn>3</mn></mrow></msub><mo>+</mo><mn>12</mn><mo>+</mo><mn>11</mn><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>I</mi><mrow><mi>l</mi><mn>3</mn></mrow></msub><mo>=</mo><mi>−</mi><mfrac><mn>23</mn><mn>6</mn></mfrac><mspace width="0.222em"></mspace><mtext mathvariant="normal">A</mtext><mi>.</mi></mrow><annotation encoding="application/x-tex">(R_1+R_2+R_3)I_{l3}+R_2I_{l2}+R_1(I_{l1}+I_{l2})=0\ \Rightarrow\ 6I_{l3}+12+11=0,\qquad I_{l3}=-\frac{23}{6}\ \text{A}.</annotation></semantics></math></div>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mn>3</mn></msub><mo>=</mo><mi>−</mi><mfrac><mn>23</mn><mn>6</mn></mfrac><mo>≈</mo><mi>−</mi><mn>3.83</mn><mspace width="0.222em"></mspace><mtext mathvariant="normal">A</mtext><mo>,</mo><mspace width="1.0em"></mspace><msub><mi>I</mi><mn>2</mn></msub><mo>=</mo><msub><mi>I</mi><mrow><mi>l</mi><mn>3</mn></mrow></msub><mo>+</mo><mn>6</mn><mo>=</mo><mfrac><mn>13</mn><mn>6</mn></mfrac><mo>≈</mo><mn>2.17</mn><mspace width="0.222em"></mspace><mtext mathvariant="normal">A</mtext><mo>,</mo><mspace width="1.0em"></mspace><msub><mi>I</mi><mn>1</mn></msub><mo>=</mo><msub><mi>I</mi><mrow><mi>l</mi><mn>3</mn></mrow></msub><mo>+</mo><mn>11</mn><mo>=</mo><mfrac><mn>43</mn><mn>6</mn></mfrac><mo>≈</mo><mn>7.17</mn><mspace width="0.222em"></mspace><mtext mathvariant="normal">A</mtext><mo>,</mo><mspace width="1.0em"></mspace><msub><mi>I</mi><mn>4</mn></msub><mo>=</mo><mn>11</mn><mspace width="0.222em"></mspace><mtext mathvariant="normal">A</mtext><mi>.</mi></mrow><annotation encoding="application/x-tex">I_3=-\frac{23}{6}\approx-3.83\ \text{A},\quad I_2=I_{l3}+6=\frac{13}{6}\approx2.17\ \text{A},\quad I_1=I_{l3}+11=\frac{43}{6}\approx7.17\ \text{A},\quad I_4=11\ \text{A}.</annotation></semantics></math></div>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>4</mn></msub><annotation encoding="application/x-tex">R_4</annotation></semantics></math>
@@ -3004,7 +3004,7 @@ KCL，求出节点电压再求其他量，称为<strong>节点电压法</strong>
 串联。</figcaption>
 </figure>
 <p><strong class="kt" data-cat="term" id="hl-506">推导。</strong> 三个独立节点的
-KCL（各<mark class="kw2">电流方向</mark>按图中<mark class="kw2">箭头</mark>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>n</mi><mi>c</mi></msub><annotation encoding="application/x-tex">n_c</annotation></semantics></math>
+KCL（各电流方向按图中<mark class="kw2">箭头</mark>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>n</mi><mi>c</mi></msub><annotation encoding="application/x-tex">n_c</annotation></semantics></math>
 的三个<mark class="kw2">电流</mark>都流入 c）：</p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mi>a</mi></msub><mo>:</mo><mspace width="0.222em"></mspace><msub><mi>I</mi><mn>1</mn></msub><mo>+</mo><msub><mi>I</mi><mn>2</mn></msub><mo>−</mo><msub><mi>I</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>n</mi><mi>b</mi></msub><mo>:</mo><mspace width="0.222em"></mspace><msub><mi>I</mi><mn>3</mn></msub><mo>+</mo><msub><mi>I</mi><mn>4</mn></msub><mo>−</mo><msub><mi>I</mi><mn>5</mn></msub><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>n</mi><mi>c</mi></msub><mo>:</mo><mspace width="0.222em"></mspace><msub><mi>I</mi><mn>1</mn></msub><mo>+</mo><msub><mi>I</mi><mn>4</mn></msub><mo>+</mo><msub><mi>I</mi><mn>6</mn></msub><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">n_a:\ I_1+I_2-I_3=0,\qquad n_b:\ I_3+I_4-I_5=0,\qquad n_c:\ I_1+I_4+I_6=0 .</annotation></semantics></math></div>
 <p>每个<mark class="kw2">支路电流</mark>都用<mark class="kw2">节点电压</mark>表示：</p>
@@ -3084,7 +3084,7 @@ c，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics
 V，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mrow><mi>S</mi><mn>2</mn></mrow></msub><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">U_{S2}=5</annotation></semantics></math>
 V。</mark><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>U</mi><mrow><mi>S</mi><mn>1</mn></mrow></msub><annotation encoding="application/x-tex">U_{S1}</annotation></semantics></math>
 竖在左边（“+”在上），<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>U</mi><mrow><mi>S</mi><mn>2</mn></mrow></msub><annotation encoding="application/x-tex">U_{S2}</annotation></semantics></math>
-在上边（“−”在左、“+”在右）。用<mark class="kw2">节点电压法</mark>求各<mark class="kw2">支路电流</mark>，<mark class="kw2">电流方向</mark>按图中<mark class="kw2">箭头</mark>。（作业
+在上边（“−”在左、“+”在右）。用<mark class="kw2">节点电压法</mark>求各<mark class="kw2">支路电流</mark>，电流方向按图中<mark class="kw2">箭头</mark>。（作业
 4.22）</p><figure>
 <button aria-label="放大：习题 4.22 的电路。" class="figure-open" type="button"><img alt="习题 4.22 的电路。" src="资源/电电基原图/f422.png"/></button>
 <figcaption aria-hidden="true">习题 4.22 的电路。</figcaption>
@@ -3559,7 +3559,7 @@ c，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics
 <p><strong class="kt" data-cat="term" id="hl-521">证明。</strong> 由定理 10
 的<mark class="kw2">展开式</mark>，<mark class="kw2">响应</mark>是各激励的<mark class="kw2">线性组合</mark>，<mark class="kw2">系数</mark>与激励无关：把所有<mark class="kw2">激励</mark>乘
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math>，<mark class="kw2">响应</mark>乘
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math>；把两组<mark class="kw2">激励</mark>放在一起，<mark class="kw2">系数</mark>不变，两组的项直接<mark class="kw2">相加</mark>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math>；把两组<mark class="kw2">激励</mark>放在一起，<mark class="kw2">系数</mark>不变，两组的项直接相加。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></p>
 <div class="block warning">
 <p class="block-title"><strong>易错 · 功率不能叠加</strong></p>
 <p><mark class="hl hl-counter" data-cat="counter" id="hl-226">功率是电流（电压）的二次式。</mark><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>
@@ -3718,7 +3718,7 @@ V，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics
 L/N。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>3</mn></msub><annotation encoding="application/x-tex">R_3</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>4</mn></msub><annotation encoding="application/x-tex">R_4</annotation></semantics></math>
 在
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>S</mi></msub><annotation encoding="application/x-tex">I_S</annotation></semantics></math>
-的<mark class="kw2">另一侧</mark>，不<mark class="kw2">影响</mark> T、L 间的<mark class="kw2">电压</mark>。</p>
+的<mark class="kw2">另一侧</mark>，不影响 T、L 间的<mark class="kw2">电压</mark>。</p>
 </details>
 <details>
 <summary>
@@ -3858,7 +3858,7 @@ a、c、d、b，两个<mark class="kw2">源合</mark>起来<mark class="kw2">电
 <mark class="kw">等电位</mark>，可以用导线短接而不影响其余部分。</mark>短接后从 N 看<mark class="kw2">出去</mark>只剩一个<mark class="kw2">电压</mark>为
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mi>k</mi></msub><annotation encoding="application/x-tex">u_k</annotation></semantics></math>
 的<mark class="kw2">电压源</mark>，即用<mark class="kw2">电压源</mark>替代了<mark class="kw2">支路</mark>
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>。<mark class="kw2">替代</mark>前后，按<mark class="kw2">基尔霍夫定律</mark>列出的<mark class="kw2">方程</mark>没有<mark class="kw2">改变</mark>，<mark class="kw">由唯一性</mark>，解也<mark class="kw2">不变</mark>。用<mark class="kw2">电流源替代</mark>的情形同理，并联一对<mark class="kw2">方向相反</mark>、大小为
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>。<mark class="kw2">替代</mark>前后，按基尔霍夫定律列出的<mark class="kw2">方程</mark>没有<mark class="kw2">改变</mark>，<mark class="kw">由唯一性</mark>，解也<mark class="kw2">不变</mark>。用<mark class="kw2">电流源替代</mark>的情形同理，并联一对<mark class="kw2">方向相反</mark>、大小为
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>i</mi><mi>k</mi></msub><annotation encoding="application/x-tex">i_k</annotation></semantics></math>
 的<mark class="kw2">电流源</mark>即可。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></p>
 <p><mark class="kw2">替代定理</mark>的作用是“<mark class="kw">把已知的量当作源</mark>”：例 31
@@ -4361,7 +4361,7 @@ A；<mark class="kw2">独立</mark>源置零后加压，<math display="inline" x
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>L</mi></msub><annotation encoding="application/x-tex">R_L</annotation></semantics></math>（电流
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>L</mi></msub><annotation encoding="application/x-tex">I_L</annotation></semantics></math>）。求：(1)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>L</mi></msub><annotation encoding="application/x-tex">R_L</annotation></semantics></math>
-为何<mark class="kw2">值时</mark>获得最大<mark class="kw2">功率</mark>；(2) 最大<mark class="kw2">功率</mark>；(3) 此时 10 V
+为何<mark class="kw2">值时</mark>获得最<mark class="kw2">大功率</mark>；(2) 最<mark class="kw2">大功率</mark>；(3) 此时 10 V
 <mark class="kw2">电压源</mark>的功率<mark class="kw2">传输</mark>效率。（<mark class="kw2">教材</mark>例 4.3.11）</p>
 <figure>
 <button aria-label="放大：(a) 原电路，虚线框为 N_1；(b) N_1 的戴维宁等效电路 5 V 串 1 Ω。" class="figure-open" type="button"><img alt="(a) 原电路，虚线框为 N_1；(b) N_1 的戴维宁等效电路 5 V 串 1 Ω。" src="资源/电电基原图/maxpower-example.png"/></button>
@@ -4375,7 +4375,7 @@ A；<mark class="kw2">独立</mark>源置零后加压，<math display="inline" x
 的<mark class="kw2">戴维宁参数</mark>：</p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mn>0</mn></msub><mo>=</mo><mfrac><mn>2</mn><mrow><mn>2</mn><mo>+</mo><mn>2</mn></mrow></mfrac><mo>×</mo><mn>10</mn><mo>=</mo><mn>5</mn><mspace width="0.222em"></mspace><mtext mathvariant="normal">V</mtext><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>R</mi><mn>0</mn></msub><mo>=</mo><mn>2</mn><mo>∥</mo><mn>2</mn><mo>=</mo><mn>1</mn><mspace width="0.222em"></mspace><mi mathvariant="normal">Ω</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">U_0=\frac{2}{2+2}\times10=5\ \text{V},\qquad R_0=2\parallel2=1\ \Omega .</annotation></semantics></math></div>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>L</mi></msub><mo>=</mo><msub><mi>R</mi><mn>0</mn></msub><mo>=</mo><mn>1</mn><mspace width="0.222em"></mspace><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">R_L=R_0=1\ \Omega</annotation></semantics></math>
-时获得最大<mark class="kw2">功率</mark>（定理 15）。</p>
+时获得最<mark class="kw2">大功率</mark>（定理 15）。</p>
 <p>(2)
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi mathvariant="normal">max</mi></msub><mo>=</mo><mfrac><msubsup><mi>U</mi><mn>0</mn><mn>2</mn></msubsup><mrow><mn>4</mn><msub><mi>R</mi><mn>0</mn></msub></mrow></mfrac><mo>=</mo><mfrac><mn>25</mn><mn>4</mn></mfrac><mo>=</mo><mn>6.25</mn><mspace width="0.222em"></mspace><mtext mathvariant="normal">W</mtext><mi>.</mi></mrow><annotation encoding="application/x-tex">P_{\max}=\frac{U_0^2}{4R_0}=\frac{25}{4}=6.25\ \text{W}.</annotation></semantics></math></p>
 <p>(3)
@@ -4407,7 +4407,7 @@ A，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mn>0.1</mn></mrow><annotation encoding="application/x-tex">I=0.1</annotation></semantics></math>
 A。(1)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>
-为多少时<mark class="kw2">获得</mark>最大<mark class="kw2">功率</mark>？最大<mark class="kw2">功率</mark>多少？(2) 把
+为多少时获得最<mark class="kw2">大功率</mark>？最<mark class="kw2">大功率</mark>多少？(2) 把
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>
 <mark class="kw2">换成</mark>另一电路：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>=</mo><msub><mi>R</mi><mn>2</mn></msub><mo>=</mo><msub><mi>R</mi><mn>3</mn></msub><mo>=</mo><mn>20</mn><mspace width="0.222em"></mspace><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">R_1=R_2=R_3=20\ \Omega</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>1</mn></msub><annotation encoding="application/x-tex">R_1</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>2</mn></msub><annotation encoding="application/x-tex">R_2</annotation></semantics></math>
 <mark class="kw2">串联</mark>接在 A、B
@@ -4574,7 +4574,7 @@ V，内阻
 可选，负载
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>L</mi></msub><mo>=</mo><mn>100</mn><mspace width="0.222em"></mspace><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">R_L=100\ \Omega</annotation></semantics></math>
 固定。</mark><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>0</mn></msub><annotation encoding="application/x-tex">R_0</annotation></semantics></math>
-取多大时负载<mark class="kw2">功率</mark>最大？最大<mark class="kw2">功率</mark>多少？（<mark class="kw2">教材</mark>例 4.3.13）</p></div>
+取多大时负载<mark class="kw2">功率</mark>最大？最<mark class="kw2">大功率</mark>多少？（<mark class="kw2">教材</mark>例 4.3.13）</p></div>
 <details>
 <summary>
 提示 · 这不是匹配问题
@@ -4868,12 +4868,12 @@ V。</p>
 与
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mi>t</mi><mo>=</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\omega t=\frac\pi2</annotation></semantics></math>，得
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>U</mi><mo accent="true">̇</mo></mover><mn>1</mn></msub><mo>−</mo><msub><mover><mi>U</mi><mo accent="true">̇</mo></mover><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\dot U_1-\dot U_2</annotation></semantics></math>
-的<mark class="kw2">虚部</mark>与实部都为零。</p>
+的虚部与实部都为零。</p>
 <p>(2)
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Im</mi><annotation encoding="application/x-tex">\operatorname{Im}</annotation></semantics></math>
 对<mark class="kw2">实系数线性</mark>：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><msub><mi>u</mi><mn>1</mn></msub><mo>+</mo><mi>b</mi><msub><mi>u</mi><mn>2</mn></msub><mo>=</mo><mrow><mi mathvariant="normal">Im</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">[</mo><msqrt><mn>2</mn></msqrt><mo form="prefix" stretchy="false">(</mo><mi>a</mi><msub><mover><mi>U</mi><mo accent="true">̇</mo></mover><mn>1</mn></msub><mo>+</mo><mi>b</mi><msub><mover><mi>U</mi><mo accent="true">̇</mo></mover><mn>2</mn></msub><mo form="postfix" stretchy="false">)</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi><mi>t</mi></mrow></msup><mo form="postfix" stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">au_1+bu_2=\operatorname{Im}[\sqrt2(a\dot U_1+b\dot U_2)e^{j\omega t}]</annotation></semantics></math>。</p>
 <p>(3)
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mstyle><mrow><mi mathvariant="normal">Im</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">[</mo><msqrt><mn>2</mn></msqrt><mover><mi>U</mi><mo accent="true">̇</mo></mover><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi><mi>t</mi></mrow></msup><mo form="postfix" stretchy="false">]</mo><mo>=</mo><mrow><mi mathvariant="normal">Im</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">[</mo><msqrt><mn>2</mn></msqrt><mo form="prefix" stretchy="false">(</mo><mi>j</mi><mi>ω</mi><mover><mi>U</mi><mo accent="true">̇</mo></mover><mo form="postfix" stretchy="false">)</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi><mi>t</mi></mrow></msup><mo form="postfix" stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">\dfrac{d}{dt}\operatorname{Im}[\sqrt2\dot Ue^{j\omega t}]=\operatorname{Im}[\sqrt2(j\omega\dot U)e^{j\omega t}]</annotation></semantics></math>，<mark class="kw2">求导</mark>与取<mark class="kw2">虚部</mark>可交换。积分是<mark class="kw2">微分</mark>的逆运算，<mark class="kw2">稳态时</mark>没有常数项。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mstyle><mrow><mi mathvariant="normal">Im</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">[</mo><msqrt><mn>2</mn></msqrt><mover><mi>U</mi><mo accent="true">̇</mo></mover><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi><mi>t</mi></mrow></msup><mo form="postfix" stretchy="false">]</mo><mo>=</mo><mrow><mi mathvariant="normal">Im</mi><mo>⁡</mo></mrow><mo form="prefix" stretchy="false">[</mo><msqrt><mn>2</mn></msqrt><mo form="prefix" stretchy="false">(</mo><mi>j</mi><mi>ω</mi><mover><mi>U</mi><mo accent="true">̇</mo></mover><mo form="postfix" stretchy="false">)</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi><mi>t</mi></mrow></msup><mo form="postfix" stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">\dfrac{d}{dt}\operatorname{Im}[\sqrt2\dot Ue^{j\omega t}]=\operatorname{Im}[\sqrt2(j\omega\dot U)e^{j\omega t}]</annotation></semantics></math>，<mark class="kw2">求导</mark>与取虚部可<mark class="kw2">交换</mark>。积分是<mark class="kw2">微分</mark>的逆运算，<mark class="kw2">稳态时</mark>没有常数项。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></p>
 <p>性质 (3) 说明：乘
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
 就是把相量<mark class="kw">逆时针转</mark>
@@ -5415,7 +5415,7 @@ V，</p>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>G</mi><mo>≠</mo><mi>R</mi></mrow><annotation encoding="application/x-tex">1/G\ne R</annotation></semantics></math>。</mark><mark class="hl hl-thesis" data-cat="thesis" id="hl-332">电抗随频率变化，所以等效<strong>只在这一个频率</strong>成立。</mark></p>
 </div>
 <p><strong class="kt" data-cat="term" id="hl-562">证明。</strong>
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>R</mi><mo>+</mo><mi>j</mi><mi>X</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>R</mi><mo>−</mo><mi>j</mi><mi>X</mi></mrow><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>+</mo><msup><mi>X</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">Y=\dfrac1{R+jX}=\dfrac{R-jX}{R^2+X^2}</annotation></semantics></math>，比较<mark class="kw2">实部</mark>和虚部即得前两式；反过来<mark class="kw2">同理</mark>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>R</mi><mo>+</mo><mi>j</mi><mi>X</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>R</mi><mo>−</mo><mi>j</mi><mi>X</mi></mrow><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>+</mo><msup><mi>X</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">Y=\dfrac1{R+jX}=\dfrac{R-jX}{R^2+X^2}</annotation></semantics></math>，比较实部和虚部即得前两式；反过来<mark class="kw2">同理</mark>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></p>
 <div class="block definition">
 <p class="block-title"><strong>定义 27 · 感性、容性与电阻性</strong></p>
 <p><mark class="hl hl-term" data-cat="term" id="hl-333">一端口阻抗
@@ -5584,7 +5584,7 @@ W。</p>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
 的<mark class="kw2">表达式</mark>。第二项是<mark class="kw2">角频率</mark>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>ω</mi></mrow><annotation encoding="application/x-tex">2\omega</annotation></semantics></math>
-的<mark class="kw2">余弦</mark>，一个周期内<mark class="kw">积分为零</mark>，剩下<mark class="kw2">常数项</mark>
+的<mark class="kw2">余弦</mark>，一个周期内<mark class="kw">积分为零</mark>，<mark class="kw2">剩下</mark>常数项
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mi>I</mi><mrow><mi mathvariant="normal">cos</mi><mo>⁡</mo></mrow><mi>φ</mi></mrow><annotation encoding="application/x-tex">UI\cos\varphi</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></p>
 <div class="block definition">
 <p class="block-title"><strong>定义 28 · 有功功率与功率因数</strong></p>
@@ -5716,7 +5716,7 @@ V·A，表示<mark class="kw">设备的容量</mark>。</mark><mark class="hl hl
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>∑</mo><mi>k</mi></munder><msub><mover><mi>U</mi><mo accent="true">̇</mo></mover><mi>k</mi></msub><msubsup><mover><mi>I</mi><mo accent="true">̇</mo></mover><mi>k</mi><mo>*</mo></msubsup><mo>=</mo><munder><mo>∑</mo><mi>k</mi></munder><mo form="prefix" stretchy="false">(</mo><msub><mover><mi>V</mi><mo accent="true">̇</mo></mover><mi>a</mi></msub><mo>−</mo><msub><mover><mi>V</mi><mo accent="true">̇</mo></mover><mi>b</mi></msub><mo form="postfix" stretchy="false">)</mo><msubsup><mover><mi>I</mi><mo accent="true">̇</mo></mover><mi>k</mi><mo>*</mo></msubsup><mo>=</mo><munder><mo>∑</mo><mi>n</mi></munder><msub><mover><mi>V</mi><mo accent="true">̇</mo></mover><mi>n</mi></msub><mo form="prefix" maxsize="180%" minsize="180%" stretchy="true">(</mo><munder><mo>∑</mo><mrow><mi>k</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 离开 </mtext><mspace width="0.333em"></mspace></mrow><mi>n</mi></mrow></munder><msub><mover><mi>I</mi><mo accent="true">̇</mo></mover><mi>k</mi></msub><mo>−</mo><munder><mo>∑</mo><mrow><mi>k</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> 进入 </mtext><mspace width="0.333em"></mspace></mrow><mi>n</mi></mrow></munder><msub><mover><mi>I</mi><mo accent="true">̇</mo></mover><mi>k</mi></msub><msup><mo form="postfix" maxsize="180%" minsize="180%" stretchy="true">)</mo><mo>*</mo></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">\sum_k\dot U_k\dot I_k^*=\sum_k(\dot V_a-\dot V_b)\dot I_k^*=\sum_n\dot V_n\Big(\sum_{k\text{ 离开 }n}\dot I_k-\sum_{k\text{ 进入 }n}\dot I_k\Big)^{*}.</annotation></semantics></math></div>
 <p>括号内是<mark class="kw2">节点</mark>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
-的 KCL（定理 17），为零。<mark class="kw2">取实</mark>部、<mark class="kw2">虚部</mark>得
+的 KCL（定理 17），为零。取实部、虚部得
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
 守恒。<mark class="hl hl-counter" data-cat="counter" id="hl-364"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>k</mi></msub><mo>=</mo><mo form="prefix" stretchy="false">|</mo><msub><mover><mi>S</mi><mo accent="true">̃</mo></mover><mi>k</mi></msub><mo form="prefix" stretchy="false">|</mo></mrow><annotation encoding="application/x-tex">S_k=|\tilde S_k|</annotation></semantics></math>，<mark class="kw">模的和</mark>一般不等于和的模，所以
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
@@ -5870,7 +5870,7 @@ A，应<mark class="kw2">并联</mark>的电容<mark class="kw2">最小</mark>�
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>I</mi><mo accent="true">̇</mo></mover><mn>1</mn></msub><mo>=</mo><mn>10</mn><mi>∠</mi><mo>−</mo><msup><mn>60</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">\dot I_1=10\angle-60^\circ</annotation></semantics></math>
 A，电阻电流 5 A <mark class="kw2">同相</mark>；<mark class="kw2">电容电流</mark>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mi>ω</mi><mi>C</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">j\omega CU</annotation></semantics></math>
-只抵消<mark class="kw2">虚部</mark>。</p>
+只<mark class="kw2">抵消</mark>虚部。</p>
 </details>
 <details>
 <summary>
@@ -6106,9 +6106,9 @@ H。</mark><mark class="kw2">电路</mark>发生串联谐振时<mark class="kw2"
 <p><strong class="kt" data-cat="term" id="hl-578">证明。</strong> 线圈导纳
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>R</mi><mo>+</mo><mi>j</mi><mi>ω</mi><mi>L</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>R</mi><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>+</mo><msup><mi>ω</mi><mn>2</mn></msup><msup><mi>L</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>−</mo><mi>j</mi><mstyle displaystyle="true"><mfrac><mrow><mi>ω</mi><mi>L</mi></mrow><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>+</mo><msup><mi>ω</mi><mn>2</mn></msup><msup><mi>L</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\dfrac1{R+j\omega L}=\dfrac{R}{R^2+\omega^2L^2}-j\dfrac{\omega L}{R^2+\omega^2L^2}</annotation></semantics></math>，总<mark class="kw2">导纳</mark></p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>=</mo><mfrac><mi>R</mi><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>+</mo><msup><mi>ω</mi><mn>2</mn></msup><msup><mi>L</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mi>j</mi><mo form="prefix" maxsize="180%" minsize="180%" stretchy="true">(</mo><mi>ω</mi><mi>C</mi><mo>−</mo><mfrac><mrow><mi>ω</mi><mi>L</mi></mrow><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>+</mo><msup><mi>ω</mi><mn>2</mn></msup><msup><mi>L</mi><mn>2</mn></msup></mrow></mfrac><mo form="postfix" maxsize="180%" minsize="180%" stretchy="true">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">Y=\frac{R}{R^2+\omega^2L^2}+j\Big(\omega C-\frac{\omega L}{R^2+\omega^2L^2}\Big).</annotation></semantics></math></div>
-<p><mark class="kw2">虚部</mark>为零：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>+</mo><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><msup><mi>L</mi><mn>2</mn></msup><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>L</mi><mi>C</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">R^2+\omega_0^2L^2=\dfrac LC</annotation></semantics></math>，解得
+<p>虚部为零：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>+</mo><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><msup><mi>L</mi><mn>2</mn></msup><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>L</mi><mi>C</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">R^2+\omega_0^2L^2=\dfrac LC</annotation></semantics></math>，解得
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>；<mark class="kw2">根号内为</mark>正要求
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>&lt;</mo><mi>L</mi><mi>/</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">R^2&lt;L/C</annotation></semantics></math>。此时<mark class="kw2">实部</mark>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>&lt;</mo><mi>L</mi><mi>/</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">R^2&lt;L/C</annotation></semantics></math>。此时实部
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle displaystyle="true"><mfrac><mi>R</mi><mrow><mi>L</mi><mi>/</mi><mi>C</mi></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>R</mi><mi>C</mi></mrow><mi>L</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\dfrac{R}{L/C}=\dfrac{RC}{L}</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>L</mi><mrow><mi>R</mi><mi>C</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">Z=\dfrac{L}{RC}</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></p>
 <div class="block result">
 <p class="block-title"><strong>结论 21 · 串并联电路的多个谐振点</strong></p>
@@ -6233,7 +6233,7 @@ mV，<mark class="kw2">实际电流</mark>比约为
 当且仅当
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo form="prefix" maxsize="180%" minsize="180%" stretchy="true">|</mo><mstyle displaystyle="true"><mfrac><mi>ω</mi><msub><mi>ω</mi><mn>0</mn></msub></mfrac></mstyle><mo>−</mo><mstyle displaystyle="true"><mfrac><msub><mi>ω</mi><mn>0</mn></msub><mi>ω</mi></mfrac></mstyle><mo form="prefix" maxsize="180%" minsize="180%" stretchy="true">|</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">Q\Big|\dfrac\omega{\omega_0}-\dfrac{\omega_0}\omega\Big|=1</annotation></semantics></math>，即</p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>ω</mi><mn>2</mn></msup><mo>∓</mo><mfrac><msub><mi>ω</mi><mn>0</mn></msub><mi>Q</mi></mfrac><mi>ω</mi><mo>−</mo><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\omega^2\mp\frac{\omega_0}{Q}\omega-\omega_0^2=0 .</annotation></semantics></math></div>
-<p><mark class="kw2">取正</mark>根：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mrow><mn>2</mn><mo>,</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>±</mi><mstyle displaystyle="true"><mfrac><msub><mi>ω</mi><mn>0</mn></msub><mrow><mn>2</mn><mi>Q</mi></mrow></mfrac></mstyle><mo>+</mo><msqrt><mrow><mo form="prefix" maxsize="180%" minsize="180%" stretchy="true">(</mo><mstyle displaystyle="true"><mfrac><msub><mi>ω</mi><mn>0</mn></msub><mrow><mn>2</mn><mi>Q</mi></mrow></mfrac></mstyle><msup><mo form="postfix" maxsize="180%" minsize="180%" stretchy="true">)</mo><mn>2</mn></msup><mo>+</mo><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\omega_{2,1}=\pm\dfrac{\omega_0}{2Q}+\sqrt{\Big(\dfrac{\omega_0}{2Q}\Big)^2+\omega_0^2}</annotation></semantics></math>，<mark class="kw2">相减</mark>得
+<p>取正根：<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mrow><mn>2</mn><mo>,</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>±</mi><mstyle displaystyle="true"><mfrac><msub><mi>ω</mi><mn>0</mn></msub><mrow><mn>2</mn><mi>Q</mi></mrow></mfrac></mstyle><mo>+</mo><msqrt><mrow><mo form="prefix" maxsize="180%" minsize="180%" stretchy="true">(</mo><mstyle displaystyle="true"><mfrac><msub><mi>ω</mi><mn>0</mn></msub><mrow><mn>2</mn><mi>Q</mi></mrow></mfrac></mstyle><msup><mo form="postfix" maxsize="180%" minsize="180%" stretchy="true">)</mo><mn>2</mn></msup><mo>+</mo><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\omega_{2,1}=\pm\dfrac{\omega_0}{2Q}+\sqrt{\Big(\dfrac{\omega_0}{2Q}\Big)^2+\omega_0^2}</annotation></semantics></math>，<mark class="kw2">相减</mark>得
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>2</mn></msub><mo>−</mo><msub><mi>ω</mi><mn>1</mn></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><msub><mi>ω</mi><mn>0</mn></msub><mi>Q</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\omega_2-\omega_1=\dfrac{\omega_0}{Q}</annotation></semantics></math>；<mark class="kw2">相乘</mark>还得
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>1</mn></msub><msub><mi>ω</mi><mn>2</mn></msub><mo>=</mo><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\omega_1\omega_2=\omega_0^2</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></p>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
@@ -6392,7 +6392,7 @@ mH，同名端为 1 与
 端（非<mark class="kw2">同名端</mark>）流入；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mn>1</mn></msub><annotation encoding="application/x-tex">u_1</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mn>2</mn></msub><annotation encoding="application/x-tex">u_2</annotation></semantics></math>
 分别与
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>i</mi><mn>1</mn></msub><annotation encoding="application/x-tex">i_1</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>i</mi><mn>2</mn></msub><annotation encoding="application/x-tex">i_2</annotation></semantics></math>
-取<mark class="kw2">关联方向</mark>。写出
+取<mark class="kw2">关联方</mark>向。写出
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mn>1</mn></msub><annotation encoding="application/x-tex">u_1</annotation></semantics></math>、<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mn>2</mn></msub><annotation encoding="application/x-tex">u_2</annotation></semantics></math>
 的<mark class="kw2">表达式</mark>；若
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>=</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">\omega=1000</annotation></semantics></math>
@@ -6444,7 +6444,7 @@ A，求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="normal">Ψ</mi><mn>21</mn></msub><annotation encoding="application/x-tex">\Psi_{21}</annotation></semantics></math>
 也按<mark class="kw2">右手定则关联</mark>（这正是<mark class="kw2">线圈</mark> 2 <mark class="kw2">自感电压</mark>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mi>L</mi><mfrac><mrow><mi>d</mi><mi>i</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">u=L\frac{di}{dt}</annotation></semantics></math>
-取<mark class="kw2">正号</mark>的方向）。由<mark class="kw2">电磁感应定律</mark>，沿这个<mark class="kw2">方向</mark>的电压为
+取正号的<mark class="kw2">方向</mark>）。由<mark class="kw2">电磁感应定律</mark>，沿这个<mark class="kw2">方向</mark>的电压为
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><msub><mi mathvariant="normal">Ψ</mi><mn>21</mn></msub></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mi>M</mi><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><msub><mi>i</mi><mn>1</mn></msub></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">+\dfrac{d\Psi_{21}}{dt}=M\dfrac{di_1}{dt}</annotation></semantics></math>。电流或<mark class="kw2">电压参考方向</mark>反过来，表达式<mark class="kw">各乘一次</mark>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></p>
 <p><strong class="kt" data-cat="term" id="hl-589">实验判断同名端。</strong> <mark class="kw2">线圈</mark> 1 经开关接<mark class="kw2">干电池</mark>，<mark class="kw2">正极</mark>接 1
@@ -6478,11 +6478,11 @@ A，求
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>i</mi><mn>1</mn></msub><annotation encoding="application/x-tex">i_1</annotation></semantics></math>
 从<mark class="kw2">同名端</mark> 1
 流入；<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mn>2</mn></msub><annotation encoding="application/x-tex">u_2</annotation></semantics></math>
-从 2（非<mark class="kw2">同名端</mark>）指向 2′（<mark class="kw2">同名端</mark>），与规定<mark class="kw2">方向相反</mark>，只<mark class="kw2">改变</mark>了一个，</p>
+从 2（非<mark class="kw2">同名端</mark>）指向 2′（<mark class="kw2">同名端</mark>），与规定<mark class="kw2">方向相反</mark>，只改变了一个，</p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mn>2</mn></msub><mo>=</mo><mi>−</mi><mi>M</mi><mfrac><mrow><mi>d</mi><msub><mi>i</mi><mn>1</mn></msub></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">u_2=-M\frac{di_1}{dt}.</annotation></semantics></math></div>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>i</mi><mn>1</mn></msub><annotation encoding="application/x-tex">i_1</annotation></semantics></math>
 改从 1′
-<mark class="kw2">流入</mark>后，<mark class="kw2">电流方向</mark>也反了，两个都<mark class="kw2">改变</mark>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mn>2</mn></msub><mo>=</mo><mi>+</mi><mi>M</mi><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><msub><mi>i</mi><mn>1</mn></msub></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">u_2=+M\dfrac{di_1}{dt}</annotation></semantics></math>（这里
+<mark class="kw2">流入</mark>后，电流方向也反了，两个都<mark class="kw2">改变</mark>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mn>2</mn></msub><mo>=</mo><mi>+</mi><mi>M</mi><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><msub><mi>i</mi><mn>1</mn></msub></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">u_2=+M\dfrac{di_1}{dt}</annotation></semantics></math>（这里
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>i</mi><mn>1</mn></msub><annotation encoding="application/x-tex">i_1</annotation></semantics></math>
 指从 1′ 流入的<mark class="kw2">电流</mark>）。</p>
 </details>
@@ -6492,7 +6492,7 @@ A，求
 </summary>
 <ul>
 <li><strong>习题 5.30</strong>
-<mark class="kw2">给出</mark>几组<mark class="kw2">线圈</mark>的实际绕向，判别<mark class="kw2">同名端</mark>：任取一个<mark class="kw2">线圈</mark>的一端通入<mark class="kw2">电流</mark>，用<mark class="kw2">右手定则</mark>画出<mark class="kw2">磁通方向</mark>；另一<mark class="kw2">线圈</mark>中能使<mark class="kw2">磁通</mark>与之<mark class="kw2">同向</mark>的电流流入端就是<mark class="kw2">同名端</mark>。</li>
+<mark class="kw2">给出</mark>几组<mark class="kw2">线圈</mark>的实际绕向，判别<mark class="kw2">同名端</mark>：任取一个<mark class="kw2">线圈</mark>的一端通入<mark class="kw2">电流</mark>，用<mark class="kw2">右手定则</mark>画出<mark class="kw2">磁通方向</mark>；另一<mark class="kw2">线圈</mark>中能使<mark class="kw2">磁通</mark>与之同向的<mark class="kw2">电流</mark>流入端就是<mark class="kw2">同名端</mark>。</li>
 <li><strong>习题 5.31</strong>
 把两<mark class="kw2">线圈</mark>以两种<mark class="kw2">方式串联</mark>，接同一<mark class="kw2">正弦电源</mark>，<mark class="kw2">电流表读数</mark>相同时，<mark class="kw2">电压表读数</mark>大的一种<mark class="kw2">等效</mark>电感大，是<mark class="kw2">顺向串联</mark>（结论
 25）：这种<mark class="kw2">接法</mark>中相连的两端是<mark class="kw2">异名</mark>端。</li>
@@ -6539,7 +6539,7 @@ A，</p>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>I</mi><mo accent="true">̇</mo></mover><annotation encoding="application/x-tex">\dot I</annotation></semantics></math>
 从两个<mark class="kw2">同名端</mark>流入，各<mark class="kw2">线圈电压</mark>取与
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>I</mi><mo accent="true">̇</mo></mover><annotation encoding="application/x-tex">\dot I</annotation></semantics></math>
-<mark class="kw2">关联方向</mark>，由结论 24 互感电压<mark class="kw">都取正</mark>：</p>
+<mark class="kw2">关联方</mark>向，由结论 24 互感电压<mark class="kw">都取正</mark>：</p>
 <div class="display math"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>U</mi><mo accent="true">̇</mo></mover><mn>1</mn></msub><mo>=</mo><msub><mi>R</mi><mn>1</mn></msub><mover><mi>I</mi><mo accent="true">̇</mo></mover><mo>+</mo><mi>j</mi><mi>ω</mi><msub><mi>L</mi><mn>1</mn></msub><mover><mi>I</mi><mo accent="true">̇</mo></mover><mo>+</mo><mi>j</mi><mi>ω</mi><mi>M</mi><mover><mi>I</mi><mo accent="true">̇</mo></mover><mo>,</mo><mspace width="2.0em"></mspace><msub><mover><mi>U</mi><mo accent="true">̇</mo></mover><mn>2</mn></msub><mo>=</mo><msub><mi>R</mi><mn>2</mn></msub><mover><mi>I</mi><mo accent="true">̇</mo></mover><mo>+</mo><mi>j</mi><mi>ω</mi><msub><mi>L</mi><mn>2</mn></msub><mover><mi>I</mi><mo accent="true">̇</mo></mover><mo>+</mo><mi>j</mi><mi>ω</mi><mi>M</mi><mover><mi>I</mi><mo accent="true">̇</mo></mover><mo>,</mo></mrow><annotation encoding="application/x-tex">\dot U_1=R_1\dot I+j\omega L_1\dot I+j\omega M\dot I,\qquad \dot U_2=R_2\dot I+j\omega L_2\dot I+j\omega M\dot I,</annotation></semantics></math></div>
 <p><mark class="kw2">相加</mark>得
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Z</mi><annotation encoding="application/x-tex">Z</annotation></semantics></math>。<mark class="kw2">反串</mark>时一个从<mark class="kw2">同名端</mark>流入、一个从非<mark class="kw2">同名端</mark>流入，<mark class="kw2">互感项都</mark>变成
@@ -6584,7 +6584,7 @@ rad/s 的正弦电源。</mark>分别求<mark class="kw2">顺串与反串</mark>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>L</mi></msub><annotation encoding="application/x-tex">R_L</annotation></semantics></math>
 接在 a 与地之间。求
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>L</mi></msub><annotation encoding="application/x-tex">R_L</annotation></semantics></math>
-为多大时<mark class="kw2">获得</mark>最大<mark class="kw2">功率</mark>，最大<mark class="kw2">功率</mark>是多少。</p></div>
+为多大时获得最<mark class="kw2">大功率</mark>，最<mark class="kw2">大功率</mark>是多少。</p></div>
 <details>
 <summary>
 提示
@@ -6618,7 +6618,7 @@ V 串感抗
 与地之间。<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Z</mi><mi>L</mi></msub><annotation encoding="application/x-tex">Z_L</annotation></semantics></math>
 可以<mark class="kw2">任意</mark>选取（电阻、<mark class="kw2">电抗</mark>都可调），求<mark class="kw2">获得</mark>最大<mark class="kw2">平均功率</mark>的
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Z</mi><mi>L</mi></msub><annotation encoding="application/x-tex">Z_L</annotation></semantics></math>
-和最大<mark class="kw2">功率</mark>。</p></div>
+和最<mark class="kw2">大功率</mark>。</p></div>
 <details>
 <summary>
 提示
@@ -6660,7 +6660,7 @@ V 串感抗
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>6</mn><mo>+</mo><mi>j</mi><mn>8</mn></mrow></mfrac></mstyle><mo>=</mo><mn>0.06</mn><mo>−</mo><mi>j</mi><mn>0.08</mn></mrow><annotation encoding="application/x-tex">\dfrac{1}{6+j8}=0.06-j0.08</annotation></semantics></math>
 S，电容的<mark class="kw2">电纳</mark>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">\omega C</annotation></semantics></math>
-抵消<mark class="kw2">虚部</mark>。</p>
+<mark class="kw2">抵消</mark>虚部。</p>
 </details>
 <details>
 <summary>
@@ -6743,7 +6743,7 @@ rad/s。</p>
 V。</li>
 <li><mark class="kw2">电感</mark>的电压<mark class="kw2">超前</mark>电流
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>90</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">90^\circ</annotation></semantics></math>，<mark class="kw2">电容</mark>的电压<mark class="kw2">滞后</mark>电流
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>90</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">90^\circ</annotation></semantics></math>（<mark class="kw2">关联方向</mark>）。</li>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>90</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">90^\circ</annotation></semantics></math>（<mark class="kw2">关联方</mark>向）。</li>
 <li><mark class="kw2">一端口</mark>的阻抗角为负，它呈<mark class="kw2">容性</mark>，<mark class="kw2">无功功率</mark>为负。</li>
 <li><mark class="kw2">感性</mark>负载并联电容<mark class="kw2">提高功率因数</mark>后，<mark class="kw2">负载</mark>自身的<mark class="kw2">电流</mark>也减小了。</li>
 <li><mark class="kw2">电路</mark>中各元件的<mark class="kw2">视在功率</mark>之和<mark class="kw2">等于</mark>电源的<mark class="kw2">视在功率</mark>。</li>
