@@ -61,7 +61,7 @@
 <line x1="400.0" y1="207.2" x2="523.6" y2="421.3" stroke="#cbd5e0" stroke-width="0.8"/>
 <circle cx="523.6" cy="421.3" r="3.4" fill="#2b6cb0" stroke="#2b6cb0" stroke-width="1"/>
 <text x="536.4" y="447.4" font-size="13" fill="#2b6cb0" text-anchor="middle" font-style="italic">z¹⁰</text>
-<text x="523.4" y="67.9" font-size="13" fill="#2b6cb0" text-anchor="start">z = 1.12·e^(iπ/6)</text>
+<text x="523.4" y="67.9" font-size="13" fill="#2b6cb0" text-anchor="start">z = 1.12·e<tspan dy="-4.7" font-size="9.4">iπ/6</tspan><tspan dy="4.7">&#8203;</tspan></text>
 <text x="523.4" y="85.9" font-size="12" fill="#333" text-anchor="start">每乘一次 z：长度 ×1.12，角度 +30°</text>
 <text x="523.4" y="103.9" font-size="12" fill="#666" text-anchor="start">灰点：r = 1 时只转不伸缩（棣莫弗）</text>
 <text x="400.0" y="24.0" font-size="15" fill="#333" text-anchor="middle">z⁰, z¹, …, z¹⁰ 沿螺线向外：|zⁿ| = rⁿ，arg 方向转过 nθ</text>

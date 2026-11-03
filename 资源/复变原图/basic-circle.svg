@@ -12,5 +12,5 @@
   <line x1="180" y1="120" x2="236.6" y2="176.6" stroke="#333" stroke-dasharray="4 3"/>
   <text x="214" y="146" font-size="14" fill="#333" font-style="italic">r</text>
   <text x="250" y="40" font-size="13" fill="#2b6cb0">C：正向</text>
-  <text x="180" y="252" font-size="12" fill="#666" text-anchor="middle">z = z₀ + r·e^(iθ)，θ：0 → 2π</text>
+  <text x="180" y="252" font-size="12" fill="#666" text-anchor="middle">z = z₀ + r·e<tspan dy="-4.3" font-size="8.6">iθ</tspan><tspan dy="4.3">，θ：0 → 2π</tspan></text>
 </svg>

@@ -45,5 +45,5 @@
 <text x="444.0" y="90.0" font-size="11" fill="#666" text-anchor="end">1</text>
 <line x1="450.0" y1="294.0" x2="770.0" y2="294.0" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="3 3"/>
 <text x="444.0" y="298.0" font-size="11" fill="#666" text-anchor="end">−1</text>
-<text x="610.0" y="30.0" font-size="14" fill="#333" text-anchor="middle">f(r·e^(iφ)) = cos φ，与 r 无关</text>
+<text x="610.0" y="30.0" font-size="14" fill="#333" text-anchor="middle">f(r·e<tspan dy="-5.0" font-size="10.1">iφ</tspan><tspan dy="5.0">) = cos φ，与 r 无关</tspan></text>
 </svg>
