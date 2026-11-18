@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 310" font-family="'Noto Serif SC', 'Songti SC', Helvetica, Arial, sans-serif">
+<rect width="860" height="310" fill="#ffffff"/>
+<defs>
+  <marker id="arr-dark" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+    <path d="M0,1 L9,5 L0,9 z" fill="#334155"/>
+  </marker>
+  <marker id="arr-blue" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+    <path d="M0,1 L9,5 L0,9 z" fill="#1d4ed8"/>
+  </marker>
+  <marker id="arr-red" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+    <path d="M0,1 L9,5 L0,9 z" fill="#b91c1c"/>
+  </marker>
+  <marker id="arr-amber" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+    <path d="M0,1 L9,5 L0,9 z" fill="#b45309"/>
+  </marker>
+</defs>
+
+  <text x="145" y="28" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">依赖区间与依赖三角</text>
+  <line x1="30" y1="240.0" x2="260" y2="240.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+  <line x1="48" y1="262" x2="48" y2="48" stroke="#334155" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+  <text x="265" y="244.0" font-size="13" fill="#334155" font-style="italic">x</text>
+  <text x="55" y="56" font-size="13" fill="#334155" font-style="italic">t</text>
+  <polygon points="80,240.0 150,95 220,240.0" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <line x1="80" y1="240.0" x2="220" y2="240.0" stroke="#b91c1c" stroke-width="3.5"/>
+  <circle cx="150" cy="95" r="4" fill="#b91c1c"/>
+  <text x="150" y="81" font-size="13" fill="#1e293b" text-anchor="middle">(x<tspan dy="3" font-size="72%">0</tspan><tspan dy="-3">, </tspan>t<tspan dy="3" font-size="72%">0</tspan><tspan dy="-3">)</tspan></text>
+  <text x="80" y="262" font-size="12" fill="#b91c1c" text-anchor="middle">x<tspan dy="3" font-size="72%">0</tspan><tspan dy="-3"> − a</tspan>t<tspan dy="3" font-size="72%">0</tspan></text>
+  <text x="220" y="262" font-size="12" fill="#b91c1c" text-anchor="middle">x<tspan dy="3" font-size="72%">0</tspan><tspan dy="-3"> + a</tspan>t<tspan dy="3" font-size="72%">0</tspan></text>
+  <text x="150" y="204" font-size="12" fill="#1e3a8a" text-anchor="middle">特征三角</text>
+  <text x="145" y="290" font-size="12" fill="#475569" text-anchor="middle">u(x<tspan dy="3" font-size="72%">0</tspan><tspan dy="-3">, </tspan>t<tspan dy="3" font-size="72%">0</tspan><tspan dy="-3">) 仅依赖于底边区间</tspan></text>
+
+  <text x="425" y="28" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">决定区域 G</text>
+  <line x1="310" y1="240.0" x2="540" y2="240.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+  <line x1="328" y1="262" x2="328" y2="48" stroke="#334155" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+  <text x="545" y="244.0" font-size="13" fill="#334155" font-style="italic">x</text>
+  <text x="335" y="56" font-size="13" fill="#334155" font-style="italic">t</text>
+  <polygon points="360,240.0 430,105 500,240.0" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <line x1="360" y1="240.0" x2="500" y2="240.0" stroke="#15803d" stroke-width="3.5"/>
+  <circle cx="430" cy="105" r="3.5" fill="#15803d"/>
+  <text x="430" y="198" font-size="15" fill="#166534" text-anchor="middle" font-style="italic" font-weight="bold">G</text>
+  <text x="430" y="90" font-size="12" fill="#166534" text-anchor="middle">t<tspan dy="3" font-size="72%">max</tspan><tspan dy="-3"> = (</tspan>x<tspan dy="3" font-size="72%">2</tspan><tspan dy="-3"> − </tspan>x<tspan dy="3" font-size="72%">1</tspan><tspan dy="-3">)/(2a)</tspan></text>
+  <text x="360" y="262" font-size="12" fill="#334155" text-anchor="middle">x<tspan dy="3" font-size="72%">1</tspan></text>
+  <text x="500" y="262" font-size="12" fill="#334155" text-anchor="middle">x<tspan dy="3" font-size="72%">2</tspan></text>
+  <text x="425" y="290" font-size="12" fill="#475569" text-anchor="middle">[x<tspan dy="3" font-size="72%">1</tspan><tspan dy="-3">, </tspan>x<tspan dy="3" font-size="72%">2</tspan><tspan dy="-3">] 上初值完全决定 G 内解</tspan></text>
+
+  <text x="705" y="28" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">影响区域</text>
+  <line x1="590" y1="240.0" x2="825" y2="240.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+  <line x1="608" y1="262" x2="608" y2="48" stroke="#334155" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+  <text x="830" y="244.0" font-size="13" fill="#334155" font-style="italic">x</text>
+  <text x="615" y="56" font-size="13" fill="#334155" font-style="italic">t</text>
+  <polygon points="680,240.0 740,240.0 805,76 615,76" fill="#fef3c7" stroke="none"/>
+  <line x1="680" y1="240.0" x2="615" y2="76" stroke="#b45309" stroke-width="2"/>
+  <line x1="740" y1="240.0" x2="805" y2="76" stroke="#b45309" stroke-width="2"/>
+  <line x1="680" y1="240.0" x2="740" y2="240.0" stroke="#b45309" stroke-width="3.5"/>
+  <text x="710" y="152" font-size="13" fill="#92400e" text-anchor="middle" font-weight="bold">影响区域</text>
+  <text x="680" y="262" font-size="12" fill="#334155" text-anchor="middle">x<tspan dy="3" font-size="72%">1</tspan></text>
+  <text x="740" y="262" font-size="12" fill="#334155" text-anchor="middle">x<tspan dy="3" font-size="72%">2</tspan></text>
+  <text x="622" y="64" font-size="11.5" fill="#92400e" text-anchor="start">x = x<tspan dy="3" font-size="72%">1</tspan><tspan dy="-3"> − at</tspan></text>
+  <text x="806" y="64" font-size="11.5" fill="#92400e" text-anchor="end">x = x<tspan dy="3" font-size="72%">2</tspan><tspan dy="-3"> + at</tspan></text>
+  <text x="705" y="290" font-size="12" fill="#475569" text-anchor="middle">[x<tspan dy="3" font-size="72%">1</tspan><tspan dy="-3">, </tspan>x<tspan dy="3" font-size="72%">2</tspan><tspan dy="-3">] 扰动按波速 a 有限扩散</tspan></text>
+
+</svg>
